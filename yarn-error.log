@@ -1,0 +1,43 @@
+Arguments: 
+  /home/akhil272/.nvm/versions/node/v14.17.0/bin/node /home/akhil272/.nvm/versions/node/v14.17.0/bin/yarn add nextjs-typescript-tailwind
+
+PATH: 
+  /home/akhil272/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/bin:/home/akhil272/.nvm/versions/node/v14.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Python38/Scripts/:/mnt/c/Python38/:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64_win/compiler:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Git/cmd:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Users/akhil/AppData/Local/Android/Sdk/platform-tools:/mnt/c/Program Files/OpenJDK/openjdk-8u275-b01/bin:/mnt/c/Program Files (x86)/Yarn/bin/:/mnt/c/Program Files/MongoDB/Server/4.4/bin:/mnt/c/Program Files/nodejs/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/akhil/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/akhil/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/akhil/AppData/Local/Yarn/bin:/mnt/c/Program Files/heroku/bin:/mnt/c/Users/akhil/AppData/Roaming/npm:/snap/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/nextjs-typescript-tailwind: Not found
+      at Request.params.callback [as _callback] (/home/akhil272/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/home/akhil272/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:376:20)
+      at Request.<anonymous> (/home/akhil272/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:376:20)
+      at IncomingMessage.<anonymous> (/home/akhil272/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:482:28)
+      at IncomingMessage.emit (events.js:388:22)
+      at endReadableNT (internal/streams/readable.js:1336:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "alsafirhotel",
+    "version": "1.0.0",
+    "description": "alsafirhotel",
+    "main": "index.js",
+    "author": "akhil272",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
