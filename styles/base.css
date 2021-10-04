@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Mark Pro";
+    font-style: book;
+    src: url("/fonts/MARKPROBOOK.otf") format("otf");
+  }
+  @font-face {
+    font-family: "Brandon";
+    font-style: light;
+    src: url("/fonts/brandon-grotesque-light.otf") format("otf");
+  }
+  @font-face {
+    font-family: "Mark Pro";
+    font-style: light;
+    src: url("/fonts/MARKPROLIGHT.otf") format("otf");
+  }
+}

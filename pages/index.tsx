@@ -25,13 +25,13 @@ function Homepage() {
         className="relative flex flex-wrap content-end py-40
      min-h-screen px-4"
       >
-        <h1 className="text-primary font-light tracking-widest text-6xl ">
+        <h1 className="text-primary font-brandon  tracking-widest text-6xl ">
           ALSAFIR HOTEL
         </h1>
-        <div className=" py-2 min-w-full">
+        <div className=" py-2 min-w-full font-mark font-light">
           <h5>Towers residence fitness</h5>
         </div>
-        <div className="text-primary font-sans">
+        <div className="text-primary font-mark font-light">
           <p>Bahrain</p>
           <p>
             {CurrentDate()} <span>27 C</span>

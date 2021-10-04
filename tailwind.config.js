@@ -7,14 +7,13 @@ module.exports = {
       colors: {
         primary: "#C3A47D",
       },
+      fontFamily: {
+        mark: "'Mark Pro',serif",
+        brandon: "'Brandon Grotesque',serif",
+      },
     },
   },
 
-  fontFamily: {
-    sans: ["Mark Pro", "mark-pro"],
-    serif: ["BrandonGrotesque-Thin", "brandonGrotesque-thin"],
-    montserrat: ["Montserrat", "montserrat"],
-  },
   variants: {
     extend: {},
   },

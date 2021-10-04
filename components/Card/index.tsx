@@ -43,7 +43,7 @@ const Card = () => {
           </svg>
         }
         title="STAY"
-        image="/images/homepage/StayCover.jpg"
+        image="/images/homepage/DineInCover.jpg"
       />
       <CardDetail
         icon={
@@ -70,6 +70,50 @@ const Card = () => {
         }
         title="DINE IN"
         image="/images/homepage/StayCover.jpg"
+      />
+      <CardDetail
+        icon={
+          <svg
+            width="28"
+            height="30"
+            viewBox="0 0 28 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.29999 6.9L26.2 1.5V19.7"
+              stroke="#BEA782"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M9.29999 6.9L26.2 1.5"
+              stroke="#BEA782"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M9.29999 11.9L26.2 6.40002"
+              stroke="#BEA782"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M22.8062 23.1328C25.0002 22.5728 26.5019 21.0344 26.1605 19.6966C25.819 18.3589 23.7637 17.7283 21.5697 18.2883C19.3758 18.8483 17.874 20.3867 18.2155 21.7245C18.5569 23.0623 20.6123 23.6928 22.8062 23.1328Z"
+              stroke="#BEA782"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M9.29999 6.90002V25"
+              stroke="#BEA782"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M9.3 25C9.6 26.4 8.1 27.9 5.9 28.5C3.7 29.1 1.6 28.4 1.3 27.1C1 25.7 2.5 24.2 4.7 23.6C6.9 23 8.9 23.6 9.3 25Z"
+              stroke="#BEA782"
+              stroke-miterlimit="10"
+            />
+          </svg>
+        }
+        title="NIGHT CLUB"
+        image="/images/homepage/NightClubCover.jpg"
       />
     </div>
   );

@@ -1,15 +1,21 @@
-const CardDetail = (props: any) => {
+type CardData = {
+  title: string;
+  image: string;
+  icon: any;
+};
+
+const CardDetail = (props: CardData) => {
   return (
     <div>
-      <div className="flex items-center mb-4">
-        <img className="absolute h-1/5 w-full" src={props.image} />
+      <div id="parent" className="flex items-center mb-4 pointer-events-none">
+        <img className="absolute h-1/5 w-full object-cover" src={props.image} />
 
-        <div className="relative px-10 ">
+        <div className="relative px-10  ">
           <div className="xs:h-200 ">
-            <div className="flex p-2">
-              <div className=" flex justify-center items-center">
+            <div className="flex p-2 ">
+              <div className=" flex justify-center items-center ">
                 {props.icon}
-                <div className="absolute justify-center h-50 w-50">
+                <div className="absolute justify-center h-50 w-50 transform transition duration-1000  hover:rotate-45 hover:scale-110  ">
                   <svg
                     width="51"
                     height="51"
@@ -36,7 +42,7 @@ const CardDetail = (props: any) => {
                   </svg>
                 </div>
               </div>
-              <div className="ml-8">
+              <div className="ml-8  ">
                 <svg
                   width="30"
                   height="51"
@@ -59,7 +65,7 @@ const CardDetail = (props: any) => {
                 </svg>
               </div>
             </div>
-            <h3 className="mt-2 text-primary  tracking-widest text-3xl">
+            <h3 className="mt-2 text-primary font-mark font-book tracking-widest text-3xl">
               {props.title}
             </h3>
           </div>
