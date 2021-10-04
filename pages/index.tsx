@@ -1,4 +1,5 @@
 import Card from "../components/Card";
+import ImageSlider from "../components/ImageSlider";
 
 function Homepage() {
   const CurrentDate = () => {
@@ -16,23 +17,27 @@ function Homepage() {
     return date;
   };
   return (
-    <div
-      className="flex flex-wrap content-end py-40
-     min-h-screen bg-black px-4"
-    >
-      <h1 className="text-primary font-light tracking-widest text-6xl ">
-        ALSAFIR HOTEL
-      </h1>
-      <div className="py-2 min-w-full">
-        <h5>Towers residence fitness</h5>
+    <div>
+      <div className="absolute h-full w-full">
+        <ImageSlider />
       </div>
-      <div className="text-primary font-sans">
-        <p>Bahrain</p>
-        <p>
-          {CurrentDate()} <span>27 C</span>
-        </p>
+      <div
+        className="relative flex flex-wrap content-end py-40
+     min-h-screen px-4"
+      >
+        <h1 className="text-primary font-light tracking-widest text-6xl ">
+          ALSAFIR HOTEL
+        </h1>
+        <div className=" py-2 min-w-full">
+          <h5>Towers residence fitness</h5>
+        </div>
+        <div className="text-primary font-sans">
+          <p>Bahrain</p>
+          <p>
+            {CurrentDate()} <span>27 C</span>
+          </p>
+        </div>
       </div>
-      <div className="h-200 min-w-full ">ICON ARROW OFFERS</div>
 
       <Card />
     </div>

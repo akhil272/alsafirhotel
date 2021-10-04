@@ -1,9 +1,10 @@
+import CardDetail from "./CardDetail";
+
 const Card = () => {
   return (
-    <div className="xs:h-200">
-      <img src="/images/homepage" />
-      <div className="flex p-2">
-        <div className="relative flex justify-center items-center">
+    <div className="mx-auto flex flex-col space-y-5">
+      <CardDetail
+        icon={
           <svg
             width="27"
             height="27"
@@ -22,57 +23,54 @@ const Card = () => {
               stroke-miterlimit="10"
             />
           </svg>
-          <div className="absolute justify-center h-50 w-50">
-            <svg
-              width="51"
-              height="51"
-              viewBox="0 0 51 51"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M35.7 44.4C32.6 46 29.1 47 25.4 47C13.5 47 3.90002 37.3 3.90002 25.4C3.90002 13.5 13.5 3.90002 25.4 3.90002C37.3 3.90002 47 13.5 47 25.4C47 29.9 45.6 34.1 43.3 37.5C42.8 38.3 42.2 39 41.6 39.7"
-                stroke="#9E8E71"
-                stroke-width="0.7245"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="bevel"
-              />
-              <path
-                d="M13.5 3.40002C17 1.50002 21.1 0.400024 25.4 0.400024C39.2 0.400024 50.4 11.6 50.4 25.4C50.4 39.2 39.2 50.4 25.4 50.4C11.6 50.4 0.400024 39.2 0.400024 25.4C0.400024 20.2 2.00002 15.4 4.70002 11.4C5.30002 10.5 6.00002 9.60002 6.70002 8.80002"
-                stroke="#9E8E71"
-                stroke-width="0.8403"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="bevel"
-              />
-            </svg>
-          </div>
-        </div>
-        <div className="ml-8">
+        }
+        title="OFFERS"
+        image="/images/homepage/OffersCover.jpg"
+      />
+      <CardDetail
+        icon={
           <svg
-            width="30"
-            height="51"
-            viewBox="0 0 30 51"
+            width="28"
+            height="19"
+            viewBox="0 0 28 19"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0)">
-              <path
-                d="M0.428833 0.490997L29.0036 25.2638L0.428833 50.0353"
-                stroke="#CAB493"
-                stroke-miterlimit="10"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0">
-                <rect width="30" height="50.5263" fill="white" />
-              </clipPath>
-            </defs>
+            <path
+              d="M27.3 5.50002C27 5.50002 26.8 5.70002 26.8 6.00002V7.90002H7.6C7.9 7.60002 8 7.20002 8 6.80002C8 5.60002 6.6 4.70003 4.9 4.70003C3.1 4.70003 1.8 5.60002 1.8 6.80002C1.8 7.20002 2 7.50002 2.2 7.90002H1V1.40002C1 1.10002 0.8 0.900024 0.5 0.900024C0.2 0.900024 0 1.10002 0 1.40002V8.50002V9.70003V10.7V12.8V18.2C0 18.5 0.2 18.7 0.5 18.7C0.8 18.7 1 18.5 1 18.2V13.4H26.7V18.2C26.7 18.5 26.9 18.7 27.2 18.7C27.5 18.7 27.7 18.5 27.7 18.2V12.8V8.50002V6.00002C27.8 5.70002 27.6 5.50002 27.3 5.50002ZM2.8 6.90002C2.8 6.40002 3.7 5.80002 4.9 5.80002C6.1 5.80002 7 6.40002 7 6.90002C7 7.40002 6.1 8.00002 4.9 8.00002C3.7 7.90002 2.8 7.40002 2.8 6.90002ZM1 12.2V10.6V9.60003V9.00002H26.7V12.2H1Z"
+              fill="#BEA782"
+            />
           </svg>
-        </div>
-      </div>
-      <h3 className="mt-2 text-primary  tracking-widest text-3xl"> OFFERS</h3>
+        }
+        title="STAY"
+        image="/images/homepage/StayCover.jpg"
+      />
+      <CardDetail
+        icon={
+          <svg
+            width="29"
+            height="20"
+            viewBox="0 0 29 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.5 3C10.2 3 6.70001 6.5 6.70001 10.8C6.70001 15.1 10.2 18.6 14.5 18.6C18.8 18.6 22.3 15.1 22.3 10.8C22.3 6.5 18.8 3 14.5 3ZM14.5 17.7C10.7 17.7 7.60001 14.6 7.60001 10.8C7.60001 7 10.7 3.9 14.5 3.9C18.3 3.9 21.4 7 21.4 10.8C21.3 14.6 18.3 17.7 14.5 17.7Z"
+              fill="#BEA782"
+            />
+            <path
+              d="M28 0.100024C27.9 2.44156e-05 27.7 2.44156e-05 27.5 0.100024C27.4 0.200024 24.1 2.30002 24.1 9.50002C24.1 9.80002 24.3 10 24.6 10H27.3V18.6C27.3 18.9 27.5 19.1 27.8 19.1C28.1 19.1 28.3 18.9 28.3 18.6V9.50002V8.90002V0.500024C28.2 0.300024 28.2 0.200024 28 0.100024ZM25.1 9.10002C25.2 5.90002 25.9 3.90002 26.6 2.70002C26.9 2.20002 27.1 1.90002 27.4 1.60002V8.90002V9.10002H25.1Z"
+              fill="#BEA782"
+            />
+            <path
+              d="M5.30001 0C5.00001 0 4.80001 0.2 4.80001 0.5V6.2C4.80001 6.3 4.70001 6.4 4.60001 6.4H3.50001V0.5C3.50001 0.2 3.30001 0 3.00001 0C2.70001 0 2.50001 0.2 2.50001 0.5V6.4H1.40001C1.30001 6.4 1.20001 6.3 1.20001 6.2V0.5C1.20001 0.2 1.00001 0 0.700012 0C0.400012 0 0.200012 0.2 0.200012 0.5V6.2C0.200012 6.8 0.700013 7.3 1.30001 7.3H2.40001V18.6C2.40001 18.9 2.60001 19.1 2.90001 19.1C3.20001 19.1 3.40001 18.9 3.40001 18.6V7.3H4.50001C5.10001 7.3 5.60001 6.8 5.60001 6.2V0.5C5.70001 0.2 5.50001 0 5.30001 0Z"
+              fill="#BEA782"
+            />
+          </svg>
+        }
+        title="DINE IN"
+        image="/images/homepage/StayCover.jpg"
+      />
     </div>
   );
 };

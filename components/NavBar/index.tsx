@@ -36,7 +36,7 @@ const NavBar = () => {
         </svg>
       </div>
 
-      <div className=" flex justify-center items-center ml-auto pr-4 space-x-4">
+      <div className=" flex justify-center  items-center ml-auto pr-4 space-x-4">
         <button>EN</button>
         <label>Menu</label>
         <button>
