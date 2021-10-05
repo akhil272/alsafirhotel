@@ -2,8 +2,9 @@ import CardDetail from "./CardDetail";
 
 const Card = () => {
   return (
-    <div className="mx-auto flex flex-col space-y-5">
+    <div>
       <CardDetail
+        id="offers"
         icon={
           <svg
             width="27"
@@ -27,7 +28,9 @@ const Card = () => {
         title="OFFERS"
         image="/images/homepage/OffersCover.jpg"
       />
+
       <CardDetail
+        id="stay"
         icon={
           <svg
             width="28"
@@ -46,6 +49,7 @@ const Card = () => {
         image="/images/homepage/DineInCover.jpg"
       />
       <CardDetail
+        id="dine"
         icon={
           <svg
             width="29"
@@ -72,6 +76,7 @@ const Card = () => {
         image="/images/homepage/StayCover.jpg"
       />
       <CardDetail
+        id="nightclub"
         icon={
           <svg
             width="28"

@@ -16,10 +16,12 @@ function Homepage() {
     const date = weekday[d.getDay()];
     return date;
   };
+  const image1 = "/images/homepage/homeCoverImage01.jpg";
+  const image2 = "/images/homepage/homeCover2.jpg";
   return (
     <div>
       <div className="absolute h-full w-full">
-        <ImageSlider />
+        <ImageSlider images={[image1, image2]} />
       </div>
       <div
         className="relative flex flex-wrap content-end py-40
