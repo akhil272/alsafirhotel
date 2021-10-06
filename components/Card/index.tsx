@@ -76,7 +76,7 @@ const Card = () => {
         image="/images/homepage/StayCover.jpg"
       />
       <CardDetail
-        id="nightclub"
+        id="entertainment"
         icon={
           <svg
             width="28"
@@ -117,7 +117,7 @@ const Card = () => {
             />
           </svg>
         }
-        title="NIGHT CLUB"
+        title="Entertainment"
         image="/images/homepage/NightClubCover.jpg"
       />
     </div>

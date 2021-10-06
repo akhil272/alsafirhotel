@@ -20,7 +20,7 @@ function Homepage() {
   const image2 = "/images/homepage/homeCover2.jpg";
   return (
     <div>
-      <div className="absolute h-full w-full">
+      <div className=" absolute h-screen w-full">
         <ImageSlider images={[image1, image2]} />
       </div>
       <div
