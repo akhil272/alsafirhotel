@@ -3,11 +3,13 @@ type SlideData = {
   images: string[];
   autoplay?: boolean;
   autoPlayTime?: number;
+  children?: any;
 };
 const ImageSlider = ({
   images = [],
   autoplay = true,
   autoPlayTime = 5000,
+  children,
   ...props
 }: SlideData) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,10 +27,7 @@ const ImageSlider = ({
   }, [currentSlide]);
 
   return (
-    <div
-      id="Wrapper"
-      className="h-full flex flex-nowrap overflow-hidden relative"
-    >
+    <div id="Wrapper" className="h-screen flex flex-nowrap overflow-hidden ">
       {images.map((imageUrl, index) => (
         <div
           id="Slide"
@@ -41,6 +40,7 @@ const ImageSlider = ({
           }}
         ></div>
       ))}
+      <div className="absolute">{children} </div>
     </div>
   );
 };

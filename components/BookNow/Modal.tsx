@@ -1,14 +1,12 @@
 import ImageSlider from "../ImageSlider";
 const image1 = "/images/homepage/homeCoverImage01.jpg";
 const image2 = "/images/homepage/homeCover2.jpg";
+
 const Modal = ({ showModal, setShowModal }) => {
   return (
     <div>
       {showModal ? (
-        <div
-          showMode={showModal}
-          className="absolute h-full w-full flex items-end"
-        >
+        <div className="fixed top-0 h-screen w-screen flex items-end">
           <div className="absolute h-full w-full">
             <ImageSlider images={[image1]} autoplay={false} />
           </div>
@@ -16,7 +14,7 @@ const Modal = ({ showModal, setShowModal }) => {
             <div className="flex p-2  ">
               <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
               <div
-                onClick={() => setShowModal((prev) => !prev)}
+                onClick={() => setShowModal((prev: any) => !prev)}
                 className="flex justify-center items-center ml-auto"
               >
                 <svg

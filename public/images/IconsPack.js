@@ -272,6 +272,29 @@ const brandStoryIcon = (
   </svg>
 );
 
+const arrowIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="51"
+    fill="none"
+    viewBox="0 0 30 51"
+  >
+    <g clipPath="url(#clip0)">
+      <path
+        stroke="#CAB493"
+        strokeMiterlimit="10"
+        d="M.429.491l28.575 24.773L.429 50.035"
+      ></path>
+    </g>
+    <defs>
+      <clipPath id="clip0">
+        <path fill="#fff" d="M0 0H30V50.526H0z"></path>
+      </clipPath>
+    </defs>
+  </svg>
+);
+
 const IconsPack = {
   alsfairLogo,
   stayIcon,
@@ -284,6 +307,7 @@ const IconsPack = {
   blogIcon,
   brandStoryIcon,
   alsafirRings,
+  arrowIcon,
 };
 
 export default IconsPack;

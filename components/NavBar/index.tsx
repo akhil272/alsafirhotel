@@ -3,12 +3,10 @@ import IconsPack from "../../public/images/IconsPack";
 const NavBar = () => {
   const router = useRouter();
   return (
-    <header className="sticky flex items-center h-16">
-      <div className="pl-2 " onClick={() => router.push("/")}>
-        {IconsPack.alsfairLogo}
-      </div>
+    <header className="transition duration-1000 hover:bg-black fixed w-screen p-4 flex items-center h-20">
+      <div onClick={() => router.push("/")}>{IconsPack.alsfairLogo}</div>
 
-      <div className=" flex justify-center items-center ml-auto pr-4 space-x-4">
+      <div className=" flex  justify-center items-center ml-auto pr-4 space-x-4">
         <button>EN</button>
         <label>Menu</label>
         <button>

@@ -20,25 +20,26 @@ function Homepage() {
   const image2 = "/images/homepage/homeCover2.jpg";
   return (
     <div>
-      <div className=" absolute h-screen w-full">
-        <ImageSlider images={[image1, image2]} />
-      </div>
-      <div
-        className="relative flex flex-wrap content-end py-40
+      <div className="h-screen w-full">
+        <ImageSlider images={[image1, image2]}>
+          <div
+            className=" flex flex-wrap content-end py-40
      min-h-screen px-4"
-      >
-        <h1 className="text-primary font-brandon  tracking-widest text-6xl ">
-          ALSAFIR HOTEL
-        </h1>
-        <div className=" py-2 min-w-full font-mark font-light">
-          <h5>Towers residence fitness</h5>
-        </div>
-        <div className="text-primary font-mark font-light">
-          <p>Bahrain</p>
-          <p>
-            {CurrentDate()} <span>27 C</span>
-          </p>
-        </div>
+          >
+            <h1 className="text-primary font-brandon  tracking-widest text-6xl ">
+              ALSAFIR HOTEL
+            </h1>
+            <div className=" py-2 min-w-full font-mark font-light">
+              <h5>Towers residence fitness</h5>
+            </div>
+            <div className="text-primary font-mark font-light">
+              <p>Bahrain</p>
+              <p>
+                {CurrentDate()} <span>27 C</span>
+              </p>
+            </div>
+          </div>
+        </ImageSlider>
       </div>
 
       <Card />
