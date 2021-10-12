@@ -51,17 +51,16 @@ const PeopleCounter = (props: {
   return (
     <div className="bg-opacity-40 bg-primary w-full  rounded-sm ">
       <div className="flex flex-col items-center justify-center -space-y-3 w-full">
-        <div className=" divide-x divide-gray-400 h-14 w-full grid grid-cols-3 content-center">
+        <div className="divide-x divide-gray-400 h-14 w-full grid grid-cols-3 content-center">
           <button
             className=" text-primary flex items-center justify-center"
             onClick={() => handleChange("dec")}
           >
             {minus}
           </button>
-          <div className="  flex items-center justify-center">
+          <div className="  flex items-center text-2xl justify-center">
             {countPeople}
           </div>
-
           <button
             className=" text-primary flex items-center justify-center"
             onClick={() => handleChange("inc")}

@@ -26,7 +26,7 @@ const Card = () => {
       <CardDetail
         id="entertainment"
         icon={IconsPack.entertainmentIcon}
-        title="Entertainment"
+        title="HEALTH & WELLNESS"
         image="/images/homepage/NightClubCover.jpg"
       />
     </div>

@@ -16,25 +16,39 @@ const CardDetail = (props: CardData) => {
   return (
     <div
       onClick={handleClick}
-      className="w-full lg:h-[365px] h-[200px] flex-shrink-0 bg-center bg-cover flex p-10 items-center"
+      className=" lg:h-[365px] h-[200px] flex-shrink-0 bg-center bg-cover flex  p-6 items-center hover:ml-10 opacity-90 hover:opacity-100 hover:shadow-2xl transition-all duration-1000 ease-in-out delay-200"
       style={{ backgroundImage: `url(${props.image})` }}
     >
-      <div className="flex flex-col">
-        <div className="flex flex-row justify-start items-center">
-          <div className=" ml-3 flex justify-center items-center ">
+      <div
+        id="main-container"
+        className="flex flex-col items-start justify-start "
+      >
+        <div
+          id="alsafir-icon-container"
+          className="flex flex-row justify-start items-center "
+        >
+          <div
+            id="alsafir-icon"
+            className=" ml-3 flex justify-center items-center"
+          >
             {props.icon}
-            <div className="absolute h-50 w-50 transform transition duration-1000  hover:rotate-45 hover:scale-110  ">
+            <div id="alsafir-rings" className="absolute h-50 w-50 ">
               {IconsPack.alsafirRings}
             </div>
           </div>
-          <div className="ml-6">{IconsPack.arrowIcon}</div>
+          <div id="alsafir-arrow" className="ml-6 duration-1000  ">
+            {IconsPack.arrowIcon}
+          </div>
         </div>
-        <h3 className="mt-2 text-primary font-mark font-book tracking-widest text-3xl">
-          {props.title}
-        </h3>
+        <div id="card title" className="mt-2 ">
+          <h3 className="text-primary font-mark font-book tracking-widest text-2xl lg:text-3xl">
+            {props.title}
+          </h3>
+        </div>
       </div>
     </div>
   );
 };
 
 export default CardDetail;
+// hover:ml-10 hover:shadow-2xl transition-all duration-1000 ease-in-out delay-200

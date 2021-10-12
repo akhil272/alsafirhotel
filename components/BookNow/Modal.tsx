@@ -1,28 +1,11 @@
 import ImageSlider from "../ImageSlider";
-import { useState } from "react";
 import Calender from "./Calendar";
 import RoomsCount from "./RoomsCount";
 import PeopleCounter from "./PeopleCounter";
+import RoomSelector from "./RoomSelector";
 const image1 = "/images/homepage/homeCoverImage01.jpg";
-const image2 = "/images/homepage/homeCover2.jpg";
 
 const Modal = ({ showModal, setShowModal }) => {
-  const defaultClass =
-    "bg-primary uppercase w-full p-1 rounded-sm flex items-center justify-center";
-  const userSelectedClass =
-    "bg-primary uppercase bg-opacity-40 font-mark w-full p-1 rounded-sm flex items-center justify-center";
-  const [deluxSingle, setDeluxSingle] = useState(true);
-  const [deluxTwin, setDeluxTwin] = useState(false);
-  const handleRoomSelection = (type: string) => {
-    if (type === "deluxSingle") {
-      setDeluxSingle(true);
-      setDeluxTwin(false);
-    } else {
-      setDeluxTwin(true);
-      setDeluxSingle(false);
-    }
-  };
-
   return (
     <div>
       {showModal ? (
@@ -31,7 +14,7 @@ const Modal = ({ showModal, setShowModal }) => {
             <ImageSlider images={[image1]} autoplay={false} />
           </div>
           <div className="h-3/5 w-full bg-black flex flex-col opacity-95 space-y-6 p-4">
-            <div className="flex p-2  ">
+            <div className="flex p-2 mt-6">
               <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
               <div
                 onClick={() => setShowModal((prev: any) => !prev)}
@@ -51,20 +34,7 @@ const Modal = ({ showModal, setShowModal }) => {
                 </svg>
               </div>
             </div>
-            <div className="flex justify-center items-center text-lg font-mark font-light mt-4 border-2 border-primary p-0.5 rounded-sm ">
-              <button
-                onClick={() => handleRoomSelection("deluxSingle")}
-                className={deluxSingle ? defaultClass : userSelectedClass}
-              >
-                Delux Single
-              </button>
-              <button
-                onClick={() => handleRoomSelection("deluxTwin")}
-                className={deluxTwin ? defaultClass : userSelectedClass}
-              >
-                Delux Twin
-              </button>
-            </div>
+            <RoomSelector />
             <Calender />
             <RoomsCount />
             <div className="flex gap-2 justify-center gap ">

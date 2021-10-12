@@ -1,17 +1,18 @@
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { useState } from "react";
 import IconsPack from "../../public/images/IconsPack";
 import MobileMenu from "./MobileMenu";
 const NavBar = () => {
-  const router = useRouter();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const openMenu = () => {
     setShowMobileMenu((prev) => !prev);
   };
   return (
-    <header className="transition duration-1000 hover:bg-black fixed w-screen p-4 flex items-center h-20">
-      <div onClick={() => router.push("/")}>{IconsPack.alsfairLogo}</div>
+    <header className="transition duration-1000 hover:bg-black fixed  w-screen p-4 flex items-center h-20">
+      <Link href="/">
+        <a>{IconsPack.alsfairLogo}</a>
+      </Link>
 
       <div className=" flex  justify-center items-center ml-auto pr-4 space-x-4">
         <button>EN</button>

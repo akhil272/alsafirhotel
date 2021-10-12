@@ -13,9 +13,9 @@ const RoomsCount = () => {
   const [openModal, setOpenModal] = useState(false);
 
   const defaultClass =
-    "flex h-14 w-full  bg-primary items-center justify-center opacity-50 rounded-md";
+    "flex text-2xl h-14 w-full  bg-primary items-center justify-center opacity-50 rounded-md";
   const userSelectedClass =
-    "flex h-14 w-full  bg-primary items-center justify-center rounded-md";
+    "flex text-2xl h-14 w-full  bg-primary items-center justify-center rounded-md";
 
   const handleSelection = (roomCount: { id: number; title?: string }) => {
     setSelected(roomCount.id);
