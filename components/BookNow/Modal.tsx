@@ -1,8 +1,28 @@
 import ImageSlider from "../ImageSlider";
+import { useState } from "react";
+import Calender from "./Calendar";
+import RoomsCount from "./RoomsCount";
+import PeopleCounter from "./PeopleCounter";
 const image1 = "/images/homepage/homeCoverImage01.jpg";
 const image2 = "/images/homepage/homeCover2.jpg";
 
 const Modal = ({ showModal, setShowModal }) => {
+  const defaultClass =
+    "bg-primary uppercase w-full p-1 rounded-sm flex items-center justify-center";
+  const userSelectedClass =
+    "bg-primary uppercase bg-opacity-40 font-mark w-full p-1 rounded-sm flex items-center justify-center";
+  const [deluxSingle, setDeluxSingle] = useState(true);
+  const [deluxTwin, setDeluxTwin] = useState(false);
+  const handleRoomSelection = (type: string) => {
+    if (type === "deluxSingle") {
+      setDeluxSingle(true);
+      setDeluxTwin(false);
+    } else {
+      setDeluxTwin(true);
+      setDeluxSingle(false);
+    }
+  };
+
   return (
     <div>
       {showModal ? (
@@ -10,7 +30,7 @@ const Modal = ({ showModal, setShowModal }) => {
           <div className="absolute h-full w-full">
             <ImageSlider images={[image1]} autoplay={false} />
           </div>
-          <div className="h-2/5 w-full bg-black flex flex-col opacity-75 p-4">
+          <div className="h-3/5 w-full bg-black flex flex-col opacity-95 space-y-6 p-4">
             <div className="flex p-2  ">
               <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
               <div
@@ -31,14 +51,29 @@ const Modal = ({ showModal, setShowModal }) => {
                 </svg>
               </div>
             </div>
-            <div className="flex justify-center mt-4 border-2 p-.5 items-center rounded-sm ">
-              <h5 className="bg-primary font-mark w-full p-1 rounded-sm ">
+            <div className="flex justify-center items-center text-lg font-mark font-light mt-4 border-2 border-primary p-0.5 rounded-sm ">
+              <button
+                onClick={() => handleRoomSelection("deluxSingle")}
+                className={deluxSingle ? defaultClass : userSelectedClass}
+              >
+                Delux Single
+              </button>
+              <button
+                onClick={() => handleRoomSelection("deluxTwin")}
+                className={deluxTwin ? defaultClass : userSelectedClass}
+              >
                 Delux Twin
-              </h5>
-              <h5 className="bg-primary opacity-25 font-mark w-full p-1 rounded-sm  ">
-                Delux Twin
-              </h5>
+              </button>
             </div>
+            <Calender />
+            <RoomsCount />
+            <div className="flex gap-2 justify-center gap ">
+              <PeopleCounter categories="Adults" />
+              <PeopleCounter categories="Children" />
+            </div>
+          </div>
+          <div className="  duration-1000 transition-all hover:bg-black hover:p-4  hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
+            <button>BOOK NOW</button>
           </div>
         </div>
       ) : null}

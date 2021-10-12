@@ -1,7 +1,14 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import IconsPack from "../../public/images/IconsPack";
+import MobileMenu from "./MobileMenu";
 const NavBar = () => {
   const router = useRouter();
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const openMenu = () => {
+    setShowMobileMenu((prev) => !prev);
+  };
   return (
     <header className="transition duration-1000 hover:bg-black fixed w-screen p-4 flex items-center h-20">
       <div onClick={() => router.push("/")}>{IconsPack.alsfairLogo}</div>
@@ -9,7 +16,7 @@ const NavBar = () => {
       <div className=" flex  justify-center items-center ml-auto pr-4 space-x-4">
         <button>EN</button>
         <label>Menu</label>
-        <button>
+        <button onClick={openMenu}>
           <svg
             width="18"
             height="12"
@@ -23,6 +30,10 @@ const NavBar = () => {
             />
           </svg>
         </button>
+        <MobileMenu
+          showMobileMenu={showMobileMenu}
+          setShowMobileMenu={setShowMobileMenu}
+        />
       </div>
     </header>
   );

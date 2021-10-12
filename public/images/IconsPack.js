@@ -295,6 +295,21 @@ const arrowIcon = (
   </svg>
 );
 
+const downIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="14"
+    height="8"
+    fill="none"
+    viewBox="0 0 14 8"
+  >
+    <path
+      fill="#BEA782"
+      d="M1.645 0L7 4.949 12.355 0 14 1.531 7 8 0 1.531 1.645 0z"
+    ></path>
+  </svg>
+);
+
 const IconsPack = {
   alsfairLogo,
   stayIcon,
@@ -308,6 +323,7 @@ const IconsPack = {
   brandStoryIcon,
   alsafirRings,
   arrowIcon,
+  downIcon,
 };
 
 export default IconsPack;
