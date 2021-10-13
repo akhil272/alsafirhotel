@@ -24,7 +24,7 @@ const BookNow = () => {
         <Modal showModal={showModal} setShowModal={setShowModal} />
       </div>
       <div className="hidden xl:block">
-        <div className="fixed right-0 max-w-lg h-3/6  duration-1000 transition-all bottom-1/4 scale-100 ">
+        <div className="fixed right-0 max-w-lg h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
           <div className="absolute duration-1000 transition-all  h-full w-full opacity-75 rounded-l-lg bg-black"></div>
           <div className="relative top-6 flex flex-col space-y-6 p-4 ">
             <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>

@@ -20,7 +20,7 @@ function Homepage() {
   const image2 = "/images/homepage/homeCover2.jpg";
   return (
     <div>
-      <div className="h-screen w-full">
+      <div className="h-screen w-full z-10">
         <ImageSlider images={[image1, image2]}>
           <div
             className=" flex flex-wrap content-end py-40

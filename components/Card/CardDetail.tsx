@@ -16,7 +16,7 @@ const CardDetail = (props: CardData) => {
   return (
     <div
       onClick={handleClick}
-      className=" lg:h-[365px] h-[200px] flex-shrink-0 bg-center bg-cover flex  p-6 items-center hover:ml-10 opacity-90 hover:opacity-100 hover:shadow-2xl transition-all duration-1000 ease-in-out delay-200"
+      className=" lg:h-[365px] h-[200px] flex-shrink-0 bg-center bg-cover flex group  p-6 items-center hover:ml-10 opacity-90 hover:opacity-100 hover:shadow-2xl transition-all duration-1000 ease-in-out delay-200"
       style={{ backgroundImage: `url(${props.image})` }}
     >
       <div
@@ -32,11 +32,17 @@ const CardDetail = (props: CardData) => {
             className=" ml-3 flex justify-center items-center"
           >
             {props.icon}
-            <div id="alsafir-rings" className="absolute h-50 w-50 ">
+            <div
+              id="alsafir-rings"
+              className="absolute h-50 w-50 transform transition-all duration-1000 group-hover:rotate-90 "
+            >
               {IconsPack.alsafirRings}
             </div>
           </div>
-          <div id="alsafir-arrow" className="ml-6 duration-1000  ">
+          <div
+            id="alsafir-arrow"
+            className="ml-6 transform transition-all duration-1000 group-hover:scale-110 group-hover:ml-8 "
+          >
             {IconsPack.arrowIcon}
           </div>
         </div>
