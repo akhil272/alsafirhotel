@@ -4,8 +4,12 @@ import RoomsCount from "./RoomsCount";
 import PeopleCounter from "./PeopleCounter";
 import RoomSelector from "./RoomSelector";
 const image1 = "/images/homepage/homeCoverImage01.jpg";
+type ModalData = {
+  showModal: Boolean;
+  setShowModal: any;
+};
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal }: ModalData) => {
   return (
     <div>
       {showModal ? (

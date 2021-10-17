@@ -1,46 +1,63 @@
 import IconsPack from "../../public/images/IconsPack";
 import MobileMenuItem from "./MobileMenuItem";
 
-const MobileMenu = ({ showMobileMenu, setShowMobileMenu }) => {
+const MobileMenu = () => {
   return (
-    <div>
-      {showMobileMenu ? (
-        <div className="fixed top-0 left-0 h-screen w-screen flex items-end bg-black">
-          <div className="h-screen w-screen flex flex-col  p-4">
-            <div className="flex p-2 ">
-              <div
-                onClick={() => setShowMobileMenu((prev: any) => !prev)}
-                className="flex justify-center items-center ml-auto"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.46 7L14 12.54V14H12.54L7 8.46L1.46 14H0V12.54L5.54 7L0 1.46V0H1.46L7 5.54L12.54 0H14V1.46L8.46 7Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </div>
-            <MobileMenuItem
-              id="offers"
-              iconName="offers"
-              menuTitle="Offers"
-              menuDescription="Get exclusive"
-            />
-            <MobileMenuItem
-              id="stay"
-              iconName="stay"
-              menuTitle="Stay"
-              menuDescription="Get exclusive"
-            />
-          </div>
-        </div>
-      ) : null}
+    <div className="lg:grid lg:grid-cols-2 lg:absolute lg:bottom-40 lg:p-10">
+      <MobileMenuItem
+        id="offers"
+        iconName={IconsPack.offerIcon}
+        menuTitle="Offers"
+        menuDescription="Get exclusive offers"
+      />
+      <MobileMenuItem
+        id="stay"
+        iconName={IconsPack.stayIcon}
+        menuTitle="Stay"
+        menuDescription="Ease and relax"
+      />
+      <MobileMenuItem
+        id="dine"
+        iconName={IconsPack.dineIcon}
+        menuTitle="Dine"
+        menuDescription="Dive into diversity"
+      />
+      <MobileMenuItem
+        id="entertainment"
+        iconName={IconsPack.entertainmentIcon}
+        menuTitle="entertainment"
+        menuDescription="Music never stops"
+      />
+      <MobileMenuItem
+        id="meet"
+        iconName={IconsPack.meetnEventIcon}
+        menuTitle="Meet & Event"
+        menuDescription="Conference"
+      />
+      <MobileMenuItem
+        id="health"
+        iconName={IconsPack.healthnWellnessIcon}
+        menuTitle="Health & wellness"
+        menuDescription="Revive"
+      />
+      <MobileMenuItem
+        id="photoGallery"
+        iconName={IconsPack.photoGallery}
+        menuTitle="Photo Gallery"
+        menuDescription="Experience"
+      />
+      <MobileMenuItem
+        id="blog"
+        iconName={IconsPack.blogIcon}
+        menuTitle="Blog"
+        menuDescription="Reading never stops"
+      />
+      <MobileMenuItem
+        id="brandstory"
+        iconName={IconsPack.brandStoryIcon}
+        menuTitle="Brand Story"
+        menuDescription="Its story time"
+      />
     </div>
   );
 };

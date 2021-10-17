@@ -43,6 +43,16 @@ function Homepage() {
       </div>
 
       <Card />
+      <div>
+        <img src="/images/AlsafirLogo.svg" />
+        <p>
+          At the AL SAFIR HOTEL AND TOWER we strive to make your stay even more
+          attractive; we have now introduced a wide range of exclusive add-on
+          packages only available to those who book directly with us. Why not
+          grab this great opportunity today and receive the best possible value
+          for your money.
+        </p>
+      </div>
     </div>
   );
 }

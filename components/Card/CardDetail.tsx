@@ -47,7 +47,7 @@ const CardDetail = (props: CardData) => {
           </div>
         </div>
         <div id="card title" className="mt-2 ">
-          <h3 className="text-primary font-mark font-book tracking-widest text-2xl lg:text-3xl">
+          <h3 className="text-primary uppercase font-mark font-book tracking-widest text-2xl lg:text-3xl">
             {props.title}
           </h3>
         </div>

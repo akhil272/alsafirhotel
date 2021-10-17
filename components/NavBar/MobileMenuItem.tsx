@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 type MenuData = {
   menuTitle: string;
   menuDescription: string;
-  iconName: string;
+  iconName: {};
   id: string;
 };
 const MobileMenuItem = (props: MenuData) => {
@@ -12,18 +12,25 @@ const MobileMenuItem = (props: MenuData) => {
   const handleClick = () => {
     router.push("/" + props.id);
   };
-  const icon = IconsPack.offerIcon;
+
   return (
-    <div onClick={handleClick} className="flex p-3 ml-4  ">
+    <div
+      onClick={handleClick}
+      className="flex p-3 ml-4 group transform transition-all duration-500 hover:scale-95 "
+    >
       <div className="flex  justify-center items-center  ">
-        <div className=" flex absolute items-center justify-center ">
-          {IconsPack.alsafirRings}{" "}
+        <div className=" flex absolute items-center justify-center transition-all duration-500 group-hover:rotate-90 ">
+          {IconsPack.alsafirRings}
         </div>
-        {icon}
+        <div className="flex w-10 h-10 items-center justify-center">
+          {props.iconName}
+        </div>
       </div>
-      <div className="flex flex-col  ml-8  ">
-        <h5 className="text-2xl">{props.menuTitle}</h5>
-        <p className="text-sm">{props.menuDescription}</p>
+      <div className="flex flex-col items-start pl-6  ">
+        <h5 className="text-2xl uppercase text-primary tracking-wider">
+          {props.menuTitle}
+        </h5>
+        <p className="text-sm text-white">{props.menuDescription}</p>
       </div>
     </div>
   );

@@ -15,19 +15,37 @@ const Card = () => {
         id="stay"
         icon={IconsPack.stayIcon}
         title="STAY"
-        image="/images/homepage/DineInCover.jpg"
+        image="/images/homepage/StayCover.jpg"
       />
       <CardDetail
         id="dine"
         icon={IconsPack.dineIcon}
         title="DINE IN"
-        image="/images/homepage/StayCover.jpg"
+        image="/images/homepage/DineInCover.jpg"
       />
       <CardDetail
         id="entertainment"
         icon={IconsPack.entertainmentIcon}
-        title="HEALTH & WELLNESS"
+        title="Entertainment"
         image="/images/homepage/NightClubCover.jpg"
+      />
+      <CardDetail
+        id="meet"
+        icon={IconsPack.meetnEventIcon}
+        title="Meet & Event"
+        image="/images/homepage/meetcover.jpg"
+      />
+      <CardDetail
+        id="health"
+        icon={IconsPack.healthnWellnessIcon}
+        title="Health & Wellness"
+        image="/images/homepage/healthcover.jpg"
+      />
+      <CardDetail
+        id="photogallery"
+        icon={IconsPack.photoGallery}
+        title="Photo Gallery"
+        image="/images/homepage/homeCover2.jpg"
       />
     </div>
   );
