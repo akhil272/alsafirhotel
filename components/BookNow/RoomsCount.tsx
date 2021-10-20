@@ -1,5 +1,4 @@
 import { useState } from "react";
-import PeopleCounter from "./PeopleCounter";
 
 const roomCounts = [
   { id: 1, title: "1" },

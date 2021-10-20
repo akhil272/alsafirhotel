@@ -1,8 +1,7 @@
-import Calendar from "./Calendar";
+// import Calendar from "./Calendar";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import ImageSlider from "../ImageSlider";
-import Calender from "./Calendar";
 import RoomsCount from "./RoomsCount";
 import PeopleCounter from "./PeopleCounter";
 import RoomSelector from "./RoomSelector";
