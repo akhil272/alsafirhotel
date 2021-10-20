@@ -1,5 +1,5 @@
 import DatePicker from "react-datepicker";
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 
 const DateData = () => {
@@ -8,7 +8,7 @@ const DateData = () => {
     <DatePicker
       className="bg-transparent  text-lg font-mark font-light"
       selected={startDate}
-      onChange={(date: SetStateAction<Date>) => setStartDate(date)}
+      onChange={(date) => setStartDate(date)}
       withPortal
     />
   );
