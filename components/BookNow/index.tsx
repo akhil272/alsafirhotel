@@ -1,4 +1,3 @@
-// import Calendar from "./Calendar";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import ImageSlider from "../ImageSlider";
@@ -91,7 +90,6 @@ const BookNow = () => {
                           </div>
                         </div>
                         <RoomSelector />
-                        <Calender />
                         <RoomsCount />
                         <div className="flex gap-2 justify-center gap ">
                           <PeopleCounter categories="Adults" />
@@ -115,7 +113,6 @@ const BookNow = () => {
           <div className="relative top-6 flex flex-col space-y-6 p-4 ">
             <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
             <RoomSelector />
-            <Calendar />
             <RoomsCount />
             <div className="flex gap-2 justify-center gap ">
               <PeopleCounter categories="Adults" />
