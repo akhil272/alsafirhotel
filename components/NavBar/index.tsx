@@ -10,6 +10,7 @@ const NavBar = () => {
   const handleClick = () => {
     setOpen(!open);
   };
+  const genericHamburgerLine = `h-1 w-10 my-1 bg-primary transition ease transform duration-300`;
   return (
     <>
       <header className=" hover:bg-black w-screen fixed p-4 z-10 flex h-20">
@@ -20,36 +21,27 @@ const NavBar = () => {
           <button>EN</button>
           <div className="flex items-center ml-2 uppercase space-x-2">
             <label>Menu</label>
-            <div>
-              {!open ? (
-                <svg
-                  onClick={handleClick}
-                  width="18"
-                  height="12"
-                  viewBox="0 0 18 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 0H17.4545V2H0V0ZM0 5H17.4545V7H0V5ZM0 10H17.4545V12H0V10Z"
-                    fill="#BEA782"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  onClick={handleClick}
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.46 7L14 12.54V14H12.54L7 8.46L1.46 14H0V12.54L5.54 7L0 1.46V0H1.46L7 5.54L12.54 0H14V1.46L8.46 7Z"
-                    fill="white"
-                  />
-                </svg>
-              )}
+            <div className="scale-50">
+              <button
+                className="flex flex-col h-12 w-12 rounded justify-center items-center "
+                onClick={() => setOpen(!open)}
+              >
+                <div
+                  className={`${genericHamburgerLine} ${
+                    open ? "rotate-45 translate-y-3 opacity-100" : "opacity-100"
+                  }`}
+                />
+                <div
+                  className={`${genericHamburgerLine} ${
+                    open ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <div
+                  className={`${genericHamburgerLine} ${
+                    open ? "-rotate-45 -translate-y-3 " : "opacity-100"
+                  }`}
+                />
+              </button>
             </div>
           </div>
         </div>

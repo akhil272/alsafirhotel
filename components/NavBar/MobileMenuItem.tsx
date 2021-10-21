@@ -27,10 +27,10 @@ const MobileMenuItem = (props: MenuData) => {
         </div>
       </div>
       <div className="flex flex-col items-start pl-6  ">
-        <h5 className="text-2xl uppercase text-primary tracking-wider">
+        <h5 className="text-2xl uppercase text-primary font-markbook tracking-wider">
           {props.menuTitle}
         </h5>
-        <p className="text-sm text-white">{props.menuDescription}</p>
+        <p className="text-sm text-white font-mark">{props.menuDescription}</p>
       </div>
     </div>
   );
