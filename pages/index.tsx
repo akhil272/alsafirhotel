@@ -39,10 +39,10 @@ function Homepage() {
             <h1 className="text-primary font-brandon  tracking-widest text-6xl lg:text-8xl ">
               ALSAFIR HOTEL
             </h1>
-            <div className=" py-2 min-w-full font-mark font-light lg:text-3xl">
+            <div className=" py-2 min-w-full font-mark  lg:text-3xl">
               <h5>Towers residence fitness</h5>
             </div>
-            <div className="text-primary font-mark font-light lg:text-3xl">
+            <div className="text-primary font-mark  lg:text-3xl">
               <p>Bahrain</p>
               <p>
                 {CurrentDate()} <span>33°C</span>
