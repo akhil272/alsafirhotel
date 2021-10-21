@@ -4,11 +4,6 @@
 
 @layer base {
   @font-face {
-    font-family: "Mark Pro";
-    font-style: book;
-    src: url("/fonts/MARKPROBOOK.otf") format("otf");
-  }
-  @font-face {
     font-family: "Brandon Grotesque";
     src: url("/fonts/BrandonGrotesque-Light.eot");
     src: url("/fonts/BrandonGrotesque-Light.eot?#iefix")
@@ -20,10 +15,26 @@
     font-style: normal;
     font-display: swap;
   }
-
   @font-face {
-    font-family: "Mark Pro";
-    font-style: light;
-    src: url("/fonts/MARKPROLIGHT.otf") format("otf");
+    font-family: "MarkPro-Book";
+    src: url("/fonts/MarkPro-Book.eot");
+    src: url("/fonts/MarkPro-Book.eot?#iefix") format("embedded-opentype"),
+      url("/fonts/MarkPro-Book.woff2") format("woff2"),
+      url("/fonts/MarkPro-Book.woff") format("woff"),
+      url("/fonts/MarkPro-Book.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "MarkPro";
+    src: url("/fonts/MarkPro-Light.eot");
+    src: url("/fonts/MarkPro-Light.eot?#iefix") format("embedded-opentype"),
+      url("/fonts/MarkPro-Light.woff2") format("woff2"),
+      url("/fonts/MarkPro-Light.woff") format("woff"),
+      url("/fonts/MarkPro-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
   }
 }
