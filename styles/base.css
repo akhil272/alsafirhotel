@@ -9,10 +9,18 @@
     src: url("/fonts/MARKPROBOOK.otf") format("otf");
   }
   @font-face {
-    font-family: "Brandon";
-    font-style: light;
-    src: url("/fonts/brandon-grotesque-light.otf") format("otf");
+    font-family: "Brandon Grotesque";
+    src: url("/fonts/BrandonGrotesque-Light.eot");
+    src: url("/fonts/BrandonGrotesque-Light.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/BrandonGrotesque-Light.woff2") format("woff2"),
+      url("/fonts/BrandonGrotesque-Light.woff") format("woff"),
+      url("/fonts/BrandonGrotesque-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
   }
+
   @font-face {
     font-family: "Mark Pro";
     font-style: light;
