@@ -9,9 +9,9 @@ module.exports = {
         primary: "#C3A47D",
       },
       fontFamily: {
-        mark: "'MarkPro',serif",
+        mark: "'MarkPro-Light',serif",
         brandon: "'Brandon Grotesque',serif",
-        markbook: "'MarkPro Book',serif",
+        markbook: "'MarkPro-Book',serif",
       },
     },
   },
