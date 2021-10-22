@@ -1,19 +1,21 @@
 import Link from "next/link";
 import IconsPack from "../../public/images/IconsPack";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import MobileMenu from "../NavBar/MobileMenu";
 import Contact from "../NavBar/Contact";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [headColor, setHeadColor] = useState("bg-transparent");
   const handleClick = () => {
     setOpen(!open);
   };
-  const genericHamburgerLine = `h-1 w-10 my-1 bg-primary transition ease transform duration-300`;
+
+  const genericHamburgerLine = `h-1 w-10 my-1 bg-primary transition ease transform duration-300 `;
   return (
     <>
-      <header className=" hover:bg-black w-screen fixed p-4 z-10 flex h-20">
+      <header className="w-screen bg-black fixed p-4 z-10 flex h-20">
         <Link href="/">
           <a>{IconsPack.alsfairLogo}</a>
         </Link>

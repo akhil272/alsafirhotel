@@ -4,6 +4,7 @@ import ImageSlider from "../ImageSlider";
 import RoomsCount from "./RoomsCount";
 import PeopleCounter from "./PeopleCounter";
 import RoomSelector from "./RoomSelector";
+import DatePicker from "./DatePicker";
 const image1 = "/images/homepage/homeCoverImage01.jpg";
 
 const BookNow = () => {
@@ -90,6 +91,7 @@ const BookNow = () => {
                           </div>
                         </div>
                         <RoomSelector />
+                        <DatePicker />
                         <RoomsCount />
                         <div className="flex gap-2 justify-center gap ">
                           <PeopleCounter categories="Adults" />
@@ -108,11 +110,14 @@ const BookNow = () => {
         </Transition.Root>
       </div>
       <div className="hidden xl:block">
-        <div className="fixed right-0 max-w-lg h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
-          <div className="absolute duration-1000 transition-all  h-full w-full opacity-75 rounded-l-lg bg-black"></div>
+        <div className="fixed right-0 w-96 h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
+          <div className="absolute duration-1000 transition-all h-full w-full opacity-75 rounded-l-lg bg-black"></div>
           <div className="relative top-6 flex flex-col space-y-6 p-4 ">
             <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
             <RoomSelector />
+            <div>
+              <DatePicker />
+            </div>
             <RoomsCount />
             <div className="flex gap-2 justify-center gap ">
               <PeopleCounter categories="Adults" />
