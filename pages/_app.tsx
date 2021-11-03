@@ -5,11 +5,17 @@ import "../styles/base.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <NavBar />
-      <Component {...pageProps} />
-      <BookNow />
-    </>
+    <div className="flex flex-col h-screen">
+      <header className=" bg-gray-700">
+        <NavBar />
+      </header>
+      <main className="flex-1">
+        <Component {...pageProps} />
+      </main>
+      <footer className="py-5 bg-black ">
+        <BookNow />
+      </footer>
+    </div>
   );
 }
 

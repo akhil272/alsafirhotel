@@ -51,14 +51,14 @@ const DatePicker = () => {
       <div className="flex flex-col ">
         <div className="text-xs">End Date</div>
         <h5 onClick={() => setOpenEndDateModal(!openEndDateModal)}>
-          {formattedEndDate()}{" "}
+          {formattedEndDate()}
           <span className="absolute right-4">{IconsPack.downIcon}</span>
         </h5>
 
         {!openEndDateModal && (
           <div className="absolute left-6 top-0 z-10">
             <Calendar
-              minDate={new Date()}
+              minDate={startDate}
               onChange={handleEndDate}
               color="#C3A47D"
             />
