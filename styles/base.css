@@ -38,3 +38,5 @@
     font-display: swap;
   }
 }
+
+@import url("./datepicker.css");

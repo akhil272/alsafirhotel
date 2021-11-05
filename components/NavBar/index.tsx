@@ -7,7 +7,6 @@ import Contact from "../NavBar/Contact";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
-  const [headColor, setHeadColor] = useState("bg-transparent");
   const handleClick = () => {
     setOpen(!open);
   };
@@ -15,7 +14,7 @@ const NavBar = () => {
   const genericHamburgerLine = `h-1 w-10 my-1 bg-primary transition ease transform duration-300 `;
   return (
     <>
-      <header className="w-screen bg-black  p-4 z-10 flex h-20">
+      <header className="w-full bg-black  p-4 z-10 flex h-20">
         <Link href="/">
           <a>{IconsPack.alsfairLogo}</a>
         </Link>

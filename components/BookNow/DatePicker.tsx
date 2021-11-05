@@ -30,18 +30,17 @@ const DatePicker = () => {
     setOpenEndDateModal(!openEndDateModal);
   };
   return (
-    <div className="flex items-start  text-lg font-mark font-light mt-4 border-b-2 border-b-primary  p-0.5 rounded-sm ">
+    <div className="flex relative items-start text-lg font-mark font-light mt-4 border-b-2 border-b-primary  p-0.5 rounded-sm ">
       <div className="flex flex-col w-1/2">
         <div className="text-xs ">Start Date</div>
         <h5 onClick={() => setOpenStartDateModal(!openStartDateModal)}>
           {formattedStartDate()}
         </h5>
         {!openStartDateModal && (
-          <div className="absolute top-0 z-10">
+          <div className="absolute bottom-14 z-10">
             <Calendar
               minDate={new Date()}
               onChange={handleStartDate}
-              color="#C3A47D"
               showMonthAndYearPickers={false}
               rangeColors={["#C3A47D"]}
             />
@@ -56,11 +55,11 @@ const DatePicker = () => {
         </h5>
 
         {!openEndDateModal && (
-          <div className="absolute left-6 top-0 z-10">
+          <div className="absolute left-1 bottom-14 z-10">
             <Calendar
               minDate={startDate}
               onChange={handleEndDate}
-              color="#C3A47D"
+              showMonthAndYearPickers={false}
             />
           </div>
         )}

@@ -1,14 +1,33 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { useRouter } from "next/router";
 import ImageSlider from "../ImageSlider";
 import RoomsCount from "./RoomsCount";
 import PeopleCounter from "./PeopleCounter";
 import RoomSelector from "./RoomSelector";
 import DatePicker from "./DatePicker";
+import ScrollBookNow from "./ScrollBookNow";
 const image1 = "/images/homepage/homeCoverImage01.jpg";
 
 const BookNow = () => {
   const [open, setOpen] = useState(false);
+  const [show, setShow] = useState(true);
+  const router = useRouter();
+
+  const controlBookNow = () => {
+    if (window.scrollY > 200) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlBookNow);
+    return () => {
+      window.removeEventListener("scroll", controlBookNow);
+    };
+  }, []);
 
   const openModal = () => {
     setOpen((prev) => !prev);
@@ -109,26 +128,34 @@ const BookNow = () => {
           </Dialog>
         </Transition.Root>
       </div>
-      <div className="hidden xl:block">
-        <div className="fixed right-0 w-96 h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
-          <div className="absolute duration-1000 transition-all h-full w-full opacity-75 rounded-l-lg bg-black"></div>
-          <div className="relative top-6 flex flex-col space-y-6 p-4 ">
-            <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
-            <RoomSelector />
-            <div>
-              <DatePicker />
-            </div>
-            <RoomsCount />
-            <div className="flex gap-2 justify-center gap ">
-              <PeopleCounter categories="Adults" />
-              <PeopleCounter categories="Children" />
-            </div>
-            <div className=" rounded-l-md  duration-1000 transition-all hover:bg-black  hover:text-primary  text-white bg-primary min-w-full text-center text-2xl p-2">
-              <button>BOOK NOW</button>
+
+      {/* desktop */}
+      {show && router.pathname === "/" && (
+        <div className="hidden xl:block">
+          <div className="fixed right-0 w-96 h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
+            <div className="relative bg-black top-6 flex flex-col rounded-l-lg space-y-6 p-4 bg-opacity-75 ">
+              <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
+              <RoomSelector />
+              <div>
+                <DatePicker />
+              </div>
+              <RoomsCount />
+              <div className="flex gap-2 justify-center gap ">
+                <PeopleCounter categories="Adults" />
+                <PeopleCounter categories="Children" />
+              </div>
+              <div className=" rounded-l-md   text-white bg-primary min-w-full text-center text-2xl p-2">
+                <button>BOOK NOW</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
+      {!show && (
+        <div className="lg:flex fixed bottom-0 min-w-full  bg-primary hidden ">
+          <ScrollBookNow />
+        </div>
+      )}
     </>
   );
 };

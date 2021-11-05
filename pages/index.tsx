@@ -25,22 +25,21 @@ function Homepage() {
         <title>Alsafir Hotel</title>
         <meta
           property="og:title"
-          content="At the AL SAFIR HOTEL AND TOWER we strive to make your stay even more
-          attractive"
+          content="Al Safir Hotel | Experience luxury above all"
           key="title"
         />
       </Head>
       <div className="h-screen w-full z-10">
         <ImageSlider images={[image1, image2]}>
           <div
-            className=" flex flex-wrap content-end py-40
+            className=" flex flex-wrap content-end py-52
      min-h-screen px-4"
           >
-            <h1 className="text-primary font-brandon  tracking-widest text-6xl lg:text-8xl ">
-              ALSAFIR HOTEL
+            <h1 className="text-primary font-brandon sm:w-1/2 tracking-widest text-6xl lg:text-8xl ">
+              AL SAFIR HOTEL
             </h1>
             <div className=" py-2 min-w-full font-mark  lg:text-3xl">
-              <h5>Towers residence fitness</h5>
+              <h5>Towers Residence Fitness</h5>
             </div>
             <div className="text-primary font-mark  lg:text-3xl">
               <p>Bahrain</p>
