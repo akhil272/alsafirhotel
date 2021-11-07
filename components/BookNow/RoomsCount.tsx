@@ -29,9 +29,6 @@ const RoomsCount = () => {
   const handleAddMoreRooms = () => {
     setIsOpen(!isOpen);
     setSelected(4);
-    //change class
-    // open update rooms
-    // plus room text need to reflect
   };
 
   return (

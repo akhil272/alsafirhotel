@@ -5,7 +5,7 @@ const ListBoxCounter = ({ title, counter }) => {
   const [selected, setSelected] = useState(counter[0]);
 
   return (
-    <div>
+    <div className="transition duration-1000 hover:bg-gray-900">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1 ">
           <Listbox.Button className="relative w-full py-2 pl-3 pr-10  ">

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Calendar } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import CallNowButton from "./CallNowButton";
 
 const counter = [
   { content: "1" },
@@ -64,13 +65,17 @@ const DatePicker = () => {
     setEndDate(date);
     setOpenEndDateModal(!openEndDateModal);
   };
+
   return (
-    <div className="flex w-full h-full justify-center items-center relative ">
-      <h5 onClick={() => setOpenStartDateModal(!openStartDateModal)}>
+    <div className="flex h-full justify-center items-center relative ">
+      <label
+        className="transition duration-1000 hover:bg-gray-900 w-full h-full text-center flex items-center "
+        onClick={() => setOpenStartDateModal(!openStartDateModal)}
+      >
         {formattedStartDate()}--
-      </h5>
+      </label>
       {!openStartDateModal && (
-        <div className="absolute bottom-12">
+        <div className="absolute bottom-12 ">
           <Calendar
             minDate={new Date()}
             onChange={handleStartDate}
@@ -78,9 +83,12 @@ const DatePicker = () => {
           />
         </div>
       )}
-      <h5 onClick={() => setOpenEndDateModal(!openEndDateModal)}>
+      <label
+        className="transition duration-1000 hover:bg-gray-900 w-full h-full text-center flex items-center "
+        onClick={() => setOpenEndDateModal(!openEndDateModal)}
+      >
         --{formattedEndDate()}
-      </h5>
+      </label>
 
       {!openEndDateModal && (
         <div className="absolute bottom-10">
@@ -97,19 +105,15 @@ const DatePicker = () => {
 
 const ScrollBookNow = () => {
   return (
-    <div className="flex w-full space-x-16 items-center pl-4 ">
-      <label className="text-xl w-1/2">Book Your Room</label>
+    <div className="flex w-screen justify-between items-center pl-20">
       {DatePicker()}
       <ListBoxCounter title="Rooms" counter={roomTypes} />
-      <ListBoxCounter title="Dance" counter={counter} />
       <ListBoxCounter title="Rooms" counter={counter} />
       <ListBoxCounter title="Adults" counter={counter} />
       <ListBoxCounter title="Children" counter={counter} />
-      <div className="transition duration-1000 hover:bg-black hover:text-primary text-white bg-black h-full w-full flex justify-center items-center">
-        <button className=" text-center text-xl">BOOK NOW</button>
-        <div className="absolute bg-black  flex justify-center items-center overflow-hidden h-14 w-14 rounded-full bottom-4 right-0 ">
-          <img src="/images/icons/call-icon-01.svg" />
-        </div>
+      <div className="transition duration-1000 hover:bg-black hover:text-primary text-white bg-black h-full  pl-20 pr-20 flex justify-center items-center">
+        <button className=" text-xl">BOOK NOW</button>
+        <CallNowButton />
       </div>
     </div>
   );
