@@ -118,7 +118,13 @@ const BookNow = () => {
                         </div>
                       </div>
                       <div className="duration-1000 transition-all hover:bg-black hover:p-4  hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
-                        <button>BOOK NOW</button>
+                        <button
+                          onClick={() =>
+                            alert("Thank you for choosing Al Safir Hotel")
+                          }
+                        >
+                          BOOK NOW
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -144,8 +150,12 @@ const BookNow = () => {
                 <PeopleCounter categories="Adults" />
                 <PeopleCounter categories="Children" />
               </div>
-              <div className=" rounded-l-md   text-white bg-primary min-w-full text-center text-2xl p-2">
-                <button>BOOK NOW</button>
+              <div className=" rounded-l-md text-white bg-primary min-w-full text-center text-2xl p-2">
+                <button
+                  onClick={() => alert("Thank you for choosing Al Safir Hotel")}
+                >
+                  BOOK NOW
+                </button>
               </div>
             </div>
           </div>

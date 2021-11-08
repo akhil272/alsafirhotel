@@ -112,7 +112,12 @@ const ScrollBookNow = () => {
       <ListBoxCounter title="Adults" counter={counter} />
       <ListBoxCounter title="Children" counter={counter} />
       <div className="transition duration-1000 hover:bg-black hover:text-primary text-white bg-black h-full  pl-20 pr-20 flex justify-center items-center">
-        <button className=" text-xl">BOOK NOW</button>
+        <button
+          onClick={() => alert("Thank you for choosing Al Safir Hotel")}
+          className=" text-xl"
+        >
+          BOOK NOW
+        </button>
         <CallNowButton />
       </div>
     </div>

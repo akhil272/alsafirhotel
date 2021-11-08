@@ -56,12 +56,11 @@
   box-sizing: inherit;
   cursor: pointer;
   outline: none;
+  background: transparent;
 }
 
-.rdrPprevButton {
-}
-
-.rdrNextButton {
+.rdrNextPrevButton:hover {
+  background: transparent;
 }
 
 .rdrMonths {

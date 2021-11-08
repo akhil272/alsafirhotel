@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#C3A47D",
+        secondary: "#C3B193",
       },
       fontFamily: {
         mark: "'MarkPro-Light',serif",

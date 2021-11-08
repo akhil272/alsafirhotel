@@ -1,8 +1,9 @@
 import Card from "../components/Card";
 import ImageSlider from "../components/ImageSlider";
 import Head from "next/head";
+import WeatherPack from "../components/Weather";
 
-function Homepage() {
+function Homepage({ weather }: { weather: any }) {
   const CurrentDate = () => {
     const d = new Date();
     const weekday = new Array(7);
@@ -29,22 +30,34 @@ function Homepage() {
           key="title"
         />
       </Head>
-      <div className="h-screen w-full z-10">
+      <div className="h-screen w-full ">
         <ImageSlider images={[image1, image2]}>
           <div
-            className=" flex flex-wrap content-end py-52
+            className=" flex flex-wrap content-end py-40
      min-h-screen px-4"
           >
             <h1 className="text-primary font-brandon sm:w-1/2 tracking-widest text-6xl lg:text-8xl ">
               AL SAFIR HOTEL
             </h1>
-            <div className=" py-2 min-w-full font-mark  lg:text-3xl">
+            <div className="min-w-full font-mark  lg:text-2xl">
               <h5>Towers Residence Fitness</h5>
             </div>
-            <div className="text-primary font-mark  lg:text-3xl">
-              <p>Bahrain</p>
+            <div className="text-secondary font-mark lg:text-lg">
               <p>
-                {CurrentDate()} <span>33°C</span>
+                Manama, Bahrain :
+                <span>
+                  {Math.floor(weather.main.temp)}°C
+                  <img
+                    className="inline-block"
+                    src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
+                  />
+                </span>
+              </p>
+              <p className="flex">
+                <WeatherPack />
+              </p>
+              <p className="font-mark capitalize text-lg pt-4">
+                {weather.weather[0].description}
               </p>
             </div>
           </div>
@@ -83,3 +96,15 @@ function Homepage() {
 }
 
 export default Homepage;
+
+export const getStaticProps = async function () {
+  const res = await fetch(
+    `http://api.openweathermap.org/data/2.5/weather?q=Bahrain&units=metric&appid=${process.env.API_KEY}`
+  );
+  const data = await res.json();
+  return {
+    props: {
+      weather: data,
+    },
+  };
+};
