@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 
-const ListBoxCounter = ({ title, counter }) => {
+const ListBoxCounter = ({ title, counter }: { title: any; counter: any }) => {
   const [selected, setSelected] = useState(counter[0]);
 
   return (
@@ -21,7 +21,7 @@ const ListBoxCounter = ({ title, counter }) => {
             leaveTo="opacity-0"
           >
             <Listbox.Options className="absolute w-full bottom-12 py-1 bg-black bg-opacity-70 text-center ">
-              {counter.map((count: string, countIdx: number) => (
+              {counter.map((count: any, countIdx: number) => (
                 <Listbox.Option
                   key={countIdx}
                   className={({ active }) =>
