@@ -33,7 +33,7 @@ function Homepage({ weather }: { weather: any }) {
       <div className="h-screen w-full ">
         <ImageSlider images={[image1, image2]}>
           <div
-            className=" flex flex-wrap content-end py-40
+            className=" flex flex-wrap content-end py-60
      min-h-screen px-4"
           >
             <h1 className="text-primary font-brandon sm:w-1/2 tracking-widest text-6xl lg:text-8xl ">
@@ -45,19 +45,7 @@ function Homepage({ weather }: { weather: any }) {
             <div className="text-secondary font-mark lg:text-lg">
               <p>
                 Manama, Bahrain :
-                <span>
-                  {Math.floor(weather.main.temp)}°C
-                  <img
-                    className="inline-block"
-                    src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
-                  />
-                </span>
-              </p>
-              <p className="flex">
-                <WeatherPack />
-              </p>
-              <p className="font-mark capitalize text-lg pt-4">
-                {weather.weather[0].description}
+                <span className="pl-2">{Math.floor(weather.main.temp)} °C</span>
               </p>
             </div>
           </div>

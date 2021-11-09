@@ -6,7 +6,7 @@ import "../styles/base.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="flex flex-col h-screen">
-      <header className=" bg-gray-700">
+      <header className=" sticky bg-transparent">
         <NavBar />
       </header>
       <main className="flex-1">
