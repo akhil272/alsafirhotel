@@ -146,10 +146,16 @@ const BookNow = () => {
                           selectedRoom={selectedRoom}
                           setSelectedRoom={setSelectedRoom}
                         />
-                        {/* <DatePicker
+                        <DatePicker
                           startDate={startDate}
-                          setStartDate={startDate}
-                        /> */}
+                          endDate={endDate}
+                          openDateModal={openDateModal}
+                          setOpenDateModal={setOpenDateModal}
+                          handleStartDate={handleStartDate}
+                          openEndDateModal={openEndDateModal}
+                          setOpenEndDateModal={setOpenEndDateModal}
+                          handleEndDate={handleEndDate}
+                        />
                         <RoomsCount
                           count={countRooms}
                           setCount={setCountRooms}
@@ -191,13 +197,11 @@ const BookNow = () => {
               />
               <div>
                 <DatePicker
+                  startDate={startDate}
+                  endDate={endDate}
                   openDateModal={openDateModal}
                   setOpenDateModal={setOpenDateModal}
                   handleStartDate={handleStartDate}
-                  startDate={startDate}
-                  setStartDate={startDate}
-                  endDate={endDate}
-                  setEndDate={setEndDate}
                   openEndDateModal={openEndDateModal}
                   setOpenEndDateModal={setOpenEndDateModal}
                   handleEndDate={handleEndDate}

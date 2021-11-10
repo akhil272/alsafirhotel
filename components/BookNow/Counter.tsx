@@ -28,7 +28,13 @@ const minus = (
   </svg>
 );
 
-const Counter = ({ categories, count, setCount }) => {
+interface counterData {
+  categories: string;
+  count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const Counter = ({ categories, count, setCount }: counterData) => {
   const handleChange = (type: string) => {
     if (type === "dec") {
       count > 1 && setCount(count - 1);

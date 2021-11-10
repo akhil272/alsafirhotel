@@ -1,6 +1,10 @@
-import { useState } from "react";
+import React from "react";
 
-const RoomSelector = ({ selectedRoom, setSelectedRoom }) => {
+interface roomSelectorData {
+  selectedRoom: number;
+  setSelectedRoom: React.Dispatch<React.SetStateAction<number>>;
+}
+const RoomSelector = ({ selectedRoom, setSelectedRoom }: roomSelectorData) => {
   const defaultClass =
     "bg-primary uppercase w-full p-1 rounded-sm flex items-center justify-center";
   const userSelectedClass =

@@ -1,22 +1,29 @@
-import { useState } from "react";
-import { Calendar } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import IconsPack from "../../public/images/IconsPack";
 import CalenderTransition from "./CalenderTransition";
 
+interface datePickerData {
+  startDate: Date;
+  handleStartDate: (date: Date) => void;
+  endDate: Date;
+  handleEndDate: (date: Date) => void;
+  openEndDateModal: boolean;
+  openDateModal: boolean;
+  setOpenDateModal: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpenEndDateModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 const DatePicker = ({
   startDate,
-  setStartDate,
   handleStartDate,
   openDateModal,
   setOpenDateModal,
   handleEndDate,
   endDate,
-  setEndDate,
   openEndDateModal,
   setOpenEndDateModal,
-}) => {
+}: datePickerData) => {
   function formattedStartDate(d = startDate) {
     return [d.getDate(), d.getMonth() + 1, d.getFullYear()]
       .map((n) => (n < 10 ? `0${n}` : `${n}`))

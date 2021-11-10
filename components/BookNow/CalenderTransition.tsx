@@ -4,7 +4,7 @@ import { Calendar } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
-interface CalenderData {
+interface calenderData {
   openModal: boolean;
   minDate: Date;
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -16,7 +16,7 @@ const CalenderTransition = ({
   setOpenModal,
   handleChange,
   minDate,
-}: CalenderData) => {
+}: calenderData) => {
   return (
     <Transition appear show={openModal} as={Fragment}>
       <Dialog

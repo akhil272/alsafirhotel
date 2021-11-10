@@ -2,13 +2,18 @@ import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Counter from "./Counter";
 
+interface roomsCountData {
+  count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+}
+
 const roomCounts = [
   { id: 1, title: "1" },
   { id: 2, title: "2" },
   { id: 3, title: "3" },
 ];
 
-const RoomsCount = ({ count, setCount }) => {
+const RoomsCount = ({ count, setCount }: roomsCountData) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
