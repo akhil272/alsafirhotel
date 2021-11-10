@@ -1,6 +1,6 @@
 import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import PeopleCounter from "./PeopleCounter";
+import Counter from "./Counter";
 
 const roomCounts = [
   { id: 1, title: "1" },
@@ -8,9 +8,7 @@ const roomCounts = [
   { id: 3, title: "3" },
 ];
 
-const RoomsCount = () => {
-  const [selected, setSelected] = useState(2);
-
+const RoomsCount = ({ count, setCount }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -23,12 +21,14 @@ const RoomsCount = () => {
     "flex flex-col h-14 w-full bg-primary items-center justify-center  rounded-md";
 
   const handleSelection = (roomCount: { id: number; title?: string }) => {
-    setSelected(roomCount.id);
+    setCount(roomCount.id);
   };
 
   const handleAddMoreRooms = () => {
     setIsOpen(!isOpen);
-    setSelected(4);
+    if (count < 3) {
+      setCount(4);
+    }
   };
 
   return (
@@ -41,7 +41,7 @@ const RoomsCount = () => {
           }}
           key={roomCount.id}
           className={`${
-            roomCount.id === selected ? userSelectedClass : defaultClass
+            roomCount.id === count ? userSelectedClass : defaultClass
           }`}
         >
           <button
@@ -61,10 +61,10 @@ const RoomsCount = () => {
           borderColor: "#C3A47D",
         }}
         onClick={handleAddMoreRooms}
-        className={`${selected === 4 ? userSelectedClass : defaultClass}`}
+        className={`${count >= 4 ? userSelectedClass : defaultClass}`}
       >
         <button className="text-2xl" type="button">
-          +
+          {count > 3 ? count : "+"}
         </button>
         <label>Room</label>
       </div>
@@ -105,13 +105,17 @@ const RoomsCount = () => {
             >
               <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-black shadow-xl rounded-2xl">
                 <div className="mt-2">
-                  <PeopleCounter categories="Rooms" />
+                  <Counter
+                    categories="Rooms"
+                    count={count}
+                    setCount={setCount}
+                  />
                 </div>
 
                 <div className="mt-4">
                   <button
                     type="button"
-                    className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-primary border border-transparent rounded-md w-full"
+                    className="inline-flex uppercase justify-center px-4 py-2 text-sm font-mark text-white bg-primary border border-transparent rounded-md w-full"
                     onClick={closeModal}
                   >
                     Update Rooms Count

@@ -33,7 +33,7 @@ function Homepage({ weather }: { weather: any }) {
       <div className="h-screen w-full ">
         <ImageSlider images={[image1, image2]}>
           <div
-            className=" flex flex-wrap content-end py-60
+            className=" flex flex-wrap content-end py-64
      min-h-screen px-4"
           >
             <h1 className="text-primary font-brandon sm:w-1/2 tracking-widest text-6xl lg:text-8xl ">
@@ -53,7 +53,7 @@ function Homepage({ weather }: { weather: any }) {
       </div>
 
       <Card />
-      <div className="p-10 space-y-4">
+      <div className="p-10 space-y-4 text-secondary">
         <img src="/images/AlsafirLogo.svg" />
         <p>
           It is said that absolute luxury vests in minute particulars to give a

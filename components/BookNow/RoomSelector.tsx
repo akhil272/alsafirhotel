@@ -1,36 +1,36 @@
 import { useState } from "react";
 
-const RoomSelector = () => {
+const RoomSelector = ({ selectedRoom, setSelectedRoom }) => {
   const defaultClass =
     "bg-primary uppercase w-full p-1 rounded-sm flex items-center justify-center";
   const userSelectedClass =
     "bg-primary uppercase bg-opacity-40 font-mark w-full p-1 rounded-sm flex items-center justify-center";
-  const [deluxSingle, setDeluxSingle] = useState(true);
-  const [deluxTwin, setDeluxTwin] = useState(false);
-  const handleRoomSelection = (type: string) => {
-    if (type === "deluxSingle") {
-      setDeluxSingle(true);
-      setDeluxTwin(false);
-    } else {
-      setDeluxTwin(true);
-      setDeluxSingle(false);
-    }
+
+  const roomTypes = [
+    { id: 1, title: "Deluxe Single" },
+    { id: 2, title: "Deluxe Twin" },
+  ];
+  const handleSelection = (roomType: { id: number; title?: string }) => {
+    setSelectedRoom(roomType.id);
   };
 
   return (
     <div className="flex justify-center items-center text-md font-mark font-light mt-4 border-2 border-primary p-0.5 rounded-sm ">
-      <button
-        onClick={() => handleRoomSelection("deluxSingle")}
-        className={deluxSingle ? defaultClass : userSelectedClass}
-      >
-        Delux Single
-      </button>
-      <button
-        onClick={() => handleRoomSelection("deluxTwin")}
-        className={deluxTwin ? defaultClass : userSelectedClass}
-      >
-        Delux Twin
-      </button>
+      {roomTypes.map((roomType) => (
+        <div
+          key={roomType.id}
+          className={`${
+            roomType.id === selectedRoom ? defaultClass : userSelectedClass
+          }`}
+        >
+          <button
+            name={roomType.title}
+            onClick={() => handleSelection(roomType)}
+          >
+            {roomType.title}
+          </button>
+        </div>
+      ))}
     </div>
   );
 };

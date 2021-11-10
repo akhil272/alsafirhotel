@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import ImageSlider from "../ImageSlider";
 import RoomsCount from "./RoomsCount";
-import PeopleCounter from "./PeopleCounter";
+import PeopleCounter from "./Counter";
 import RoomSelector from "./RoomSelector";
 import DatePicker from "./DatePicker";
 import ScrollBookNow from "./ScrollBookNow";
@@ -32,6 +32,39 @@ const BookNow = () => {
 
   const openModal = () => {
     setOpen((prev) => !prev);
+  };
+
+  //RoomSelector
+  // Room types defined in room selector
+  const [selectedRoom, setSelectedRoom] = useState(1);
+
+  //Date
+  const [startDate, setStartDate] = useState<Date>(new Date());
+  const [openDateModal, setOpenDateModal] = useState<boolean>(false);
+  const [endDate, setEndDate] = useState<Date>(new Date());
+  const [openEndDateModal, setOpenEndDateModal] = useState<boolean>(false);
+
+  const handleStartDate = (date: Date) => {
+    setStartDate(date);
+    setOpenDateModal(!openDateModal);
+  };
+  const handleEndDate = (date: Date) => {
+    setEndDate(date);
+    setOpenEndDateModal(!openEndDateModal);
+  };
+
+  //Counter
+  const [countAdults, setCountAdults] = useState(2);
+  const [countChildren, setCountChildren] = useState(1);
+  const [countRooms, setCountRooms] = useState(1);
+
+  const handleBookNow = () => {
+    console.log("Adults" + countAdults);
+    console.log("Children" + countChildren);
+    console.log("RoomsCount" + countRooms);
+    console.log("RoomSelected" + selectedRoom);
+    console.log("StartDate" + startDate);
+    console.log("EndDate" + endDate);
   };
 
   return (
@@ -109,22 +142,33 @@ const BookNow = () => {
                             </svg>
                           </div>
                         </div>
-                        <RoomSelector />
-                        <DatePicker />
-                        <RoomsCount />
+                        <RoomSelector
+                          selectedRoom={selectedRoom}
+                          setSelectedRoom={setSelectedRoom}
+                        />
+                        {/* <DatePicker
+                          startDate={startDate}
+                          setStartDate={startDate}
+                        /> */}
+                        <RoomsCount
+                          count={countRooms}
+                          setCount={setCountRooms}
+                        />
                         <div className="flex gap-2 justify-center gap ">
-                          <PeopleCounter categories="Adults" />
-                          <PeopleCounter categories="Children" />
+                          <PeopleCounter
+                            categories="Adults"
+                            count={countAdults}
+                            setCount={setCountAdults}
+                          />
+                          <PeopleCounter
+                            categories="Children"
+                            count={countChildren}
+                            setCount={setCountChildren}
+                          />
                         </div>
                       </div>
                       <div className="duration-1000 transition-all hover:bg-black hover:p-4  hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
-                        <button
-                          onClick={() =>
-                            alert("Thank you for choosing Al Safir Hotel")
-                          }
-                        >
-                          BOOK NOW
-                        </button>
+                        <button onClick={handleBookNow}>BOOK NOW</button>
                       </div>
                     </div>
                   </div>
@@ -141,21 +185,39 @@ const BookNow = () => {
           <div className="fixed right-0 w-96 h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
             <div className="relative bg-black top-6 flex flex-col rounded-l-lg space-y-6 p-4 bg-opacity-75 ">
               <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
-              <RoomSelector />
+              <RoomSelector
+                selectedRoom={selectedRoom}
+                setSelectedRoom={setSelectedRoom}
+              />
               <div>
-                <DatePicker />
+                <DatePicker
+                  openDateModal={openDateModal}
+                  setOpenDateModal={setOpenDateModal}
+                  handleStartDate={handleStartDate}
+                  startDate={startDate}
+                  setStartDate={startDate}
+                  endDate={endDate}
+                  setEndDate={setEndDate}
+                  openEndDateModal={openEndDateModal}
+                  setOpenEndDateModal={setOpenEndDateModal}
+                  handleEndDate={handleEndDate}
+                />
               </div>
-              <RoomsCount />
+              <RoomsCount count={countRooms} setCount={setCountRooms} />
               <div className="flex gap-2 justify-center gap ">
-                <PeopleCounter categories="Adults" />
-                <PeopleCounter categories="Children" />
+                <PeopleCounter
+                  categories="Adults"
+                  count={countAdults}
+                  setCount={setCountAdults}
+                />
+                <PeopleCounter
+                  categories="Children"
+                  count={countChildren}
+                  setCount={setCountChildren}
+                />
               </div>
               <div className=" rounded-l-md text-white bg-primary min-w-full text-center text-2xl p-2">
-                <button
-                  onClick={() => alert("Thank you for choosing Al Safir Hotel")}
-                >
-                  BOOK NOW
-                </button>
+                <button onClick={handleBookNow}>BOOK NOW</button>
               </div>
             </div>
           </div>

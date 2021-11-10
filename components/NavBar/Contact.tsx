@@ -1,4 +1,3 @@
-import Link from "next/link";
 const Contact = () => {
   return (
     <div className="uppercase flex p-2 lg:pl-4 pl-6 w-full justify-start">

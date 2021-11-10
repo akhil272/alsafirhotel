@@ -1,5 +1,3 @@
-import { ReactChild, ReactFragment, ReactPortal, useState } from "react";
-
 const plus = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -30,21 +28,12 @@ const minus = (
   </svg>
 );
 
-const PeopleCounter = (props: {
-  categories:
-    | boolean
-    | ReactChild
-    | ReactFragment
-    | ReactPortal
-    | null
-    | undefined;
-}) => {
-  const [countPeople, setCountPeople] = useState(2);
+const Counter = ({ categories, count, setCount }) => {
   const handleChange = (type: string) => {
     if (type === "dec") {
-      countPeople > 1 && setCountPeople(countPeople - 1);
+      count > 1 && setCount(count - 1);
     } else {
-      countPeople < 10 && setCountPeople(countPeople + 1);
+      count < 10 && setCount(count + 1);
     }
   };
 
@@ -59,7 +48,7 @@ const PeopleCounter = (props: {
             {minus}
           </button>
           <div className="  flex items-center text-2xl justify-center">
-            {countPeople}
+            {count}
           </div>
           <button
             className=" text-primary flex items-center justify-center"
@@ -68,10 +57,10 @@ const PeopleCounter = (props: {
             {plus}
           </button>
         </div>
-        <div className="font-mark font-light">{props.categories}</div>
+        <div className="font-mark font-light">{categories}</div>
       </div>
     </div>
   );
 };
 
-export default PeopleCounter;
+export default Counter;
