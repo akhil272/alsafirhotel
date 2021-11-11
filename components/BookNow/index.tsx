@@ -34,24 +34,14 @@ const BookNow = () => {
     setOpen((prev) => !prev);
   };
 
+  // States Management
   //RoomSelector
   // Room types defined in room selector
   const [selectedRoom, setSelectedRoom] = useState(1);
 
   //Date
-  const [startDate, setStartDate] = useState<Date>(new Date());
-  const [openDateModal, setOpenDateModal] = useState<boolean>(false);
-  const [endDate, setEndDate] = useState<Date>(new Date());
-  const [openEndDateModal, setOpenEndDateModal] = useState<boolean>(false);
-
-  const handleStartDate = (date: Date) => {
-    setStartDate(date);
-    setOpenDateModal(!openDateModal);
-  };
-  const handleEndDate = (date: Date) => {
-    setEndDate(date);
-    setOpenEndDateModal(!openEndDateModal);
-  };
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
 
   //Counter
   const [countAdults, setCountAdults] = useState(2);
@@ -63,8 +53,8 @@ const BookNow = () => {
     console.log("Children" + countChildren);
     console.log("RoomsCount" + countRooms);
     console.log("RoomSelected" + selectedRoom);
-    console.log("StartDate" + startDate);
-    console.log("EndDate" + endDate);
+    console.log("RoomSelected" + startDate);
+    console.log("RoomSelected" + endDate);
   };
 
   return (
@@ -149,12 +139,8 @@ const BookNow = () => {
                         <DatePicker
                           startDate={startDate}
                           endDate={endDate}
-                          openDateModal={openDateModal}
-                          setOpenDateModal={setOpenDateModal}
-                          handleStartDate={handleStartDate}
-                          openEndDateModal={openEndDateModal}
-                          setOpenEndDateModal={setOpenEndDateModal}
-                          handleEndDate={handleEndDate}
+                          setStartDate={setStartDate}
+                          setEndDate={setEndDate}
                         />
                         <RoomsCount
                           count={countRooms}
@@ -199,12 +185,8 @@ const BookNow = () => {
                 <DatePicker
                   startDate={startDate}
                   endDate={endDate}
-                  openDateModal={openDateModal}
-                  setOpenDateModal={setOpenDateModal}
-                  handleStartDate={handleStartDate}
-                  openEndDateModal={openEndDateModal}
-                  setOpenEndDateModal={setOpenEndDateModal}
-                  handleEndDate={handleEndDate}
+                  setStartDate={setStartDate}
+                  setEndDate={setEndDate}
                 />
               </div>
               <RoomsCount count={countRooms} setCount={setCountRooms} />
@@ -227,6 +209,7 @@ const BookNow = () => {
           </div>
         </div>
       )}
+      {/* on desktop scroll visible  */}
       {!show && (
         <div className="lg:flex fixed bottom-0 min-w-full  bg-primary hidden ">
           <ScrollBookNow />

@@ -2,28 +2,23 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import IconsPack from "../../public/images/IconsPack";
 import CalenderTransition from "./CalenderTransition";
+import { useState } from "react";
 
 interface datePickerData {
   startDate: Date;
-  handleStartDate: (date: Date) => void;
   endDate: Date;
-  handleEndDate: (date: Date) => void;
-  openEndDateModal: boolean;
-  openDateModal: boolean;
-  setOpenDateModal: React.Dispatch<React.SetStateAction<boolean>>;
-  setOpenEndDateModal: React.Dispatch<React.SetStateAction<boolean>>;
+  setStartDate: React.Dispatch<React.SetStateAction<Date>>;
+  setEndDate: React.Dispatch<React.SetStateAction<Date>>;
 }
 
 const DatePicker = ({
   startDate,
-  handleStartDate,
-  openDateModal,
-  setOpenDateModal,
-  handleEndDate,
+  setStartDate,
   endDate,
-  openEndDateModal,
-  setOpenEndDateModal,
+  setEndDate,
 }: datePickerData) => {
+  const [openDateModal, setOpenDateModal] = useState<boolean>(false);
+  const [openEndDateModal, setOpenEndDateModal] = useState<boolean>(false);
   function formattedStartDate(d = startDate) {
     return [d.getDate(), d.getMonth() + 1, d.getFullYear()]
       .map((n) => (n < 10 ? `0${n}` : `${n}`))
@@ -34,6 +29,14 @@ const DatePicker = ({
       .map((n) => (n < 10 ? `0${n}` : `${n}`))
       .join("/");
   }
+  const handleStartDate = (date: Date) => {
+    setStartDate(date);
+    setOpenDateModal(!openDateModal);
+  };
+  const handleEndDate = (date: Date) => {
+    setEndDate(date);
+    setOpenEndDateModal(!openEndDateModal);
+  };
 
   return (
     <div className="flex relative items-start text-lg font-mark font-light mt-4 border-b-2 border-b-primary  p-0.5 rounded-sm ">
