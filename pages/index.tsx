@@ -1,25 +1,25 @@
 import Card from "../components/Card";
 import ImageSlider from "../components/ImageSlider";
 import Head from "next/head";
-import WeatherPack from "../components/Weather";
 
 function Homepage({ weather }: { weather: any }) {
-  const CurrentDate = () => {
-    const d = new Date();
-    const weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
+  // const CurrentDate = () => {
+  //   const d = new Date();
+  //   const weekday = new Array(7);
+  //   weekday[0] = "Sunday";
+  //   weekday[1] = "Monday";
+  //   weekday[2] = "Tuesday";
+  //   weekday[3] = "Wednesday";
+  //   weekday[4] = "Thursday";
+  //   weekday[5] = "Friday";
+  //   weekday[6] = "Saturday";
 
-    const date = weekday[d.getDay()];
-    return date;
-  };
+  //   const date = weekday[d.getDay()];
+  //   return date;
+  // };
   const image1 = "/images/homepage/homeCoverImage01.jpg";
   const image2 = "/images/homepage/homeCover2.jpg";
+  const image3 = "/images/homepage/Inside-Al-Safir-Hotel.jpg";
   return (
     <div>
       <Head>
@@ -30,11 +30,11 @@ function Homepage({ weather }: { weather: any }) {
           key="title"
         />
       </Head>
-      <div className="h-screen w-full ">
-        <ImageSlider images={[image1, image2]}>
+      <div className="h-screen w-full  ">
+        <ImageSlider images={[image1, image3, image2]}>
           <div
-            className=" flex flex-wrap content-end py-64
-     min-h-screen px-4"
+            className="bg-gradient-to-l from-transparent to-black flex flex-wrap content-end py-64
+     min-h-screen px-4 "
           >
             <h1 className="text-primary font-brandon sm:w-1/2 tracking-widest text-6xl lg:text-8xl ">
               AL SAFIR HOTEL

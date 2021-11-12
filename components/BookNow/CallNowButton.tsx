@@ -14,7 +14,7 @@ const CallNowButton = () => {
     <div>
       <div
         onClick={handleCallNow}
-        className="absolute bg-black flex justify-center bg-opacity-80 hover:bg-opacity-100 items-center h-14 w-14 rounded-full bottom-4 right-4"
+        className="absolute bg-black flex ring-2 ring-primary justify-center bg-opacity-80 hover:bg-opacity-100 items-center h-14 w-14 rounded-full bottom-4 right-4"
       >
         <img
           className="object-contain h-10 w-10  "

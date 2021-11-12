@@ -16,10 +16,10 @@ const MobileMenuItem = (props: MenuData) => {
   return (
     <div
       onClick={handleClick}
-      className="flex p-3 ml-4 group transform transition-all duration-500 hover:scale-95 "
+      className="flex p-3 ml-4 group transform transition-all duration-1000 hover:scale-95 "
     >
       <div className="flex  justify-center items-center  ">
-        <div className=" flex absolute items-center justify-center transition-all duration-500 group-hover:rotate-90 ">
+        <div className=" flex absolute items-center justify-center transition-all duration-1000 group-hover:rotate-90 ">
           {IconsPack.alsafirRings}
         </div>
         <div className="flex w-10 h-10 items-center justify-center">

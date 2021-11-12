@@ -1,11 +1,12 @@
 import Link from "next/link";
 import IconsPack from "../../public/images/IconsPack";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import MobileMenu from "../NavBar/MobileMenu";
 import Contact from "../NavBar/Contact";
 
 const NavBar = () => {
+  const completeButtonRef = useRef(null);
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
@@ -51,6 +52,7 @@ const NavBar = () => {
             as="div"
             className="fixed inset-0 overflow-hidden"
             onClose={handleClick}
+            initialFocus={completeButtonRef}
           >
             <div className="absolute inset-0 overflow-hidden">
               <Transition.Child
@@ -78,6 +80,7 @@ const NavBar = () => {
                     <div className="w-screen flex flex-col  bg-black shadow-xl overflow-y-scroll lg:overflow-hidden">
                       <div
                         onClick={handleClick}
+                        ref={completeButtonRef}
                         className="relative right-0 py-4 w-screen h-screen rounded-md shadow-lg "
                       >
                         <MobileMenu />

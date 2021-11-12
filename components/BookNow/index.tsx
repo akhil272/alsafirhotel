@@ -55,6 +55,9 @@ const BookNow = () => {
     console.log("RoomSelected" + selectedRoom);
     console.log("RoomSelected" + startDate);
     console.log("RoomSelected" + endDate);
+    alert(
+      `You'll be redirected to our booking confirmation page. Duration: ${startDate} - ${endDate} Count of Adults : ${countAdults} Count of Children : ${countChildren} Rooms Count : ${countRooms} `
+    );
   };
 
   return (
@@ -109,7 +112,7 @@ const BookNow = () => {
                       <div className="absolute h-full w-full">
                         <ImageSlider images={[image1]} autoplay={false} />
                       </div>
-                      <div className="h-3/5 w-full bg-black flex flex-col opacity-95 space-y-6 p-4">
+                      <div className="h-auto w-full bg-black flex flex-col opacity-95 space-y-6 px-4 pt-0 py-16">
                         <div className="flex p-2 mt-6">
                           <h3 className="uppercase font-mark text-2xl">
                             Book Your Room
@@ -159,7 +162,7 @@ const BookNow = () => {
                           />
                         </div>
                       </div>
-                      <div className="duration-1000 transition-all hover:bg-black hover:p-4  hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
+                      <div className="duration-1000 transition-all hover:bg-black hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
                         <button onClick={handleBookNow}>BOOK NOW</button>
                       </div>
                     </div>
@@ -202,7 +205,7 @@ const BookNow = () => {
                   setCount={setCountChildren}
                 />
               </div>
-              <div className=" rounded-l-md text-white bg-primary min-w-full text-center text-2xl p-2">
+              <div className="transition duration-1000 hover:bg-black hover:text-primary hover:ring-1 hover:ring-primary  rounded-md text-white bg-primary min-w-full text-center text-2xl p-2">
                 <button onClick={handleBookNow}>BOOK NOW</button>
               </div>
             </div>

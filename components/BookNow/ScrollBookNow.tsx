@@ -60,10 +60,12 @@ const DatePicker = () => {
   const handleStartDate = (date: Date) => {
     setStartDate(date);
     setOpenStartDateModal(!openStartDateModal);
+    setOpenEndDateModal(true);
   };
   const handleEndDate = (date: Date) => {
     setEndDate(date);
     setOpenEndDateModal(!openEndDateModal);
+    setOpenStartDateModal(true);
   };
 
   return (
@@ -91,7 +93,7 @@ const DatePicker = () => {
       </label>
 
       {!openEndDateModal && (
-        <div className="absolute bottom-10">
+        <div className="absolute bottom-12">
           <Calendar
             minDate={startDate}
             onChange={handleEndDate}

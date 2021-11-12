@@ -2,11 +2,11 @@ import ImageSlider from "../../components/ImageSlider";
 import IconsPack from "../../public/images/IconsPack";
 const Stay = () => {
   const image1 = "/images/homepage/homeCoverImage01.jpg";
-  const image2 = "/images/homepage/homeCover2.jpg";
+  const image2 = "/images/staypage/twin-room-inside.jpg";
 
   return (
     <div>
-      <ImageSlider images={[image1, image2]}>
+      <ImageSlider autoPlayTime={10000} images={[image1, image2]}>
         <div className="flex flex-col h-full">
           <div className=" absolute p-4 w-screen flex flex-col  ">
             <div className="flex p-6">
