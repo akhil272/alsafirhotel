@@ -3,7 +3,7 @@ import MobileMenuItem from "./MobileMenuItem";
 
 const MobileMenu = () => {
   return (
-    <div className="lg:grid lg:grid-cols-2 lg:absolute lg:bottom-40 lg:p-10">
+    <div className="lg:grid lg:grid-cols-2 lg:absolute lg:bottom-40 lg:p-10 pt-20">
       <MobileMenuItem
         id="offers"
         iconName={IconsPack.offerIcon}
