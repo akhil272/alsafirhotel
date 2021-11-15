@@ -1,46 +1,57 @@
+import { useState } from "react";
 import OfferCard from "../../components/Card/OfferCard";
+import OfferListings from "../../components/Card/OffersData";
 
 function Offers() {
+  const [offers, setOffers] = useState(OfferListings);
+  const [select, setSelected] = useState("all");
+  const filterOffers = (tag: string) => {
+    setSelected(tag);
+    if (tag === "all") {
+      return setOffers(OfferListings);
+    }
+    const updateOffers = OfferListings.filter((offer) => offer.tag === tag);
+    setOffers(updateOffers);
+  };
   return (
-    <div className="mt-20 mx-4 flex flex-col space-y-10">
+    <div className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4">
       <h1 className="text-3xl lg:text-6xl p-4 uppercase font-markbook tracking-wide text-center text-primary ">
         Exciting Offers at Al Safir Hotel
       </h1>
-
-      <p className="text-lg font-mark text-center p-2">
+      <p className="text-lg font-mark text-center">
         Enjoy your travel and treat yourself with one of our enticing packages
         below at Al Safir Hotel.
       </p>
-      <div className="space-y-10" id="offerscards">
-        <div className="flex">
-          <ul className="flex w-full uppercase font-markbook text-2xl justify-evenly">
-            <li>All</li>
-            <li>Stay</li>
-            <li>Dine</li>
-          </ul>
+      <div>
+        <div className="flex justify-center text-2xl gap-10 font-markbook">
+          <button
+            className={`uppercase ${select === "all" ? "text-primary" : ""}`}
+            onClick={() => filterOffers("all")}
+          >
+            All
+          </button>
+          <button
+            className={`uppercase ${select === "stay" ? "text-primary" : ""}`}
+            onClick={() => filterOffers("stay")}
+          >
+            Stay
+          </button>
+          <button
+            className={`uppercase ${select === "dine" ? "text-primary" : ""}`}
+            onClick={() => filterOffers("dine")}
+          >
+            Dine
+          </button>
         </div>
         <div className="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-40">
-          <div className="space-y-2">
-            <div className="h-72 w-full bg-red-300"></div>
-            <h3 className="font-markbook text-lg uppercase">
-              ADVANCE PURCHASE
-            </h3>
-            <p className="text-base font-mark">
-              Enjoy savings of up to 10% off our best available rates by booking
-              7 days in advance.
-            </p>
-          </div>
-          <div className="space-y-2">
-            <div className="h-72 w-full bg-red-300"></div>
-            <h3 className="font-markbook text-lg uppercase">ONE FREE NIGHT</h3>
-            <p className="text-base font-mark">
-              Book 3 nights and get one complimentary night.
-            </p>
-          </div>
-          <OfferCard
-            title="ONE FREE NIGHT"
-            content="Book 3 nights and get one complimentary night."
-          />
+          {offers.map((offer) => (
+            <OfferCard
+              key={offer.id}
+              title={offer.title}
+              description={offer.description}
+              src={offer.coverImage}
+            />
+          ))}
         </div>
       </div>
     </div>
