@@ -14,7 +14,7 @@ const Stay = () => {
   return (
     <div>
       <ImageSlider autoPlayTime={10000} images={[coverImage02, coverImage01]}>
-        <div className="flex flex-col h-full my-20 px-2 md:p-0">
+        <div className="flex flex-col h-full mt-24  px-2 md:p-0">
           <div className="md:p-14 p-0 flex flex-col">
             <div className="flex p-6">
               <div className=" flex justify-center scale-150 items-center ">
