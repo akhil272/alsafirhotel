@@ -27,27 +27,33 @@ const RoomType = ({
   return (
     <div>
       <ImageSlider autoPlayTime={10000} images={images}>
-        <div className="mt-20 md:px-14 px-4">
-          <h2 className="uppercase text-3xl font-mark tracking-widest text-primary  ">
-            {title}
-          </h2>
-          <div className="mt-4 font-mark text-primary">
-            <div className="flex items-center py-1 space-x-4">
-              <p className="h-12 w-12">{tapeIcon}</p>
-              <p>{roomSize}</p>
+        <div
+          aria-hidden="true"
+          className="bg-gradient-to-l from-transparent to-black flex flex-wrap 
+     min-h-screen  "
+        >
+          <div className="mt-20 md:px-14 px-4">
+            <h2 className="uppercase text-3xl font-mark tracking-widest text-primary  ">
+              {title}
+            </h2>
+            <div className="mt-4 font-mark text-primary">
+              <div className="flex items-center py-1 space-x-4">
+                <p className="h-12 w-12">{tapeIcon}</p>
+                <p>{roomSize}</p>
+              </div>
+              <div className="flex items-center py-1 space-x-4">
+                <p className="h-12 w-12">{paxIcon}</p>
+                <p>{guests}</p>
+              </div>
+              <div className="flex items-center py-1 space-x-4">
+                <p className="h-12 w-12">{bedIcon}</p>
+                <p>{bedSize}</p>
+              </div>
+              <div className="mt-4">{roomFigure}</div>
             </div>
-            <div className="flex items-center py-1 space-x-4">
-              <p className="h-12 w-12">{paxIcon}</p>
-              <p>{guests}</p>
+            <div className=" text-sm md:text-lg font-mark tracking-wide pt-2 md:w-1/3 w-full text-secondary ">
+              <p className=" tracking-wide font-mark ">{desc}</p>
             </div>
-            <div className="flex items-center py-1 space-x-4">
-              <p className="h-12 w-12">{bedIcon}</p>
-              <p>{bedSize}</p>
-            </div>
-            <div className="mt-4">{roomFigure}</div>
-          </div>
-          <div className=" text-sm md:text-lg font-mark tracking-wide pt-2 md:w-1/3 w-full text-secondary ">
-            <p className=" tracking-wide font-mark ">{desc}</p>
           </div>
         </div>
       </ImageSlider>

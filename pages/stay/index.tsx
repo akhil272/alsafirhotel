@@ -62,6 +62,7 @@ const Stay = () => {
               amenities. The room is also equipped with a work desk and has
               startling city view."
         />
+
         <RoomType
           title="Deluxe Twin Rooms"
           roomSize="29m2"
