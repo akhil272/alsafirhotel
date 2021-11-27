@@ -1,8 +1,11 @@
 import ImageSlider from "../../components/ImageSlider";
-
+import { motion } from "framer-motion";
 import IconsPack from "../../public/images/IconsPack";
 const coverImage01 = "/images/dineinpage/dinepagecover.jpg";
+import Link from "next/link";
+
 const DineIn = () => {
+  const id = "1";
   return (
     <div>
       <ImageSlider images={[coverImage01]}>
@@ -33,10 +36,6 @@ const DineIn = () => {
           </div>
         </div>
       </ImageSlider>
-      <div className="flex flex-col w-full h-full ">
-        <div className="h-96 w-96 bg-red-300">SAVOY </div>
-        <div className="h-96 w-96 bg-yellow-300">KOFFIE AND KUKKIE</div>
-      </div>
     </div>
   );
 };

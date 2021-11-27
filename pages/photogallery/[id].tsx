@@ -26,15 +26,15 @@ const ImageViewer = () => {
           </a>
         </Link>
       </div>
-      <div className="hs">
+      <div className="flex overflow-x-auto ">
         {ImageData.map((item) => {
           return (
-            <div className="h-full" key={item.id}>
+            <div className="flex-shrink-0 md:h-48 h-24 px-4 " key={item.id}>
               <Link href={`/photogallery/${encodeURIComponent(item.id)}`}>
-                <a>
+                <a className="flex  h-full w-full">
                   <motion.img
                     layoutId={String(item.id)}
-                    className=" mt-2 h-2/3 object-cover rounded-xl border-b-2"
+                    className=" mt-2 w-full object-cover rounded-xl border-b-2"
                     src={item.image}
                   />
                 </a>

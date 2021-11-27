@@ -1,21 +1,23 @@
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import { ImageData } from "../../components/PhotoGallery/ImageData";
-import ImageViewer from "./[id]";
 import Link from "next/link";
 
 const PhotoGallery = () => {
   return (
-    <motion.div className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4">
+    <div className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4">
       <div>
-        <motion.h1 className="text-3xl lg:text-6xl p-4 uppercase font-markbook tracking-wide text-center text-primary ">
+        <h1 className="text-3xl lg:text-6xl p-4 uppercase font-markbook tracking-wide text-center text-primary ">
           Gallery
-        </motion.h1>
+        </h1>
       </div>
       <div className="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-40">
         {ImageData.map((item) => {
           return (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ease: "easeOut", duration: 1 }}
+              exit={{ opacity: 0 }}
               className="flex w-auto h-auto justify-center items-center py-4 px-1 "
               key={item.id}
             >
@@ -28,11 +30,11 @@ const PhotoGallery = () => {
                   />
                 </a>
               </Link>
-            </div>
+            </motion.div>
           );
         })}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
