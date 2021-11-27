@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ImageSlider from "../../components/ImageSlider";
 import Amenities from "../../components/StayRoom/Amenities";
 import RoomType from "../../components/StayRoom/RoomType";
@@ -12,7 +13,12 @@ const Stay = () => {
   const image4 = "/images/staypage/single-room-alsafir-hotel.jpg";
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <ImageSlider autoPlayTime={10000} images={[coverImage02, coverImage01]}>
         <div className="flex flex-col h-full mt-24  px-2 md:p-0">
           <div className="md:p-14 p-0 flex flex-col">
@@ -77,7 +83,7 @@ const Stay = () => {
         />
       </div>
       <Amenities />
-    </div>
+    </motion.div>
   );
 };
 

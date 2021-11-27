@@ -1,7 +1,7 @@
 import { useState } from "react";
 import OfferCard from "../../components/Card/OfferCard";
 import OfferListings from "../../components/Card/OffersData";
-
+import { AnimatePresence, motion } from "framer-motion";
 function Offers() {
   const [offers, setOffers] = useState(OfferListings);
   const [select, setSelected] = useState("all");
@@ -14,7 +14,13 @@ function Offers() {
     setOffers(updateOffers);
   };
   return (
-    <div className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4">
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      exit={{ opacity: 0 }}
+      className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4"
+    >
       <h1 className="text-3xl lg:text-6xl p-4 uppercase font-markbook tracking-wide text-center text-primary ">
         Exciting Offers at Al Safir Hotel
       </h1>
@@ -43,7 +49,14 @@ function Offers() {
             Dine
           </button>
         </div>
-        <div className="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-40">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          exit={{ opacity: 1 }}
+          layoutId="image"
+          className="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-40"
+        >
           {offers.map((offer) => (
             <OfferCard
               key={offer.id}
@@ -52,9 +65,9 @@ function Offers() {
               src={offer.coverImage}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
