@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 interface OfferCardData {
   title: string;
@@ -8,7 +9,13 @@ interface OfferCardData {
 
 const OfferCard = ({ title, description, src }: OfferCardData) => {
   return (
-    <div className="space-y-2 scale-95 hover:scale-100 transition-all duration-1000 border-b-2 p-2 border-primary ">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      exit={{ opacity: 0 }}
+      className="space-y-2 scale-95 hover:scale-100 transition-all duration-1000 border-b-2 p-2 border-primary "
+    >
       <div className="h-96 w-auto relative">
         <Image
           className="rounded"
@@ -27,7 +34,7 @@ const OfferCard = ({ title, description, src }: OfferCardData) => {
       </div>
       <h3 className="font-markbook text-lg uppercase text-primary">{title}</h3>
       <p className="text-base font-mark">{description}</p>
-    </div>
+    </motion.div>
   );
 };
 

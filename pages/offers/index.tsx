@@ -49,23 +49,18 @@ function Offers() {
             Dine
           </button>
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 0.5 }}
-          exit={{ opacity: 1 }}
-          layoutId="image"
-          className="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-40"
-        >
-          {offers.map((offer) => (
-            <OfferCard
-              key={offer.id}
-              title={offer.title}
-              description={offer.description}
-              src={offer.coverImage}
-            />
-          ))}
-        </motion.div>
+        <div className="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-40">
+          <AnimatePresence>
+            {offers.map((offer) => (
+              <OfferCard
+                key={offer.id}
+                title={offer.title}
+                description={offer.description}
+                src={offer.coverImage}
+              />
+            ))}
+          </AnimatePresence>
+        </div>
       </div>
     </motion.div>
   );
