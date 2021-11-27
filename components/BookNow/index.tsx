@@ -64,7 +64,7 @@ const BookNow = () => {
     <>
       {/* Smartphone  */}
       <div className="block lg:hidden">
-        <div className="transition duration-1000 hover:bg-black hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
+        <div className="transition duration-1000 hover:bg-black font-mark tracking-widest hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
           <button onClick={openModal}>BOOK NOW</button>
           <CallNowButton />
         </div>
@@ -162,7 +162,7 @@ const BookNow = () => {
                           />
                         </div>
                       </div>
-                      <div className="duration-1000 transition-all hover:bg-black hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
+                      <div className="duration-1000 font-mark tracking-widest transition-all hover:bg-black hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
                         <button onClick={handleBookNow}>BOOK NOW</button>
                       </div>
                     </div>
