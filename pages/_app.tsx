@@ -1,20 +1,20 @@
 import type { AppProps } from "next/app";
 import BookNow from "../components/BookNow";
 import NavBar from "../components/NavBar";
-import { AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import "../styles/base.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div className="flex flex-col h-screen">
       <header>
         <NavBar />
       </header>
-      <AnimateSharedLayout>
+      <AnimatePresence exitBeforeEnter>
         <main className="flex-1">
-          <Component {...pageProps} />
+          <Component {...pageProps} key={router.route} />
         </main>
-      </AnimateSharedLayout>
+      </AnimatePresence>
       <footer className="py-5 bg-black ">
         <BookNow />
       </footer>

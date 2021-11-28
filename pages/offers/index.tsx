@@ -2,6 +2,8 @@ import { useState } from "react";
 import OfferCard from "../../components/Card/OfferCard";
 import OfferListings from "../../components/Card/OffersData";
 import { AnimatePresence, motion } from "framer-motion";
+import { slideInRight, stagger } from "../../variants";
+
 function Offers() {
   const [offers, setOffers] = useState(OfferListings);
   const [select, setSelected] = useState("all");
@@ -15,10 +17,9 @@ function Offers() {
   };
   return (
     <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ ease: "easeOut", duration: 1 }}
-      exit={{ opacity: 0 }}
+      initial="initial"
+      animate="animate"
+      variants={slideInRight}
       className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4"
     >
       <h1 className="text-3xl lg:text-6xl p-4 uppercase font-markbook tracking-wide text-center text-primary ">
@@ -49,18 +50,19 @@ function Offers() {
             Dine
           </button>
         </div>
-        <div className="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-40">
-          <AnimatePresence>
-            {offers.map((offer) => (
-              <OfferCard
-                key={offer.id}
-                title={offer.title}
-                description={offer.description}
-                src={offer.coverImage}
-              />
-            ))}
-          </AnimatePresence>
-        </div>
+        <motion.div
+          variants={stagger}
+          className="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-40"
+        >
+          {offers.map((offer) => (
+            <OfferCard
+              key={offer.id}
+              title={offer.title}
+              description={offer.description}
+              src={offer.coverImage}
+            />
+          ))}
+        </motion.div>
       </div>
     </motion.div>
   );

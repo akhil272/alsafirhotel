@@ -3,6 +3,7 @@ import ImageSlider from "../../components/ImageSlider";
 import Amenities from "../../components/StayRoom/Amenities";
 import RoomType from "../../components/StayRoom/RoomType";
 import IconsPack from "../../public/images/IconsPack";
+import { slideInRight } from "../../variants";
 
 const Stay = () => {
   const coverImage01 = "/images/staypage/twin-room-inside.jpg";
@@ -14,10 +15,10 @@ const Stay = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ ease: "easeOut", duration: 1 }}
-      exit={{ opacity: 0 }}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={slideInRight}
     >
       <ImageSlider autoPlayTime={10000} images={[coverImage02, coverImage01]}>
         <div className="flex flex-col h-full mt-24  px-2 md:p-0">
