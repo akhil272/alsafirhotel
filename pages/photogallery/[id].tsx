@@ -18,7 +18,7 @@ const ImageViewer = () => {
     >
       <motion.div
         whileTap={{ scale: 0.9 }}
-        className="flex w-full justify-center items-center h-[80vh] "
+        className="flex w-full justify-center items-center h-[80vh] mb-2 "
       >
         <Link href="/photogallery">
           <a className="h-full ">
@@ -32,11 +32,11 @@ const ImageViewer = () => {
           </a>
         </Link>
       </motion.div>
-      <motion.div variants={stagger} className="flex overflow-x-auto ">
+      <motion.div variants={stagger} className="flex overflow-x-scroll   ">
         {ImageData.map((item) => {
           return (
             <motion.div
-              className="flex-shrink-0 md:h-48 h-24 px-4 "
+              className="flex-shrink-0 md:h-48 h-24 md:px-10 px-2 "
               key={item.id}
               variants={fadeInUp}
               whileTap={{ scale: 0.9 }}
@@ -45,7 +45,7 @@ const ImageViewer = () => {
                 <a className="flex h-full w-full">
                   <motion.img
                     variants={fadeInUp}
-                    className="mt-2 w-full object-cover rounded-xl border-b-2"
+                    className="md:w-48 w-24 object-cover rounded-xl border-b-2 border-t-2"
                     src={item.image}
                   />
                 </a>

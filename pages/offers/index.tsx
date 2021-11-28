@@ -1,7 +1,7 @@
 import { useState } from "react";
 import OfferCard from "../../components/Card/OfferCard";
 import OfferListings from "../../components/Card/OffersData";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { slideInRight, stagger } from "../../variants";
 
 function Offers() {
