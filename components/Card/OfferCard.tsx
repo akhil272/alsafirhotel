@@ -17,6 +17,7 @@ const OfferCard = ({ title, description, src }: OfferCardData) => {
     >
       <div className="h-96 w-auto relative">
         <Image
+          priority
           className="rounded"
           layout="fill"
           objectFit="cover"

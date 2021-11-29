@@ -19,6 +19,7 @@ const ListingCard = ({
       <div className="h-96 w-auto relative">
         <Image
           className="rounded"
+          priority
           layout="fill"
           objectFit="cover"
           src={`/images/${src}`}

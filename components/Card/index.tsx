@@ -27,19 +27,19 @@ const Card = () => {
         id="entertainment"
         icon={IconsPack.entertainmentIcon}
         title="Entertainment"
-        image="/images/homepage/NightClubCover.jpg"
+        image="/images/homepage/entertainment-cover.jpg"
       />
       <CardDetail
         id="meet"
         icon={IconsPack.meetnEventIcon}
         title="Meet & Event"
-        image="/images/homepage/meetcover.jpg"
+        image="/images/homepage/meet-cover.jpg"
       />
       <CardDetail
         id="health"
         icon={IconsPack.healthnWellnessIcon}
         title="Health & Wellness"
-        image="/images/homepage/healthcover.jpg"
+        image="/images/homepage/health-cover.jpg"
       />
       <CardDetail
         id="photogallery"
