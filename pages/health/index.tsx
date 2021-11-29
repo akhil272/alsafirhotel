@@ -19,7 +19,7 @@ const Health = () => {
           <div className="md:p-14 p-0 flex flex-col">
             <div className="flex p-6">
               <div className=" flex justify-center scale-150 items-center ">
-                {IconsPack.meetnEventIcon}
+                {IconsPack.healthnWellnessIcon}
                 <div className="absolute ">{IconsPack.alsafirRings}</div>
               </div>
             </div>

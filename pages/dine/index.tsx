@@ -1,10 +1,10 @@
 import ImageSlider from "../../components/ImageSlider";
 import { motion } from "framer-motion";
 import IconsPack from "../../public/images/IconsPack";
-const coverImage01 = "/images/dineinpage/dinepagecover.jpg";
-
 import { slideInRight } from "../../variants";
-import DineInCard from "../../components/DineIn/DineInCard";
+import ListingCard from "../../components/Card/ListingCard";
+
+const coverImage01 = "/images/dineinpage/dinepagecover.jpg";
 
 const DineIn = () => {
   return (
@@ -45,17 +45,17 @@ const DineIn = () => {
         </ImageSlider>
       </motion.div>
       <motion.div className="lg:grid lg:grid-cols-2 lg:gap-8 mt-5 lg:px-40 mb-5">
-        <DineInCard
+        <ListingCard
           title="SAVOY"
-          url="savoy"
+          learnMoreUrl="/dine/savoy"
           description="Get ready for the very best of Mediterranean Indian, Arabic and Asian cuisines and home style international buffet breakfast."
-          src="savoy-offer-cover.jpg"
+          src="offerpage/savoy-offer-cover.jpg"
         />
-        <DineInCard
+        <ListingCard
           title="KOFFIE AND KUKKIE"
-          url="koffie"
+          learnMoreUrl="/dine/koffie"
           description="Koffie and Kukkie is a trendy coffee kiosk outlets located at the Alsafir hotel lobby, operating from 6.30am until 12 midnight."
-          src="dine-offer-cover.jpg"
+          src="offerpage/dine-offer-cover.jpg"
         />
       </motion.div>
     </>
