@@ -1,8 +1,15 @@
 import Card from "../components/Card";
 import ImageSlider from "../components/ImageSlider";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import en from "../locales/home/en";
+import ar from "../locales/home/ar";
 
 function Homepage({ weather }: { weather: any }) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
+
   // const CurrentDate = () => {
   //   const d = new Date();
   //   const weekday = new Array(7);
@@ -37,14 +44,14 @@ function Homepage({ weather }: { weather: any }) {
      min-h-screen px-4 "
           >
             <h1 className="text-primary font-brandon sm:w-1/2 tracking-widest text-6xl lg:text-8xl ">
-              AL SAFIR HOTEL
+              {t.hero}
             </h1>
             <div className="min-w-full font-mark  lg:text-2xl">
-              <h5>Towers Residence Fitness</h5>
+              <h5>{t.subtitle}</h5>
             </div>
             <div className="text-secondary font-mark lg:text-lg">
               <p>
-                Manama, Bahrain :
+                {t.location} :
                 <span className="pl-2">{Math.floor(weather.main.temp)} °C</span>
               </p>
             </div>

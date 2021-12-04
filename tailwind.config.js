@@ -21,6 +21,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    require("tailwindcss-rtl"),
     require("@tailwindcss/forms")({
       strategy: "class",
     }),

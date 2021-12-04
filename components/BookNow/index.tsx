@@ -49,14 +49,19 @@ const BookNow = () => {
   const [countRooms, setCountRooms] = useState(1);
 
   const handleBookNow = () => {
-    console.log("Adults" + countAdults);
-    console.log("Children" + countChildren);
-    console.log("RoomsCount" + countRooms);
-    console.log("RoomSelected" + selectedRoom);
-    console.log("RoomSelected" + startDate);
-    console.log("RoomSelected" + endDate);
-    alert(
-      `You'll be redirected to our booking confirmation page. Duration: ${startDate} - ${endDate} Count of Adults : ${countAdults} Count of Children : ${countChildren} Rooms Count : ${countRooms} `
+    const checkInDate = new Intl.DateTimeFormat("en-GB", {
+      dateStyle: "medium",
+    })
+      .format(startDate)
+      .replace(/ /g, "%20");
+    const checkOutDate = new Intl.DateTimeFormat("en-GB", {
+      dateStyle: "medium",
+    })
+      .format(endDate)
+      .replace(/ /g, "%20");
+
+    router.push(
+      `https://alsafirhotel.seebooking.com/#/roomlist?checkin=${checkInDate}&checkout=${checkOutDate}&lang=EN&noOfAdults=${countAdults}&noOfChildren=${countChildren}&noOfRooms=${countRooms}&property_id=554769`
     );
   };
 

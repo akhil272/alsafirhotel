@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ImageData } from "../../components/PhotoGallery/ImageData";
 import Link from "next/link";
 import { fadeInUp, stagger } from "../../variants";
-
 const PhotoGallery = () => {
   return (
     <motion.div

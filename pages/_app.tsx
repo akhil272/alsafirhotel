@@ -10,11 +10,13 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <header>
         <NavBar />
       </header>
-      <AnimatePresence exitBeforeEnter>
-        <main className="flex-1">
-          <Component {...pageProps} key={router.route} />
-        </main>
-      </AnimatePresence>
+
+      <main className="flex-1">
+        <AnimatePresence initial={false} exitBeforeEnter>
+          <Component {...pageProps} key={router.pathname} />
+        </AnimatePresence>
+      </main>
+
       <footer className="py-5 bg-black ">
         <BookNow />
       </footer>

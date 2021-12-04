@@ -4,8 +4,11 @@ import { Fragment, useState, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import MobileMenu from "../NavBar/MobileMenu";
 import Contact from "../NavBar/Contact";
+import { useRouter } from "next/router";
 
 const NavBar = () => {
+  const router = useRouter();
+  const { locale } = router;
   const completeButtonRef = useRef(null);
   const [openMenu, setOpenMenu] = useState(false);
   const handleClick = () => {
@@ -16,6 +19,11 @@ const NavBar = () => {
     setOpenMenu(true);
   };
 
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    router.push("/", "/", { locale });
+  };
+
   const genericHamburgerLine = `h-1 w-10 my-1 bg-primary transition ease transform duration-300 `;
   return (
     <>
@@ -24,7 +32,14 @@ const NavBar = () => {
           <a>{IconsPack.alsfairLogo}</a>
         </Link>
         <div className="flex text-primary justify-center items-center ml-auto pr-4 space-x-4">
-          <button>EN</button>
+          <select
+            className="bg-black outline-none "
+            onChange={changeLanguage}
+            defaultValue={locale}
+          >
+            <option value="en">EN</option>
+            <option value="ar">AR</option>
+          </select>
           <div
             onClick={handleClick}
             className="flex items-center ml-2 uppercase space-x-2"

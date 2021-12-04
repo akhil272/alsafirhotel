@@ -1,12 +1,12 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 
-interface counter {
+interface ListBoxCounterProps {
   title: string;
   counter: { content: string }[];
 }
 
-const ListBoxCounter = ({ title, counter }: counter) => {
+const ListBoxCounter = ({ title, counter }: ListBoxCounterProps) => {
   const [selected, setSelected] = useState(counter[0]);
 
   return (
