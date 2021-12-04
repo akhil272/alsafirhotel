@@ -19,7 +19,7 @@ const NavBar = () => {
     setOpenMenu(true);
   };
 
-  const changeLanguage = (e) => {
+  const changeLanguage = (e: { target: { value: string } }) => {
     const locale = e.target.value;
     router.push("/", "/", { locale });
   };
