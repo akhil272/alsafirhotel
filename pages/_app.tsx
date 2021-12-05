@@ -6,17 +6,15 @@ import "../styles/base.css";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen ">
       <header>
         <NavBar />
       </header>
-
       <main className="flex-1">
         <AnimatePresence initial={false} exitBeforeEnter>
           <Component {...pageProps} key={router.pathname} />
         </AnimatePresence>
       </main>
-
       <footer className="py-5 bg-black ">
         <BookNow />
       </footer>

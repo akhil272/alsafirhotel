@@ -182,7 +182,7 @@ const BookNow = () => {
       {/* desktop */}
       {show && router.pathname === "/" && (
         <div className="hidden xl:block">
-          <div className="fixed right-0 w-96 h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
+          <div className="fixed rtl:left-0 right-0 w-96 h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
             <div className="relative bg-black top-6 flex flex-col rounded-l-lg space-y-6 p-4 bg-opacity-75 ">
               <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
               <RoomSelector
