@@ -56,7 +56,9 @@ const DatePicker = ({
         <div className="text-xs">End Date</div>
         <h5 onClick={() => setOpenEndDateModal(!openEndDateModal)}>
           {formattedEndDate()}
-          <span className="absolute right-4">{IconsPack.downIcon}</span>
+          <span className="absolute right-4 rtl:hidden">
+            {IconsPack.downIcon}
+          </span>
         </h5>
         <CalenderTransition
           handleChange={handleEndDate}

@@ -12,6 +12,7 @@ import en from "../../locales/booknow/en";
 import ar from "../../locales/booknow/ar";
 
 const image1 = "/images/homepage/homeCoverImage01.jpg";
+const video = "/images/staypage/video.mp4";
 
 const BookNow = () => {
   const [open, setOpen] = useState(false);
@@ -120,7 +121,19 @@ const BookNow = () => {
                     </Transition.Child>
                     <div className="fixed top-0 h-screen w-screen flex items-end">
                       <div className="absolute h-full w-full">
-                        <ImageSlider images={[image1]} autoplay={false} />
+                        {selectedRoom === 1 && (
+                          <ImageSlider images={[image1]} autoplay={false} />
+                        )}
+                        {selectedRoom === 2 && (
+                          <video
+                            className="h-full w-full object-cover"
+                            muted
+                            autoPlay
+                            loop
+                          >
+                            <source src={video} type="video/mp4" />
+                          </video>
+                        )}
                       </div>
                       <div className="h-auto w-full bg-black flex flex-col opacity-95 space-y-6 px-4 pt-0 py-16">
                         <div className="flex p-2 mt-6">
