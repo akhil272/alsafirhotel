@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="px-4">
         <ScrollToTop />
       </div>
-      <div className="uppercase flex justify-evenly">
+      <div className="uppercase flex justify-around">
         <Link href="/contactus">
           <a>Contact Us</a>
         </Link>

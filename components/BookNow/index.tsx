@@ -8,12 +8,17 @@ import RoomSelector from "./RoomSelector";
 import DatePicker from "./DatePicker";
 import ScrollBookNow from "./ScrollBookNow";
 import CallNowButton from "./CallNowButton";
+import en from "../../locales/booknow/en";
+import ar from "../../locales/booknow/ar";
+
 const image1 = "/images/homepage/homeCoverImage01.jpg";
 
 const BookNow = () => {
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(true);
   const router = useRouter();
+  const { locale } = router;
+  const t = locale === "en" ? en : ar;
 
   const controlBookNow = () => {
     if (window.scrollY > 200) {
@@ -70,7 +75,7 @@ const BookNow = () => {
       {/* Smartphone  */}
       <div className="block lg:hidden">
         <div className="transition duration-1000 hover:bg-black font-mark tracking-widest hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
-          <button onClick={openModal}>BOOK NOW</button>
+          <button onClick={openModal}>{t.booknow}</button>
           <CallNowButton />
         </div>
         <Transition.Root show={open} as={Fragment}>
@@ -120,7 +125,7 @@ const BookNow = () => {
                       <div className="h-auto w-full bg-black flex flex-col opacity-95 space-y-6 px-4 pt-0 py-16">
                         <div className="flex p-2 mt-6">
                           <h3 className="uppercase font-mark text-2xl">
-                            Book Your Room
+                            {t.title}
                           </h3>
                           <div
                             onClick={openModal}
@@ -156,19 +161,19 @@ const BookNow = () => {
                         />
                         <div className="flex gap-2 justify-center gap ">
                           <PeopleCounter
-                            categories="Adults"
+                            categories={t.adult}
                             count={countAdults}
                             setCount={setCountAdults}
                           />
                           <PeopleCounter
-                            categories="Children"
+                            categories={t.children}
                             count={countChildren}
                             setCount={setCountChildren}
                           />
                         </div>
                       </div>
                       <div className="duration-1000 font-mark tracking-widest transition-all hover:bg-black hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
-                        <button onClick={handleBookNow}>BOOK NOW</button>
+                        <button onClick={handleBookNow}>{t.booknow}</button>
                       </div>
                     </div>
                   </div>
@@ -181,10 +186,10 @@ const BookNow = () => {
 
       {/* desktop */}
       {show && router.pathname === "/" && (
-        <div className="hidden xl:block">
+        <div dir={locale === "ar" ? "rtl" : "ltl"} className="hidden xl:block">
           <div className="fixed rtl:left-0 right-0 w-96 h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
             <div className="relative bg-black top-6 flex flex-col rounded-l-lg space-y-6 p-4 bg-opacity-75 ">
-              <h3 className="uppercase font-mark text-2xl"> Book Your Room</h3>
+              <h3 className="uppercase font-mark text-2xl">{t.title}</h3>
               <RoomSelector
                 selectedRoom={selectedRoom}
                 setSelectedRoom={setSelectedRoom}
@@ -200,18 +205,18 @@ const BookNow = () => {
               <RoomsCount count={countRooms} setCount={setCountRooms} />
               <div className="flex gap-2 justify-center gap ">
                 <PeopleCounter
-                  categories="Adults"
+                  categories={t.adult}
                   count={countAdults}
                   setCount={setCountAdults}
                 />
                 <PeopleCounter
-                  categories="Children"
+                  categories={t.children}
                   count={countChildren}
                   setCount={setCountChildren}
                 />
               </div>
               <div className="transition duration-1000 hover:bg-black hover:text-primary hover:ring-1 hover:ring-primary  rounded-md text-white bg-primary min-w-full text-center text-2xl p-2">
-                <button onClick={handleBookNow}>BOOK NOW</button>
+                <button onClick={handleBookNow}>{t.booknow}</button>
               </div>
             </div>
           </div>
