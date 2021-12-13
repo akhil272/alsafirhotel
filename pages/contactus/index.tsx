@@ -1,11 +1,19 @@
+import ContactForm from "../../components/Forms/ContactForm";
+import IconsPack from "../../public/images/IconsPack";
+
 const ContactUs = () => {
   return (
-    <div className="text-primary font-mark mt-20 px-4">
+    <div className=" font-mark mt-20 px-4">
       <div>
-        <h1 className="uppercase text-4xl">Contact Us</h1>
+        <h1 className="text-primary uppercase text-4xl">Contact Us</h1>
       </div>
-      <div className="my-5">
-        <h4 className="uppercase text-2xl">
+      <div className="my-5 space-y-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14317.4985489431!2d50.6046653!3d26.217014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4ade8d7b2b9b5c61!2sAl%20Safir%20Hotel!5e0!3m2!1sen!2sin!4v1639377414372!5m2!1sen!2sin"
+          className="w-full h-96 my-4 rounded"
+          loading="lazy"
+        ></iframe>
+        <h4 className="text-primary uppercase text-2xl py-4">
           IF YOU HAVE ANY QUESTIONS, PLEASE FEEL FREE TO CONTACT US USING THE
           FORM BELOW.
         </h4>
@@ -27,16 +35,32 @@ const ContactUs = () => {
           thereby surpassing its deluxe four star status.
         </p>
       </div>
-      <div className="grid grid-cols-2">
-        <div>+973 17827999</div>
-        <div>+973 17827999</div>
-        <div>+973 17827999</div>
-        <div>hello@alsafirhotel.com</div>
-        <div className="col-span-2">
-          Building 670, Road 2411, Block 324 ,PO BOX: 55222, Manama, Kingdom of
-          Bahrain
+      <div className="md:grid md:grid-cols-2 gap-4 space-y-4 ">
+        <div className="flex items-center">
+          <div className="h-10 w-10">{IconsPack.callIcon}</div>
+          <label className="px-2">+973 17827999</label>
+        </div>
+        <div className="flex items-center">
+          <div className="h-10 w-10">{IconsPack.faxIcon}</div>
+          <label className="px-2">+973 17827999</label>
+        </div>
+        <div className="flex items-center">
+          <div className="h-10 w-10">{IconsPack.whatsappIcon}</div>
+          <label className="px-2">+973 17827999</label>
+        </div>
+        <div className="flex items-center">
+          <div className="h-10 w-10">{IconsPack.mailIcon}</div>
+          <label className="px-2">hello@alsafirhotel.com</label>
+        </div>
+        <div className="col-span-2 flex items-center">
+          <div className="h-10 w-10">{IconsPack.addressIcon}</div>
+          <label className="px-2">
+            Building 670, Road 2411, Block 324 ,PO BOX: 55222, Manama, Kingdom
+            of Bahrain
+          </label>
         </div>
       </div>
+      <ContactForm />
     </div>
   );
 };
