@@ -1,7 +1,11 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import { slideInRight } from "../../variants";
 
+interface ItemProps {
+  items: { id: number; question: string; answer: string };
+}
 const content = [
   {
     id: 1,
@@ -31,52 +35,67 @@ const content = [
 Access to the guest room prior to this time, subject to availability of rooms at the time of arrival. Check out time is 12:00(noon).`,
   },
 ];
-
-const Faq = () => {
+const Item = ({ items }: ItemProps) => {
   const [openModal, setOpenModal] = useState(false);
   const handleModal = () => {
     setOpenModal(!openModal);
   };
-
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={slideInRight}
-      className="text-primary font-mark mt-20 px-4"
-    >
-      <div>
-        <h1 className="uppercase text-4xl">FAQ</h1>
+    <motion.div onClick={handleModal} key={items.id} className="text-lg ">
+      <div className="  items-center flex">
+        <h5 className="bg-black border-l-4 border-primary px-2 w-full">
+          {items.question}
+        </h5>
       </div>
-      <div className="space-y-4">
-        {content.map((item) => (
-          <div key={item.id} className="text-lg">
-            <div onClick={handleModal} className="  items-center flex">
-              <h5 className="bg-black border-l-4 border-primary px-2 w-full">
-                {item.question}
-              </h5>
-            </div>
-            <AnimatePresence>
-              {openModal && (
-                <motion.p
-                  initial={{ opacity: 0, y: "-2vh" }}
-                  animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-                  exit={{
-                    opacity: 0,
-                    y: "-2vh",
-                    transition: { duration: 0.5 },
-                  }}
-                  className="text-white text-sm border-primary border-l-4 px-2"
-                >
-                  {item.answer}
-                </motion.p>
-              )}
-            </AnimatePresence>
-          </div>
-        ))}
-      </div>
+      <AnimatePresence>
+        {openModal && (
+          <motion.p
+            layout
+            initial={{ opacity: 0, y: "-2vh" }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+            exit={{
+              opacity: 0,
+              y: "-2vh",
+              transition: { duration: 0.5 },
+            }}
+            className="text-white text-sm border-primary border-l-4 px-2"
+          >
+            {items.answer}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </motion.div>
+  );
+};
+const Faq = () => {
+  return (
+    <AnimateSharedLayout>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={slideInRight}
+        className="text-primary font-mark mt-20 px-4 md:px-96"
+      >
+        <div>
+          <h1 className="uppercase text-4xl">Frequently Asked Questions</h1>
+        </div>
+        <div className="h-96 w-auto relative my-4 ">
+          <Image
+            className="rounded"
+            layout="fill"
+            objectFit="cover"
+            src="/images/faq/faqcover.jpg"
+          />
+        </div>
+
+        <motion.div layout className="space-y-4 my-10 ">
+          {content.map((item) => (
+            <Item key={item.id} items={item} />
+          ))}
+        </motion.div>
+      </motion.div>
+    </AnimateSharedLayout>
   );
 };
 

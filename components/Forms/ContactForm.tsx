@@ -11,7 +11,7 @@ const ContactForm = () => {
       <form
         onSubmit={handleSubmit}
         id="contact-me"
-        className="w-full max-w-3xl  shadow  text-primary font-mark"
+        className="w-full max-w-xl  shadow  text-primary font-mark"
       >
         <h2 className="w-full uppercase text-3xl  my-5">Contact form</h2>
         <div className="flex flex-wrap mb-6">
