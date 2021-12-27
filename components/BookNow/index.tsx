@@ -130,6 +130,7 @@ const BookNow = () => {
                             muted
                             autoPlay
                             loop
+                            playsInline
                           >
                             <source src={video} type="video/mp4" />
                           </video>

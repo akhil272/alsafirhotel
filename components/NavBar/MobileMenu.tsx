@@ -5,8 +5,7 @@ import ar from "../../locales/navbar/ar";
 import useTranslation from "../../hooks/useTranslatiion";
 
 const MobileMenu = () => {
-  const locale = useTranslation();
-  const t = locale === "en" ? en : ar;
+  const t = useTranslation(en, ar);
 
   return (
     <div className="lg:grid lg:grid-cols-2 lg:absolute lg:bottom-40 lg:p-10 pt-20">
