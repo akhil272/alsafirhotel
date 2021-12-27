@@ -7,14 +7,13 @@ import ar from "../locales/home/ar";
 import Footer from "../components/Footer";
 
 function Homepage({ weather }: { weather: any }) {
-  const locale = useTranslation();
-  const t = locale === "en" ? en : ar;
+  const t = useTranslation(en, ar);
 
   const image1 = "/images/homepage/homeCoverImage01.jpg";
   const image2 = "/images/homepage/homeCover2.jpg";
   const image3 = "/images/homepage/Inside-Al-Safir-Hotel.jpg";
   return (
-    <div dir={locale === "ar" ? "rtl" : "ltl"}>
+    <div>
       <Head>
         <title>Alsafir Hotel</title>
         <meta

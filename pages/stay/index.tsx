@@ -4,6 +4,9 @@ import Amenities from "../../components/StayRoom/Amenities";
 import RoomType from "../../components/StayRoom/RoomType";
 import IconsPack from "../../public/images/IconsPack";
 import { slideInRight } from "../../variants";
+import en from "../../locales/stay/en";
+import ar from "../../locales/stay/ar";
+import useTranslation from "../../hooks/useTranslatiion";
 
 const Stay = () => {
   const coverImage01 = "/images/staypage/twin-room-inside.jpg";
@@ -12,6 +15,7 @@ const Stay = () => {
   const image2 = "/images/staypage/twin-room-day.jpg";
   const image3 = "/images/staypage/single-room-alsafir-front-view.jpg";
   const image4 = "/images/staypage/single-room-alsafir-hotel.jpg";
+  const t = useTranslation(en, ar);
 
   return (
     <motion.div
@@ -30,44 +34,25 @@ const Stay = () => {
               </div>
             </div>
             <div className="uppercase text-3xl font-mark tracking-widest text-primary mt-6 ">
-              Stay
+              {t.title}
             </div>
             <div className="md:text-lg text-sm font-mark tracking-wide mt-2 md:w-1/3 text-white bg-black backdrop-blur-sm bg-opacity-10 rounded-xl p-2 ">
-              Sophistic and splendid style
-              <p className=" tracking-wide font-mark ">
-                Al Safir Hotel offers a classic stay. With 126 stylishly
-                appointed rooms and suites that cleverly combine charm with
-                discreet modern amenities.
-              </p>
-              <p className=" tracking-wide font-mark pt-4">
-                It offers an elegant combination of classic luxury and
-                contemporary style and creates a diverse experience with
-                proficiently designed hotel rooms. All room accommodations allow
-                for intuitive facility and replenished spirits to offer a
-                soothing respite from the buzz and verve of the city.
-              </p>
-              <p className=" tracking-wide font-mark pt-4">
-                Every detail of your stay with us is intended to cherish and
-                celebrate your personal desires. Every step of the way, our
-                expertise are dedicated to offer a considerate, custom-made
-                service to make it an exceptional stay.
-              </p>
+              {t.subtitle}
+              <p className=" tracking-wide font-mark ">{t.p1}</p>
+              <p className=" tracking-wide font-mark pt-4">{t.p2}</p>
+              <p className=" tracking-wide font-mark pt-4">{t.p3}</p>
             </div>
           </div>
         </div>
       </ImageSlider>
       <div>
         <RoomType
-          title="Deluxe Single Rooms"
+          title={t.room1}
           roomSize="29m2"
           guests="max 2 guests"
           bedSize="1500mm wide"
           images={[image3, image4]}
-          desc="  Step inside the classy spacious 29sqm, guest bedrooms and
-              experience extravagance at its best. All rooms have king-sized
-              bed, ample closet space and a bathroom with daily replenish of
-              amenities. The room is also equipped with a work desk and has
-              startling city view."
+          desc={t.room1description}
         />
 
         <RoomType

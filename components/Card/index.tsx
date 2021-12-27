@@ -4,8 +4,7 @@ import useTranslation from "../../hooks/useTranslatiion";
 import en from "../../locales/navbar/en";
 import ar from "../../locales/navbar/ar";
 const Card = () => {
-  const locale = useTranslation();
-  const t = locale === "en" ? en : ar;
+  const t = useTranslation(en, ar);
   return (
     <div>
       <CardDetail

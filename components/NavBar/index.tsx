@@ -21,7 +21,8 @@ const NavBar = () => {
 
   const changeLanguage = (e: { target: { value: string } }) => {
     const locale = e.target.value;
-    router.push("/", "/", { locale });
+    const { pathname } = router;
+    router.push({ pathname }, { pathname }, { locale });
   };
 
   const genericHamburgerLine = `h-1 w-10 my-1 bg-primary transition ease transform duration-300 `;
