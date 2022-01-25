@@ -98,17 +98,17 @@ const NavBar = () => {
                   leaveFrom="translate-x-0"
                   leaveTo="translate-x-full"
                 >
-                  <div className="w-screen flex flex-col h-auto bg-black shadow-xl overflow-y-scroll lg:overflow-hidden">
+                  <div className="flex flex-col h-auto bg-black shadow-xl overflow-y-scroll ">
                     <div
                       ref={completeButtonRef}
                       onClick={handleClick}
-                      className="relative right-0 py-4 w-screen h-screen rounded-md shadow-lg "
+                      className="pr-12 py-4 md:w-full w-screen h-screen rounded-md shadow-lg "
                     >
                       <MobileMenu />
-                      <div className="w-full uppercase h-12 bg-primary text-white lg:absolute lg:bottom-36 flex text-2xl justify-start lg:pl-14 pl-6 items-center">
+                      <div className="w-full capitalize h-12 bg-primary text-white flex text-2xl justify-start pl-6 items-center">
                         <p> Contact Us </p>
                       </div>
-                      <div className="w-full  text-white absolute lg:bottom-14 flex text-2xl ">
+                      <div className="w-full  text-white flex text-2xl ">
                         <Contact />
                       </div>
                     </div>

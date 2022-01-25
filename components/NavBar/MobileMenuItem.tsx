@@ -18,7 +18,7 @@ const MobileMenuItem = (props: MenuData) => {
       onClick={handleClick}
       className="flex p-3 ml-4 group transform transition-all duration-1000 hover:scale-95 "
     >
-      <div className="flex  justify-center items-center  ">
+      <div className="flex justify-center items-center  ">
         <div className=" flex absolute items-center justify-center transition-all duration-1000 group-hover:rotate-90 ">
           {IconsPack.alsafirRings}
         </div>
@@ -27,7 +27,7 @@ const MobileMenuItem = (props: MenuData) => {
         </div>
       </div>
       <div className="flex flex-col items-start pl-6  ">
-        <h5 className="text-2xl uppercase text-primary font-markbook tracking-wider">
+        <h5 className="text-2xl capitalize text-primary font-markbook tracking-wider">
           {props.menuTitle}
         </h5>
         <p className="text-sm text-white font-mark">{props.menuDescription}</p>
