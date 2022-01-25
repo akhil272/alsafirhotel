@@ -37,7 +37,7 @@ interface counterData {
 const Counter = ({ categories, count, setCount }: counterData) => {
   const handleChange = (type: string) => {
     if (type === "dec") {
-      count > 1 && setCount(count - 1);
+      count > 0 && setCount(count - 1);
     } else {
       count < 10 && setCount(count + 1);
     }
