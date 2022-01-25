@@ -105,7 +105,7 @@ const NavBar = () => {
                       className="pr-12 py-4 md:w-full w-screen h-screen rounded-md shadow-lg "
                     >
                       <MobileMenu />
-                      <div className="w-full capitalize h-12 bg-primary text-white flex text-2xl justify-start pl-6 items-center">
+                      <div className="w-full capitalize h-12 border-b-2 border-primary text-white flex text-2xl justify-start pl-6 items-center">
                         <p> Contact Us </p>
                       </div>
                       <div className="w-full  text-white flex text-2xl ">

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { fadeInUp, stagger } from "../../variants";
+import { fadeInUp } from "../../variants";
 
 interface OfferCardData {
   title: string;
@@ -32,7 +32,7 @@ const OfferCard = ({ title, description, src }: OfferCardData) => {
           </button>
         </div>
       </div>
-      <h3 className="font-markbook text-lg uppercase text-primary">{title}</h3>
+      <h3 className="font-markbook text-lg capitalize text-primary">{title}</h3>
       <p className="text-base font-mark">{description}</p>
     </motion.div>
   );

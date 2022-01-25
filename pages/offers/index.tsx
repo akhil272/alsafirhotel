@@ -22,7 +22,7 @@ function Offers() {
       variants={slideInRight}
       className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4"
     >
-      <h1 className="text-3xl lg:text-6xl p-4 uppercase font-markbook tracking-wide text-center text-primary ">
+      <h1 className="text-3xl lg:text-6xl p-4  font-mark tracking-wide text-center text-primary ">
         Exciting Offers at Al Safir Hotel
       </h1>
       <p className="text-lg font-mark text-center">
@@ -30,21 +30,21 @@ function Offers() {
         below at Al Safir Hotel.
       </p>
       <div>
-        <div className="flex justify-center text-2xl gap-10 font-markbook">
+        <div className="flex justify-center text-2xl gap-10 font-mark">
           <button
-            className={`uppercase ${select === "all" ? "text-primary" : ""}`}
+            className={` ${select === "all" ? "text-primary" : ""}`}
             onClick={() => filterOffers("all")}
           >
             All
           </button>
           <button
-            className={`uppercase ${select === "stay" ? "text-primary" : ""}`}
+            className={` ${select === "stay" ? "text-primary" : ""}`}
             onClick={() => filterOffers("stay")}
           >
             Stay
           </button>
           <button
-            className={`uppercase ${select === "dine" ? "text-primary" : ""}`}
+            className={` ${select === "dine" ? "text-primary" : ""}`}
             onClick={() => filterOffers("dine")}
           >
             Dine

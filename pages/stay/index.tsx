@@ -36,7 +36,7 @@ const Stay = () => {
             <div className="uppercase text-3xl font-mark tracking-widest text-primary mt-6 ">
               {t.title}
             </div>
-            <div className="md:text-lg text-sm font-mark tracking-wide mt-2 md:w-1/3 text-white bg-black backdrop-blur-sm bg-opacity-10 rounded-xl p-2 ">
+            <div className="md:text-lg text-sm font-mark tracking-wide mt-2 md:w-2/3 text-white bg-black backdrop-blur-sm bg-opacity-10 rounded-xl p-2 ">
               {t.subtitle}
               <p className=" tracking-wide font-mark ">{t.p1}</p>
               <p className=" tracking-wide font-mark pt-4">{t.p2}</p>

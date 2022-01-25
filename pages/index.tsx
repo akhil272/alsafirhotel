@@ -10,8 +10,7 @@ function Homepage({ weather }: { weather: any }) {
   const t = useTranslation(en, ar);
 
   const image1 = "/images/homepage/homeCoverImage01.jpg";
-  const image2 = "/images/homepage/homeCover2.jpg";
-  const image3 = "/images/homepage/Inside-Al-Safir-Hotel.jpg";
+  const image2 = "/images/homepage/Inside-Al-Safir-Hotel.jpg";
   return (
     <div>
       <Head>
@@ -23,7 +22,7 @@ function Homepage({ weather }: { weather: any }) {
         />
       </Head>
       <div className="h-screen w-full">
-        <ImageSlider images={[image1, image3, image2]}>
+        <ImageSlider images={[image1, image2]}>
           <div
             className="bg-gradient-to-l from-transparent to-black rtl:bg-gradient-to-r flex flex-wrap content-end py-64
      min-h-screen px-4"

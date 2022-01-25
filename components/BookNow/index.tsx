@@ -12,7 +12,7 @@ import en from "../../locales/booknow/en";
 import ar from "../../locales/booknow/ar";
 
 const image1 = "/images/homepage/homeCoverImage01.jpg";
-const video = "/images/staypage/video.mp4";
+const image2 = "/images/staypage/twin-room-inside.jpg";
 
 const BookNow = () => {
   const [open, setOpen] = useState(false);
@@ -125,15 +125,7 @@ const BookNow = () => {
                           <ImageSlider images={[image1]} autoplay={false} />
                         )}
                         {selectedRoom === 2 && (
-                          <video
-                            className="h-full w-full object-cover"
-                            muted
-                            autoPlay
-                            loop
-                            playsInline
-                          >
-                            <source src={video} type="video/mp4" />
-                          </video>
+                          <ImageSlider images={[image2]} autoplay={false} />
                         )}
                       </div>
                       <div className="h-auto w-full bg-black flex flex-col opacity-95 space-y-6 px-4 pt-0 py-16">
@@ -200,7 +192,7 @@ const BookNow = () => {
 
       {/* desktop */}
       {show && router.pathname === "/" && (
-        <div dir={locale === "ar" ? "rtl" : "ltl"} className="hidden xl:block">
+        <div dir={locale === "ar" ? "rtl" : "ltl"} className="hidden lg:block">
           <div className="fixed rtl:left-0 right-0 w-96 h-3/6 duration-1000 transition-all bottom-1/4 scale-100 ">
             <div className="relative bg-black top-6 flex flex-col rounded-l-lg space-y-6 p-4 bg-opacity-75 ">
               <h3 className="uppercase font-mark text-2xl">{t.title}</h3>

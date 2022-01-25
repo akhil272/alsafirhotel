@@ -8,7 +8,7 @@ const MobileMenu = () => {
   const t = useTranslation(en, ar);
 
   return (
-    <div className="pt-16 ">
+    <div className="pt-16">
       <MobileMenuItem
         id="offers"
         iconName={IconsPack.offerIcon}

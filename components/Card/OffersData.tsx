@@ -1,7 +1,7 @@
 const OfferListings = [
   {
     id: "1",
-    title: "ADVANCE PURCHASE",
+    title: "Advance purchase",
     description:
       "Enjoy savings of up to 10% off our best available rates by booking 7 days in advance.",
     coverImage: "alsafir-hotel-offer-advance-purchase.jpg",
@@ -9,7 +9,7 @@ const OfferListings = [
   },
   {
     id: "2",
-    title: "ONE FREE NIGHT",
+    title: "One free night",
     description: "Book 3 nights and get one complimentary night.",
     coverImage: "one-free-night-cover.jpg",
     tag: "stay",
