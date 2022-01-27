@@ -92,6 +92,36 @@ const Amenities = () => {
         </div>
       </div>
       <div className="flex flex-col">
+        <h4 className="text-2xl uppercase py-4">Hotel Facilities</h4>
+        <div className="md:flex md:space-x-4">
+          <div className="flex flex-col space-y-4">
+            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
+              <div className="md:w-14 md:h-14 w-8 h-8">{wifiIcon}</div>
+              <p>Free Wifi</p>
+            </div>
+            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
+              <div className="md:w-14 md:h-14 w-8 h-8">{parkingIcon}</div>
+              <p>Free Parking</p>
+            </div>
+
+            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
+              <div className="md:w-14 md:h-14 w-8 h-8">{elevatorIcon}</div>
+              <p>Upper floors accessible by elevator</p>
+            </div>
+            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
+              <div className="md:w-14 md:h-14 w-8 h-8">{wheelchairIcon}</div>
+              <p>Entire unit wheelchair accessible</p>
+            </div>
+            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
+              <div className="md:w-14 md:h-14 w-8 h-8">
+                {interconnectingroomsIcon}
+              </div>
+              <p>Interconnecting room (s) available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col">
         <h4 className="text-2xl uppercase py-4">Private Bathroom</h4>
         <div className="md:flex md:space-x-4 grid grid-cols-2">
           <div className="flex flex-col space-y-4">
@@ -124,36 +154,6 @@ const Amenities = () => {
             <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
               <div className="md:w-14 md:h-14 w-8 h-8">{bathtubeIcon}</div>
               <p>Bathtub or shower</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col">
-        <h4 className="text-2xl uppercase py-4">Hotel Facilities</h4>
-        <div className="md:flex md:space-x-4">
-          <div className="flex flex-col space-y-4">
-            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
-              <div className="md:w-14 md:h-14 w-8 h-8">{wifiIcon}</div>
-              <p>Free Wifi</p>
-            </div>
-            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
-              <div className="md:w-14 md:h-14 w-8 h-8">{parkingIcon}</div>
-              <p>Free Parking</p>
-            </div>
-
-            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
-              <div className="md:w-14 md:h-14 w-8 h-8">{elevatorIcon}</div>
-              <p>Upper floors accessible by elevator</p>
-            </div>
-            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
-              <div className="md:w-14 md:h-14 w-8 h-8">{wheelchairIcon}</div>
-              <p>Entire unit wheelchair accessible</p>
-            </div>
-            <div className="flex md:text-lg text-sm capitalize items-center md:gap-4 gap-1">
-              <div className="md:w-14 md:h-14 w-8 h-8">
-                {interconnectingroomsIcon}
-              </div>
-              <p>Interconnecting room (s) available</p>
             </div>
           </div>
         </div>

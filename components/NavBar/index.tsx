@@ -33,14 +33,14 @@ const NavBar = () => {
           <a>{IconsPack.alsfairLogo}</a>
         </Link>
         <div className="flex text-primary justify-center items-center ml-auto pr-4 space-x-4">
-          <select
+          {/* <select
             className="bg-black outline-none "
             onChange={changeLanguage}
             defaultValue={locale}
           >
             <option value="en">EN</option>
             <option value="ar">AR</option>
-          </select>
+          </select> */}
           <div
             onClick={handleClick}
             className="flex items-center ml-2 uppercase space-x-2"

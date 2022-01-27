@@ -50,8 +50,8 @@ const BookNow = () => {
   const [endDate, setEndDate] = useState(new Date());
 
   //Counter
-  const [countAdults, setCountAdults] = useState(2);
-  const [countChildren, setCountChildren] = useState(1);
+  const [countAdults, setCountAdults] = useState(1);
+  const [countChildren, setCountChildren] = useState(0);
   const [countRooms, setCountRooms] = useState(1);
 
   const handleBookNow = () => {
