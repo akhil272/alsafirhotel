@@ -16,7 +16,7 @@ const CardDetail = (props: CardData) => {
   return (
     <div
       onClick={handleClick}
-      className=" lg:h-[365px] h-[200px] flex-shrink-0 bg-center bg-cover flex group  p-6 items-center hover:ml-10  opacity-90 hover:opacity-100 hover:shadow-2xl transition-all duration-1000 ease-in-out delay-200"
+      className=" lg:h-[375px] h-[220px] flex-shrink-0 bg-center bg-cover flex group  p-6 items-center hover:ml-10  opacity-90 hover:opacity-100 hover:shadow-2xl transition-all duration-1000 ease-in-out delay-200"
       style={{ backgroundImage: `url(${props.image})` }}
     >
       <div

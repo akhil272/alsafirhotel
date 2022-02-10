@@ -57,6 +57,18 @@ const DineIn = () => {
           description="Koffie and Kukkie is a trendy coffee kiosk outlets located at the Alsafir hotel lobby, operating from 6.30am until 12 midnight."
           src="offerpage/dine-offer-cover.jpg"
         />
+        <ListingCard
+          title="Cucina"
+          learnMoreUrl="/dine/cucina"
+          description="Cucina Italian is the place where Italian Food is served with style and passion."
+          src="offerpage/dine-offer-cover.jpg"
+        />
+        <ListingCard
+          title="Benngian's"
+          learnMoreUrl="/dine/bennigans"
+          description="More than 30 years ago, Bennigan's first opened it’s doors as a great place to relax "
+          src="offerpage/dine-offer-cover.jpg"
+        />
       </motion.div>
     </>
   );

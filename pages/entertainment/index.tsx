@@ -39,19 +39,19 @@ const Entertainment = () => {
         <ListingCard
           title="APOLLO CLUB LOUNGE"
           learnMoreUrl="/entertainment/apolloclub"
-          description="Get ready for the very best of Mediterranean Indian, Arabic and Asian cuisines and home style international buffet breakfast."
+          description="A nightlife destination to be explored in the heart of Juffair. "
           src="entertainment/apollo/apollo-cover.jpg"
         />
         <ListingCard
           title="RICH ARABIC CLUB"
           learnMoreUrl="/entertainment/richclub"
-          description="Koffie and Kukkie is a trendy coffee kiosk outlets located at the Alsafir hotel lobby, operating from 6.30am until 12 midnight."
+          description="Rich Club is created for discerning guests who require a sophisticated and modern environment. "
           src="entertainment/apollo/apollo-alsfair-hotel.jpg"
         />
         <ListingCard
           title="THE HAPPY GOAT"
           learnMoreUrl="/entertainment/happygoat"
-          description="Koffie and Kukkie is a trendy coffee kiosk outlets located at the Alsafir hotel lobby, operating from 6.30am until 12 midnight."
+          description="Rich Club is created for discerning guests who require a sophisticated and modern environment. "
           src="entertainment/apollo/apollo-alsfair-hotel-01.jpg"
         />
       </motion.div>

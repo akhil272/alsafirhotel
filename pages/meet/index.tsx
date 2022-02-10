@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import IconsPack from "../../public/images/IconsPack";
 import { slideInRight } from "../../variants";
 import Image from "next/image";
+import ListingCard from "../../components/Card/ListingCard";
 
 const Meet = () => {
   return (
@@ -60,6 +61,26 @@ const Meet = () => {
             </p>
           </div>
         </div>
+        <motion.div className="lg:grid lg:grid-cols-3 lg:gap-8 mt-5 lg:px-40 mb-5">
+          <ListingCard
+            title="Al Seef Meeting Room"
+            learnMoreUrl="/meet/alseef"
+            description="Al Seef Meeting Room is ideal for training & small meetings with a capacity for 35 guests"
+            src="entertainment/apollo/apollo-cover.jpg"
+          />
+          <ListingCard
+            title="Al Zallaq Hall"
+            learnMoreUrl="/meet/alzallaq"
+            description="Al Zallaq Hall is ideal for training & small meetings with a capacity for 45 guests"
+            src="entertainment/apollo/apollo-alsfair-hotel.jpg"
+          />
+          <ListingCard
+            title="Al Muharraq Hall"
+            learnMoreUrl="/meet/almuharraq"
+            description="Al Muharraq Hall is ideal for training & weddings with a capacity for 80 guests"
+            src="entertainment/apollo/apollo-alsfair-hotel-01.jpg"
+          />
+        </motion.div>
       </div>
     </motion.div>
   );

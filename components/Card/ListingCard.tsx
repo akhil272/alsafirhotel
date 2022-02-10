@@ -26,13 +26,13 @@ const ListingCard = ({
         />
         <div className="absolute bottom-5 w-full flex justify-center items-center space-x-4 ">
           <Link href={`${learnMoreUrl}`}>
-            <a className="uppercase font-mark text-black text-center py-2 px-4 rounded bg-white hover:bg-gray-300">
+            <a className="uppercase font-mark text-white text-center py-2 px-4 rounded bg-primary hover:bg-secondary">
               Learn More
             </a>
           </Link>
-          <button className="uppercase font-mark text-white text-center py-2 px-4 rounded bg-primary hover:bg-secondary">
+          {/* <button className="uppercase font-mark text-white text-center py-2 px-4 rounded bg-primary hover:bg-secondary">
             Book Now
-          </button>
+          </button> */}
         </div>
       </div>
       <h3 className="font-markbook text-lg uppercase text-primary">{title}</h3>
