@@ -61,24 +61,21 @@ const Meet = () => {
             </p>
           </div>
         </div>
-        <motion.div className="lg:grid lg:grid-cols-3 lg:gap-8 mt-5 lg:px-40 mb-5">
+        <motion.div className="lg:grid lg:grid-cols-3 lg:gap-8 mt-5 lg:px-10 mb-5">
           <ListingCard
             title="Al Seef Meeting Room"
-            learnMoreUrl="/meet/alseef"
             description="Al Seef Meeting Room is ideal for training & small meetings with a capacity for 35 guests"
-            src="entertainment/apollo/apollo-cover.jpg"
+            src="meetnevent/alseefhallcover.jpg"
           />
           <ListingCard
             title="Al Zallaq Hall"
-            learnMoreUrl="/meet/alzallaq"
             description="Al Zallaq Hall is ideal for training & small meetings with a capacity for 45 guests"
-            src="entertainment/apollo/apollo-alsfair-hotel.jpg"
+            src="meetnevent/zallaqhallcover.jpg"
           />
           <ListingCard
             title="Al Muharraq Hall"
-            learnMoreUrl="/meet/almuharraq"
             description="Al Muharraq Hall is ideal for training & weddings with a capacity for 80 guests"
-            src="entertainment/apollo/apollo-alsfair-hotel-01.jpg"
+            src="meetnevent/muharraqhall.jpg"
           />
         </motion.div>
       </div>

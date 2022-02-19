@@ -11,7 +11,7 @@ import useTranslation from "../../hooks/useTranslatiion";
 const Stay = () => {
   const coverImage01 = "/images/staypage/twin-room-inside.jpg";
   const coverImage02 = "/images/staypage/stay-cover.jpg";
-  const image1 = "/images/offerpage/one-free-night-cover.jpg";
+  const image1 = "/images/gallery/delux-twin.jpg";
   const image2 = "/images/staypage/twin-room-day.jpg";
   const image3 = "/images/staypage/single-room-alsafir-front-view.jpg";
   const image4 = "/images/staypage/single-room-alsafir-hotel.jpg";

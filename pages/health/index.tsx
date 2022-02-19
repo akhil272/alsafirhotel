@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import IconsPack from "../../public/images/IconsPack";
 import { slideInRight } from "../../variants";
 import Image from "next/image";
+import ListingCard from "../../components/Card/ListingCard";
 
 const Health = () => {
   return (
@@ -43,6 +44,26 @@ const Health = () => {
             </p>
           </div>
         </div>
+        <motion.div className="lg:grid lg:grid-cols-3 lg:gap-8 mt-5 lg:px-40 mb-5">
+          <ListingCard
+            title="Ann's Spa"
+            learnMoreUrl="/meet/alseef"
+            description="Relax at Al Safir Hotel & Tower. Welcome to one of Bahrain’s most relaxing massage and Spa"
+            src="health/annscover.jpg"
+          />
+          <ListingCard
+            title="Indoor Pool"
+            learnMoreUrl="/meet/alzallaq"
+            description="Our Health Club has got an heated indoor swimming pool and adjacent to the Al Safir Hotel."
+            src="meetnevent/zallaqhallcover.jpg"
+          />
+          <ListingCard
+            title="Health Club"
+            learnMoreUrl="/meet/almuharraq"
+            description="Al Safir Hotel & Tower is luxury personified. The Sports Recreation Centre spans two floors and offers an indoor swimming pool and fully-equipped fitness tower with hi-tech machines, Jacuzzi, steam room, dry and wet sauna, personal sports advisor & lots more."
+            src="meetnevent/muharraqhall.jpg"
+          />
+        </motion.div>
       </div>
     </motion.div>
   );
