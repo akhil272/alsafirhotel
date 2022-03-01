@@ -55,13 +55,13 @@ const Health = () => {
             title="Indoor Pool"
             learnMoreUrl="/meet/alzallaq"
             description="Our Health Club has got an heated indoor swimming pool and adjacent to the Al Safir Hotel."
-            src="meetnevent/zallaqhallcover.jpg"
+            src="health/indoorpool.jpg"
           />
           <ListingCard
             title="Health Club"
             learnMoreUrl="/meet/almuharraq"
             description="Al Safir Hotel & Tower is luxury personified. The Sports Recreation Centre spans two floors and offers an indoor swimming pool and fully-equipped fitness tower with hi-tech machines, Jacuzzi, steam room, dry and wet sauna, personal sports advisor & lots more."
-            src="meetnevent/muharraqhall.jpg"
+            src="health/healthclub.jpg"
           />
         </motion.div>
       </div>

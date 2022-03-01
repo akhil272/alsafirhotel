@@ -1,5 +1,5 @@
 import { ImageData } from "../../components/PhotoGallery/ImageData";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { fadeInUp, stagger } from "../../variants";

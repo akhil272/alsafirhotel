@@ -49,7 +49,7 @@ const RoomType = ({
                 <p className="h-12 w-12">{bedIcon}</p>
                 <p>{bedSize}</p>
               </div>
-              <div className="mt-4">{roomFigure}</div>
+              {/* <div className="mt-4">{roomFigure}</div> */}
             </div>
             <div className=" text-sm md:text-lg font-mark tracking-wide pt-2 md:w-2/3 w-full text-secondary ">
               <p className=" tracking-wide font-mark ">{desc}</p>
