@@ -14,12 +14,17 @@ function Homepage({ weather }: { weather: any }) {
   return (
     <div>
       <Head>
-        <title>Alsafir Hotel</title>
+        <title>Al Safir Hotel | Experience luxury above all | Bahrain</title>
         <meta
           property="og:title"
           content="Al Safir Hotel | Experience luxury above all"
           key="title"
         />
+        <meta
+          name="description"
+          content="If you are looking for a royal stay then Al Safir Hotel is the place for you. a gateway to a magnificent place located in right in Manama’s Juffair district"
+        />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="h-screen w-full">
         <ImageSlider images={[image1, image2]}>

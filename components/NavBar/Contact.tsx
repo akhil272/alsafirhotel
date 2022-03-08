@@ -11,8 +11,8 @@ const Contact = () => {
         <div className=" py-2">
           <p className="text-sm">whatsapp</p>
           <p className="text-primary">
-            <a href="https://wa.me/+97317827999?text=I%20like%20to%20book%20rooms%20in%20AlSafir%20Hotel">
-              +973 1782 7999
+            <a href="https://wa.me/+97333644411?text=I%20like%20to%20book%20rooms%20in%20AlSafir%20Hotel">
+              +973 33644411
             </a>
           </p>
         </div>

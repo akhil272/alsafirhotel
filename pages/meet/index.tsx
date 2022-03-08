@@ -3,6 +3,7 @@ import IconsPack from "../../public/images/IconsPack";
 import { slideInRight } from "../../variants";
 import Image from "next/image";
 import ListingCard from "../../components/Card/ListingCard";
+import Head from "next/head";
 
 const Meet = () => {
   return (
@@ -12,6 +13,13 @@ const Meet = () => {
       exit="exit"
       variants={slideInRight}
     >
+      <Head>
+        <title>Meet & Event | Al Safir Experience</title>
+        <meta
+          name="description"
+          content="Anniversaries, birthdays, engagements, weddings; every auspicious occasion from the small and intimate to the large and corporate. It has to be Al Safir Hotel."
+        />
+      </Head>
       <div className="flex flex-col h-full mt-24  px-2 md:p-0">
         <div className="md:p-14 p-0 flex flex-col">
           <div className="flex p-6">

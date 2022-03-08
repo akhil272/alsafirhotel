@@ -7,12 +7,13 @@ import { slideInRight } from "../../variants";
 import en from "../../locales/stay/en";
 import ar from "../../locales/stay/ar";
 import useTranslation from "../../hooks/useTranslatiion";
+import Head from "next/head";
 
 const Stay = () => {
   const coverImage01 = "/images/staypage/twin-room-inside.jpg";
   const coverImage02 = "/images/staypage/stay-cover.jpg";
   const image1 = "/images/gallery/delux-twin.jpg";
-  const image2 = "/images/staypage/twin-room-day.jpg";
+  const image2 = "/images/staypage/delux-twin-room-01.jpg";
   const image3 = "/images/staypage/single-room-alsafir-front-view.jpg";
   const image4 = "/images/staypage/single-room-alsafir-hotel.jpg";
   const t = useTranslation(en, ar);
@@ -24,6 +25,13 @@ const Stay = () => {
       exit="exit"
       variants={slideInRight}
     >
+      <Head>
+        <title>Stay | Al Safir Experience</title>
+        <meta
+          name="description"
+          content="Sophistic and splendid style Al Safir Hotel offers a classic stay. With 126 stylishly appointed rooms and suites that cleverly combine charm with discreet modern amenities."
+        />
+      </Head>
       <ImageSlider autoPlayTime={10000} images={[coverImage02, coverImage01]}>
         <div className="flex flex-col h-full mt-24  px-2 md:p-0">
           <div className="md:p-14 p-0 flex flex-col">

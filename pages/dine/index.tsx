@@ -3,12 +3,20 @@ import { motion } from "framer-motion";
 import IconsPack from "../../public/images/IconsPack";
 import { slideInRight } from "../../variants";
 import ListingCard from "../../components/Card/ListingCard";
+import Head from "next/head";
 
 const coverImage01 = "/images/dineinpage/dinepagecover.jpg";
 
 const DineIn = () => {
   return (
     <>
+      <Head>
+        <title>Dine In | Al Safir Experience</title>
+        <meta
+          name="description"
+          content="Discover some of Manama's finest cuisine from the city's top culinary masters as they craft dishes in open kitchens or stop in for your favorite drink at a popular pub."
+        />
+      </Head>
       <motion.div
         initial="initial"
         animate="animate"

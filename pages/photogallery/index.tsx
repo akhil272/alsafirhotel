@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ImageData } from "../../components/PhotoGallery/ImageData";
 import Link from "next/link";
 import { fadeInUp, stagger } from "../../variants";
+import Head from "next/head";
 const PhotoGallery = () => {
   return (
     <motion.div
@@ -10,6 +11,13 @@ const PhotoGallery = () => {
       exit="exit"
       className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4"
     >
+      <Head>
+        <title>Gallery | Alsafir Experience</title>
+        <meta
+          name="description"
+          content="A sneak into the Al Safir Experience."
+        />
+      </Head>
       <div>
         <h1 className="text-3xl lg:text-6xl p-4 uppercase font-markbook tracking-wide text-center text-primary ">
           Gallery

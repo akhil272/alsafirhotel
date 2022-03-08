@@ -1,9 +1,14 @@
+import Head from "next/head";
 import ContactForm from "../../components/Forms/ContactForm";
 import IconsPack from "../../public/images/IconsPack";
 
 const ContactUs = () => {
   return (
     <div className=" font-mark mt-20 px-4">
+      <Head>
+        <title>Contact Us | Al Safir Experience</title>
+        <meta name="description" content="Contact Alsafir team." />
+      </Head>
       <div>
         <h1 className="text-primary uppercase text-4xl">Contact Us</h1>
       </div>
@@ -46,7 +51,7 @@ const ContactUs = () => {
         </div>
         <div className="flex items-center">
           <div className="h-10 w-10">{IconsPack.whatsappIcon}</div>
-          <label className="px-2">+973 17827999</label>
+          <label className="px-2">+97333644411</label>
         </div>
         <div className="flex items-center">
           <div className="h-10 w-10">{IconsPack.mailIcon}</div>

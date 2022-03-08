@@ -1,6 +1,12 @@
+import Head from "next/head";
+
 const PrivacyPolicy = () => {
   return (
     <div className=" font-mark mt-20 px-4 md:px-96">
+      <Head>
+        <title>Privacy Policy | Al Safir Experience</title>
+        <meta name="description" content="Privacy policy of Al Safir Hotel." />
+      </Head>
       <div>
         <h1 className="text-primary uppercase text-4xl">Privacy Policy</h1>
       </div>

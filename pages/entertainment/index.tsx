@@ -3,6 +3,7 @@ import ImageSlider from "../../components/ImageSlider";
 import IconsPack from "../../public/images/IconsPack";
 import { slideInRight } from "../../variants";
 import ListingCard from "../../components/Card/ListingCard";
+import Head from "next/head";
 
 const Entertainment = () => {
   const coverImage01 =
@@ -17,6 +18,13 @@ const Entertainment = () => {
       exit="exit"
       variants={slideInRight}
     >
+      <Head>
+        <title>Entertainment | Al Safir Experience</title>
+        <meta
+          name="description"
+          content="Alsafir hotel offers an array of activities and adventures."
+        />
+      </Head>
       <ImageSlider autoPlayTime={5000} images={[coverImage01, coverImage02]}>
         <div className="flex flex-col h-full mt-24  px-2 md:p-0">
           <div className="md:p-14 p-0 flex flex-col">

@@ -3,6 +3,7 @@ import OfferCard from "../../components/Card/OfferCard";
 import OfferListings from "../../components/Card/OffersData";
 import { motion } from "framer-motion";
 import { slideInRight, stagger } from "../../variants";
+import Head from "next/head";
 
 function Offers() {
   const [offers, setOffers] = useState(OfferListings);
@@ -22,6 +23,13 @@ function Offers() {
       variants={slideInRight}
       className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4"
     >
+      <Head>
+        <title>Offers | Al Safir Experience</title>
+        <meta
+          name="description"
+          content="Enjoy your travel and treat yourself with one of our enticing packages below at Al Safir Hotel."
+        />
+      </Head>
       <h1 className="text-3xl lg:text-6xl p-4  font-mark tracking-wide text-center text-primary ">
         Exciting Offers at Al Safir Hotel
       </h1>

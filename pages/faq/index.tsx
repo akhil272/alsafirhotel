@@ -1,4 +1,5 @@
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { slideInRight } from "../../variants";
@@ -42,6 +43,10 @@ const Item = ({ items }: ItemProps) => {
   };
   return (
     <motion.div onClick={handleModal} key={items.id} className="text-lg ">
+      <Head>
+        <title>FAQ | Al Safir Experience</title>
+        <meta name="description" content="Frequently asked question." />
+      </Head>
       <div className="  items-center flex">
         <h5 className="bg-black border-l-4 border-primary px-2 w-full">
           {items.question}

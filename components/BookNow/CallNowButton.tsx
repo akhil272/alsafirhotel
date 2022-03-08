@@ -76,9 +76,9 @@ const CallNowButton = () => {
                     <label className="text-xs">WHATSAPP</label>
                     <a
                       className="text-xl"
-                      href="https://wa.me/+97317827999?text=I%20like%20to%20book%20rooms%20in%20AlSafir%20Hotel"
+                      href="https://wa.me/+97333644411?text=I%20like%20to%20book%20rooms%20in%20AlSafir%20Hotel"
                     >
-                      +973 1782 7999
+                      +973 33644411
                     </a>
                   </div>
                 </div>
