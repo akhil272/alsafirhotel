@@ -54,13 +54,13 @@ const Entertainment = () => {
           title="RICH ARABIC CLUB"
           learnMoreUrl="/entertainment/richclub"
           description="Rich Club is created for discerning guests who require a sophisticated and modern environment. "
-          src="entertainment/apollo/apollo-alsfair-hotel.jpg"
+          src="entertainment/richarabic/richclub-cover.jpg"
         />
         <ListingCard
           title="THE HAPPY GOAT"
           learnMoreUrl="/entertainment/happygoat"
           description="Rich Club is created for discerning guests who require a sophisticated and modern environment. "
-          src="entertainment/apollo/apollo-alsfair-hotel-01.jpg"
+          src="entertainment/thehappygoat/happygoat-cover.jpg"
         />
       </motion.div>
     </motion.div>
