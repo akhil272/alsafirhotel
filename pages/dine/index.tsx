@@ -75,7 +75,7 @@ const DineIn = () => {
           enableLearnMoreButton={true}
         />
         <ListingCard
-          title="Benngian's"
+          title="Bennigan's"
           learnMoreUrl="/dine/bennigans"
           description="More than 30 years ago, Bennigan's first opened it’s doors as a great place to relax "
           src="dineinpage/benngianscover.jpg"

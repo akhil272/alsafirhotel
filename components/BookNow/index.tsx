@@ -47,7 +47,10 @@ const BookNow = () => {
 
   //Date
   const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+
+  const [endDate, setEndDate] = useState(
+    new Date(new Date().getTime() + 1000 * 60 * 60 * 24)
+  );
 
   //Counter
   const [countAdults, setCountAdults] = useState(1);

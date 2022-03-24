@@ -53,13 +53,13 @@ const Entertainment = () => {
         <ListingCard
           title="RICH ARABIC CLUB"
           learnMoreUrl="/entertainment/richclub"
-          description="Rich Club is created for discerning guests who require a sophisticated and modern environment. "
+          description="Rich Club is created for discerning guests who require a sophisticated and modern environment."
           src="entertainment/richarabic/richclub-cover.jpg"
         />
         <ListingCard
           title="THE HAPPY GOAT"
           learnMoreUrl="/entertainment/happygoat"
-          description="Rich Club is created for discerning guests who require a sophisticated and modern environment. "
+          description="The Happy Goat, A place where you can chill and replenish Darts, Billiards, Beer Pong, Board Games (jenga), create your own music & live sports matches."
           src="entertainment/thehappygoat/happygoat-cover.jpg"
         />
       </motion.div>
