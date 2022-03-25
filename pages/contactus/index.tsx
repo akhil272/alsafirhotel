@@ -4,7 +4,7 @@ import IconsPack from "../../public/images/IconsPack";
 
 const ContactUs = () => {
   return (
-    <div className=" font-mark mt-20 px-4">
+    <div className=" font-mark mt-20 px-4 md:px-96">
       <Head>
         <title>Contact Us | Al Safir Experience</title>
         <meta name="description" content="Contact Alsafir team." />

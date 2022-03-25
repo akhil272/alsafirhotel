@@ -13,7 +13,9 @@ const ContactForm = () => {
         id="contact-me"
         className="w-full max-w-xl  shadow  text-primary font-mark"
       >
-        <h2 className="w-full uppercase text-3xl  my-5">Contact form</h2>
+        <h2 className="w-full capitalize border-b-2 text-3xl  my-5">
+          Contact form
+        </h2>
         <div className="flex flex-wrap mb-6">
           <div className="relative w-full appearance-none label-floating">
             <input

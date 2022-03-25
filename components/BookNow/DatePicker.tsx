@@ -31,6 +31,8 @@ const DatePicker = ({
   }
   const handleStartDate = (date: Date) => {
     setStartDate(date);
+
+    setEndDate(new Date(date.getTime() + 1000 * 60 * 60 * 24));
     setOpenDateModal(!openDateModal);
   };
   const handleEndDate = (date: Date) => {
