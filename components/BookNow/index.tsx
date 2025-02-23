@@ -69,9 +69,11 @@ const BookNow = () => {
       .format(endDate)
       .replace(/ /g, "%20");
 
-    router.push(
-      `https://alsafirhotel.seebooking.com/#/roomlist?checkin=${checkInDate}&checkout=${checkOutDate}&lang=EN&noOfAdults=${countAdults}&noOfChildren=${countChildren}&noOfRooms=${countRooms}&property_id=554769`
-    );
+    //  rate triger integration disabled
+    // router.push(
+    //   `https://alsafirhotel.seebooking.com/#/roomlist?checkin=${checkInDate}&checkout=${checkOutDate}&lang=EN&noOfAdults=${countAdults}&noOfChildren=${countChildren}&noOfRooms=${countRooms}&property_id=554769`
+    // );
+    router.push("/contactus");
   };
 
   return (
@@ -83,12 +85,8 @@ const BookNow = () => {
           <CallNowButton />
         </div>
         <Transition.Root show={open} as={Fragment}>
-          <Dialog
-            as="div"
-            className="fixed inset-0 overflow-hidden"
-            onClose={setOpen}
-          >
-            <div className="absolute inset-0 overflow-hidden">
+          <Dialog as="div" className="flex overflow-y-scroll" onClose={setOpen}>
+            <div className="h-screen overflow-y-scroll">
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-500"
@@ -98,7 +96,7 @@ const BookNow = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Dialog.Overlay className="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                <Dialog.Overlay className=" inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
               </Transition.Child>
               <div className="fixed inset-y-0 right-0 w-screen flex">
                 <Transition.Child
@@ -131,58 +129,60 @@ const BookNow = () => {
                           <ImageSlider images={[image2]} autoplay={false} />
                         )}
                       </div>
-                      <div className="h-auto w-full bg-black flex flex-col opacity-95 space-y-6 px-4 pt-0 py-16">
-                        <div className="flex p-2 mt-6">
-                          <h3 className="uppercase font-mark text-2xl">
-                            {t.title}
-                          </h3>
-                          <div
-                            onClick={openModal}
-                            className="flex justify-center items-center ml-auto"
-                          >
-                            <svg
-                              width="14"
-                              height="14"
-                              viewBox="0 0 14 14"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
+                      <div className=" w-full bg-black flex flex-col opacity-95  space-y-4 ">
+                        <div className="px-4  space-y-4  ">
+                          <div className="flex mt-4">
+                            <h3 className="uppercase font-mark text-2xl">
+                              {t.title}
+                            </h3>
+                            <div
+                              onClick={openModal}
+                              className="flex justify-center items-center ml-auto"
                             >
-                              <path
-                                d="M8.46 7L14 12.54V14H12.54L7 8.46L1.46 14H0V12.54L5.54 7L0 1.46V0H1.46L7 5.54L12.54 0H14V1.46L8.46 7Z"
-                                fill="white"
-                              />
-                            </svg>
+                              <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M8.46 7L14 12.54V14H12.54L7 8.46L1.46 14H0V12.54L5.54 7L0 1.46V0H1.46L7 5.54L12.54 0H14V1.46L8.46 7Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <RoomSelector
+                            selectedRoom={selectedRoom}
+                            setSelectedRoom={setSelectedRoom}
+                          />
+                          <DatePicker
+                            startDate={startDate}
+                            endDate={endDate}
+                            setStartDate={setStartDate}
+                            setEndDate={setEndDate}
+                          />
+                          <RoomsCount
+                            count={countRooms}
+                            setCount={setCountRooms}
+                          />
+                          <div className="flex gap-2 justify-center gap ">
+                            <PeopleCounter
+                              categories={t.adult}
+                              count={countAdults}
+                              setCount={setCountAdults}
+                            />
+                            <PeopleCounter
+                              categories={t.children}
+                              count={countChildren}
+                              setCount={setCountChildren}
+                            />
                           </div>
                         </div>
-                        <RoomSelector
-                          selectedRoom={selectedRoom}
-                          setSelectedRoom={setSelectedRoom}
-                        />
-                        <DatePicker
-                          startDate={startDate}
-                          endDate={endDate}
-                          setStartDate={setStartDate}
-                          setEndDate={setEndDate}
-                        />
-                        <RoomsCount
-                          count={countRooms}
-                          setCount={setCountRooms}
-                        />
-                        <div className="flex gap-2 justify-center gap ">
-                          <PeopleCounter
-                            categories={t.adult}
-                            count={countAdults}
-                            setCount={setCountAdults}
-                          />
-                          <PeopleCounter
-                            categories={t.children}
-                            count={countChildren}
-                            setCount={setCountChildren}
-                          />
+                        <div className="duration-1000 font-mark tracking-widest transition-all hover:bg-black hover:text-primary  text-white bg-primary min-w-full text-center text-2xl p-2">
+                          <button onClick={handleBookNow}>{t.booknow}</button>
                         </div>
-                      </div>
-                      <div className="duration-1000 font-mark tracking-widest transition-all hover:bg-black hover:text-primary fixed bottom-0 text-white bg-primary min-w-full text-center text-2xl p-2">
-                        <button onClick={handleBookNow}>{t.booknow}</button>
                       </div>
                     </div>
                   </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { fadeInUp } from "../../variants";
 
 interface OfferCardData {
@@ -10,6 +11,12 @@ interface OfferCardData {
 }
 
 const OfferCard = ({ title, description, src }: OfferCardData) => {
+  const router = useRouter();
+  const handleBookNow = () => {
+    // rate triger integration disabled
+    // router.push("https://alsafirhotel.seebooking.com/#/home");
+    router.push("/contactus");
+  };
   return (
     <motion.div
       variants={fadeInUp}
@@ -24,10 +31,16 @@ const OfferCard = ({ title, description, src }: OfferCardData) => {
           src={`/images/offerpage/${src}`}
         />
         <div className="absolute bottom-5 w-full flex justify-center items-center space-x-4 ">
-          <button className="uppercase font-mark text-black text-center py-2 px-4 rounded bg-white hover:bg-gray-300">
+          <button
+            onClick={handleBookNow}
+            className="uppercase font-mark text-black text-center py-2 px-4 rounded bg-white hover:bg-gray-300"
+          >
             Learn More
           </button>
-          <button className="uppercase font-mark text-white text-center py-2 px-4 rounded bg-primary hover:bg-secondary">
+          <button
+            onClick={handleBookNow}
+            className="uppercase font-mark text-white text-center py-2 px-4 rounded bg-primary hover:bg-secondary"
+          >
             Book Now
           </button>
         </div>

@@ -17,7 +17,7 @@ const Footer = () => {
           <a>Privacy Policy</a>
         </Link>
       </div>
-      <div className="my-4 uppercase flex justify-center">@Alsfairhotel</div>
+      <div className="my-4 uppercase flex justify-center">@Alsafirhotel</div>
     </div>
   );
 };

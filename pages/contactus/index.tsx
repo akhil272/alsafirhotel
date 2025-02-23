@@ -58,7 +58,7 @@ const ContactUs = () => {
           <label className="px-2">hello@alsafirhotel.com</label>
         </div>
         <div className="col-span-2 flex items-center">
-          <div className="h-10 w-10">{IconsPack.addressIcon}</div>
+          <div className="h-10 md:w-10 w-20">{IconsPack.addressIcon}</div>
           <label className="px-2">
             Building 670, Road 2411, Block 324 ,PO BOX: 55222, Manama, Kingdom
             of Bahrain

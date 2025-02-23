@@ -51,7 +51,7 @@ const MobileMenu = () => {
         menuTitle={t.photogallery}
         menuDescription="Experience"
       />
-      <MobileMenuItem
+      {/* <MobileMenuItem
         id="blog"
         iconName={IconsPack.blogIcon}
         menuTitle={t.blog}
@@ -62,7 +62,7 @@ const MobileMenu = () => {
         iconName={IconsPack.brandStoryIcon}
         menuTitle={t.brandstory}
         menuDescription="Its story time"
-      />
+      /> */}
     </div>
   );
 };

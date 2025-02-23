@@ -45,7 +45,7 @@ const Entertainment = () => {
       </ImageSlider>
       <motion.div className="lg:grid lg:grid-cols-3 lg:gap-8 mt-5 lg:px-40 mb-5">
         <ListingCard
-          title="APOLLO CLUB LOUNGE"
+          title="FAVELA"
           learnMoreUrl="/entertainment/apolloclub"
           description="A nightlife destination to be explored in the heart of Juffair. "
           src="entertainment/apollo/apollo-cover.jpg"
@@ -57,9 +57,9 @@ const Entertainment = () => {
           src="entertainment/richarabic/richclub-cover.jpg"
         />
         <ListingCard
-          title="THE HAPPY GOAT"
+          title="SHUJOON"
           learnMoreUrl="/entertainment/happygoat"
-          description="The Happy Goat, A place where you can chill and replenish Darts, Billiards, Beer Pong, Board Games (jenga), create your own music & live sports matches."
+          description="Shujoon, A place where you can chill and replenish Darts, Billiards, Beer Pong, Board Games (jenga), create your own music & live sports matches."
           src="entertainment/thehappygoat/happygoat-cover.jpg"
         />
       </motion.div>

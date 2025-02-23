@@ -136,9 +136,11 @@ const ScrollBookNow = () => {
     const countChildren = 1;
     const countRooms = 1;
 
-    router.push(
-      `https://alsafirhotel.seebooking.com/#/roomlist?checkin=${checkInDate}&checkout=${checkOutDate}&lang=EN&noOfAdults=${countAdults}&noOfChildren=${countChildren}&noOfRooms=${countRooms}&property_id=554769`
-    );
+    //rate triger integration disabled
+    // router.push(
+    //   `https://alsafirhotel.seebooking.com/#/roomlist?checkin=${checkInDate}&checkout=${checkOutDate}&lang=EN&noOfAdults=${countAdults}&noOfChildren=${countChildren}&noOfRooms=${countRooms}&property_id=554769`
+    // );
+    router.push("/contactus");
   };
   return (
     <div className="flex w-screen justify-between items-center pl-20">

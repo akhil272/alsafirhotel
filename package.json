@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -16,13 +16,17 @@
     "@types/node": "^16.11.1",
     "autoprefixer": "^10.3.6",
     "axios": "^0.24.0",
+    "caniuse-lite": "^1.0.30001320",
     "date-fns": "^2.25.0",
+    "dotenv": "^16.0.1",
     "framer-motion": "^5.3.3",
     "next": "^11.1.2",
+    "nodemailer": "^6.7.5",
     "postcss": "^8.3.8",
     "react": "^17.0.2",
     "react-date-range": "^1.4.0",
     "react-dom": "^17.0.2",
+    "sharp": "^0.30.3",
     "tailwindcss": "^2.2.16",
     "tailwindcss-rtl": "^0.8.0",
     "typescript": "^4.4.3"

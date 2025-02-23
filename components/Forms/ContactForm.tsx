@@ -1,15 +1,66 @@
 import { useState } from "react";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({ name: "", mail: "", message: "" });
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [form, setForm] = useState({ state: "", message: "" });
+
+  const handleChange = (e: any) => {
+    setInputs((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+  };
+
+  const onSubmitForm = async (e: any) => {
     e.preventDefault();
-    console.log(formData);
+
+    if (inputs.name && inputs.email && inputs.message) {
+      setForm({ state: "loading", message: "" });
+      try {
+        const res = await fetch(`api/contact`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(inputs),
+        });
+
+        const { error } = await res.json();
+
+        if (error) {
+          setForm({
+            state: "error",
+            message: error,
+          });
+          return;
+        }
+
+        setForm({
+          state: "success",
+          message: "Your message was sent successfully.",
+        });
+        setInputs({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } catch (error) {
+        setForm({
+          state: "error",
+          message: "Something went wrong",
+        });
+      }
+    }
   };
   return (
     <div className="pb-10">
       <form
-        onSubmit={handleSubmit}
+        onSubmit={(e) => onSubmitForm(e)}
         id="contact-me"
         className="w-full max-w-xl  shadow  text-primary font-mark"
       >
@@ -19,15 +70,13 @@ const ContactForm = () => {
         <div className="flex flex-wrap mb-6">
           <div className="relative w-full appearance-none label-floating">
             <input
-              className="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+              className="tracking-wide text-black py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
               id="name"
               type="text"
               placeholder="Your name"
               required
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
+              value={inputs.name}
+              onChange={handleChange}
             />
             <label
               htmlFor="name"
@@ -40,15 +89,13 @@ const ContactForm = () => {
         <div className="flex flex-wrap mb-6">
           <div className="relative w-full appearance-none label-floating">
             <input
-              className="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
-              id="mail"
+              className="tracking-wide text-black  py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+              id="email"
               type="text"
               placeholder="Your email"
               required
-              value={formData.mail}
-              onChange={(e) =>
-                setFormData({ ...formData, mail: e.target.value })
-              }
+              value={inputs.email}
+              onChange={handleChange}
             />
             <label
               htmlFor="name"
@@ -61,15 +108,13 @@ const ContactForm = () => {
         <div className="flex flex-wrap mb-6">
           <div className="relative w-full appearance-none label-floating">
             <textarea
-              className="autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+              className="text-black tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
               id="message"
               typeof="text"
               placeholder="Message..."
-              value={formData.message}
-              onChange={(e) =>
-                setFormData({ ...formData, message: e.target.value })
-              }
-            ></textarea>
+              value={inputs.message}
+              onChange={handleChange}
+            />
             <label
               htmlFor="message"
               className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text"
@@ -78,8 +123,14 @@ const ContactForm = () => {
             </label>
           </div>
         </div>
-
         <div>
+          {form.state === "loading" ? (
+            <div>Sending....</div>
+          ) : form.state === "error" ? (
+            <div>{form.message}</div>
+          ) : (
+            form.state === "success" && <div>Sent successfully</div>
+          )}
           <button
             className="w-full shadow bg-primary  font-mark uppercase tracking-widest  text-white font-bold py-2 px-4 rounded"
             type="submit"
