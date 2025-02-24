@@ -2,7 +2,7 @@ import { slideInRight } from "../../variants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const Savoy = () => {
+const Dune = () => {
   return (
     <motion.div
       initial="initial"
@@ -13,13 +13,13 @@ const Savoy = () => {
       <div className="flex flex-col h-full mt-24  px-2 md:px-40">
         <div className="md:p-14 p-0 flex flex-col">
           <div className="uppercase text-3xl font-mark tracking-widest text-primary mt-6 ">
-            Savoy
+            Dune
           </div>
           <div className="h-96 w-auto relative ">
             <Image
               layout="fill"
               objectFit="cover"
-              src="/images/dineinpage/savoycover.jpg"
+              src="/images/dineinpage/dunecover.jpg"
             />
           </div>
           <div className="md:text-lg text-sm font-mark tracking-wide mt-2  text-white  p-2 ">
@@ -40,7 +40,7 @@ const Savoy = () => {
               ingredients are sourced locally, cooked and prepared fresh daily
             </p>
             <p className=" tracking-wide font-mark pt-4">
-              Make sure you try our Signature Savoy burger or traditional club
+              Make sure you try our Signature Dune burger or traditional club
               sandwiches as recommended by our head chef.
             </p>
           </div>
@@ -50,4 +50,4 @@ const Savoy = () => {
   );
 };
 
-export default Savoy;
+export default Dune;

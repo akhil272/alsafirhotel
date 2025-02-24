@@ -54,10 +54,10 @@ const DineIn = () => {
       </motion.div>
       <motion.div className="lg:grid lg:grid-cols-2 lg:gap-8 mt-5 lg:px-40 mb-5">
         <ListingCard
-          title="SAVOY"
-          learnMoreUrl="/dine/savoy"
+          title="Dune"
+          learnMoreUrl="/dine/dune"
           description="Get ready for the very best of Mediterranean Indian, Arabic and Asian cuisines and home style international buffet breakfast."
-          src="dineinpage/savoycover.jpg"
+          src="dineinpage/dunecover.jpg"
           enableLearnMoreButton={true}
         />
         <ListingCard
