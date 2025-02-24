@@ -47,19 +47,19 @@ const Entertainment = () => {
         <ListingCard
           title="FAVELA"
           learnMoreUrl="/entertainment/apolloclub"
-          description="A nightlife destination to be explored in the heart of Juffair. "
+          description=" One of the hottest clubs in Bahrain, Brining you a luxury taste towards nightlife with a VIP Experience. Mix music of all genres being played by the best Dj’s on the island coming all the way from America & Nigeria. "
           src="entertainment/apollo/apollo-cover.jpg"
         />
         <ListingCard
           title="RICH ARABIC CLUB"
           learnMoreUrl="/entertainment/richclub"
-          description="Rich Club is created for discerning guests who require a sophisticated and modern environment."
+          description="نادي ليلي فاخر يجمع بين الأجواء العربية الأصيلة والفخامة العصرية. تجربة استثنائية مع ديكور راقٍ، موسيقى شرقية وغربية، وخدمة VIP تناسب أصحاب الذوق الرفيع. إذا كنت تبحث عن سهرة راقية تجمع بين الترفيه والرفاهية، فهذا هو المكان المثالي لك."
           src="entertainment/richarabic/richclub-cover.jpg"
         />
         <ListingCard
-          title="SHUJOON"
+          title="TOUCH DOWN"
           learnMoreUrl="/entertainment/happygoat"
-          description="Shujoon, A place where you can chill and replenish Darts, Billiards, Beer Pong, Board Games (jenga), create your own music & live sports matches."
+          description="A sports bar with a wide variety of drinks & food. Where you can come with a group of friend enjoying your time watching your favorite sport games on the TV while being entertained with games such as pool & darts."
           src="entertainment/thehappygoat/happygoat-cover.jpg"
         />
       </motion.div>
