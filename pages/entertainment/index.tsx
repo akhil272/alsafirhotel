@@ -48,7 +48,7 @@ const Entertainment = () => {
           title="FAVELA"
           learnMoreUrl="/entertainment/apolloclub"
           description=" One of the hottest clubs in Bahrain, Brining you a luxury taste towards nightlife with a VIP Experience. Mix music of all genres being played by the best Dj’s on the island coming all the way from America & Nigeria. "
-          src="entertainment/apollo/apollo-cover.jpg"
+          src="entertainment/favela/favela-alsafirhotel.jpeg"
         />
         <ListingCard
           title="RICH ARABIC CLUB"
@@ -60,7 +60,7 @@ const Entertainment = () => {
           title="TOUCH DOWN"
           learnMoreUrl="/entertainment/happygoat"
           description="A sports bar with a wide variety of drinks & food. Where you can come with a group of friend enjoying your time watching your favorite sport games on the TV while being entertained with games such as pool & darts."
-          src="entertainment/thehappygoat/happygoat-cover.jpg"
+          src="entertainment/touchdown/touch-down-alsafirhotel.jpeg"
         />
       </motion.div>
     </motion.div>
