@@ -57,7 +57,7 @@ const DineIn = () => {
           title="Dune"
           learnMoreUrl="/dine/dune"
           description="Get ready for the very best of Mediterranean Indian, Arabic and Asian cuisines and home style international buffet breakfast."
-          src="dineinpage/dunecover.jpg"
+          src="dineinpage/dune-cover.jpeg"
           enableLearnMoreButton={true}
         />
         <ListingCard

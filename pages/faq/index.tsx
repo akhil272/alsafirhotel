@@ -1,6 +1,5 @@
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
 import { slideInRight } from "../../variants";
 
@@ -86,10 +85,8 @@ const Faq = () => {
           <h1 className="uppercase text-4xl">Frequently Asked Questions</h1>
         </div>
         <div className="h-96 w-auto relative my-4 ">
-          <Image
-            className="rounded"
-            layout="fill"
-            objectFit="cover"
+          <img
+            className="rounded h-96 w-full object-cover"
             src="/images/faq/faqcover.jpg"
           />
         </div>

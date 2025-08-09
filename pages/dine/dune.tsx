@@ -19,7 +19,7 @@ const Dune = () => {
             <Image
               layout="fill"
               objectFit="cover"
-              src="/images/dineinpage/dunecover.jpg"
+              src="/images/dineinpage/dune-cover.jpeg"
             />
           </div>
           <div className="md:text-lg text-sm font-mark tracking-wide mt-2  text-white  p-2 ">

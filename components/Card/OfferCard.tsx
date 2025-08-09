@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { fadeInUp } from "../../variants";
 
@@ -23,11 +22,8 @@ const OfferCard = ({ title, description, src }: OfferCardData) => {
       className="space-y-2 scale-95 hover:scale-100 transition-all duration-1000 border-b-2 p-2 border-primary "
     >
       <div className="h-96 w-auto relative">
-        <Image
-          priority
-          className="rounded"
-          layout="fill"
-          objectFit="cover"
+        <img
+          className="rounded h-96 w-full object-cover"
           src={`/images/offerpage/${src}`}
         />
         <div className="absolute bottom-5 w-full flex justify-center items-center space-x-4 ">

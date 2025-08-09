@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import IconsPack from "../../public/images/IconsPack";
 import { slideInRight } from "../../variants";
-import Image from "next/image";
+
 import ListingCard from "../../components/Card/ListingCard";
 import Head from "next/head";
 
@@ -32,9 +32,8 @@ const Health = () => {
             Health And Wellness
           </div>
           <div className="h-96 w-auto relative ">
-            <Image
-              layout="fill"
-              objectFit="cover"
+            <img
+              className="h-96 w-full object-cover"
               src="/images/homepage/health-cover.jpg"
             />
           </div>

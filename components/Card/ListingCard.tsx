@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 interface ListingCardProps {
   title: string;
@@ -19,11 +18,8 @@ const ListingCard = ({
   return (
     <div className="space-y-2 scale-95 hover:scale-100 transition-all duration-1000 border-b-2 p-2 border-primary ">
       <div className="h-96 w-auto relative">
-        <Image
-          className="rounded"
-          priority
-          layout="fill"
-          objectFit="cover"
+        <img
+          className="rounded h-96 w-full object-cover"
           src={`/images/${src}`}
         />
         {enableLearnMoreButton ? (

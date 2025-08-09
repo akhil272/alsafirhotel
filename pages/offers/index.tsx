@@ -21,7 +21,7 @@ function Offers() {
       initial="initial"
       animate="animate"
       variants={slideInRight}
-      className="mt-20 mb-20 flex flex-col md:space-y-10 space-y-4"
+      className="mt-20 mb-20 flex flex-col lg:space-y-10 space-y-4 px-4 lg:px-0"
     >
       <Head>
         <title>Offers | Al Safir Experience</title>
