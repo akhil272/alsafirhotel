@@ -16,6 +16,20 @@ const Stay = () => {
   const image2 = "/images/staypage/delux-twin-room-01.jpg";
   const image3 = "/images/staypage/single-room-alsafir-front-view.jpg";
   const image4 = "/images/staypage/single-room-alsafir-hotel.jpg";
+  const imperial_image01 = "/images/staypage/Imperial-Suite-image-1.jpg";
+  const imperial_image02 = "/images/staypage/Imperial-Suite-image-2.jpg";
+  const two_bedroom_suite_image01 =
+    "/images/staypage/two-bedroom-suite-image01.jpg";
+  const two_bedroom_suite_image02 =
+    "/images/staypage/two-bedroom-suite-image02.jpg";
+  const executive_single_room_image01 =
+    "/images/staypage/executive-single-room-image01.jpg";
+  const executive_single_room_image02 =
+    "/images/staypage/executive-single-room-image02.jpg";
+  const executive_double_image01 =
+    "/images/staypage/executive_double_image01.jpg";
+  const executive_double_image02 =
+    "/images/staypage/executive_double_image02.jpg";
   const t = useTranslation(en, ar);
 
   return (
@@ -64,7 +78,7 @@ const Stay = () => {
         />
 
         <RoomType
-          title="Deluxe Twin Rooms"
+          title="Deluxe Twin"
           roomSize="29m2"
           guests="max 3 guests"
           bedSize="2400mm wide"
@@ -74,6 +88,46 @@ const Stay = () => {
             our elegant hotel suites and luxury amenities. Each deluxe single
             rooms have vibrant decoration and combines luxurious furnishings
             with innovative technology to radiate a contemporary elegance."
+        />
+        <RoomType
+          title="Executive Single"
+          roomSize="30m2"
+          guests="max 3 guests"
+          bedSize="1500mm wide"
+          images={[
+            executive_single_room_image01,
+            executive_single_room_image02,
+          ]}
+          desc="Spacious 30 square meters Apartment with Queen Size bed, ample closet space, and bathroom with daily replenish of amenities. The room is also equipped with a work desk and has amazing city view.
+          Each of these Executive King Apartment vibrant decor and combines luxurious furnishings with innovative technology to radiate a contemporary elegance."
+        />
+        <RoomType
+          title="Executive Twin"
+          roomSize="30m2"
+          guests="max 3 guests"
+          bedSize="1300mm wide"
+          images={[executive_double_image01, executive_double_image02]}
+          desc="Spacious 30 square meters Apartment with Twin bed, ample closet space, and bathroom with daily replenish of amenities. The room is also equipped with a work desk and has amazing city view.
+          Each of these Executive Twin Apartment vibrant decor and combines luxurious furnishings with innovative technology to radiate a contemporary elegance."
+        />
+        <RoomType
+          title="Two-Bedroom Suite"
+          roomSize="90m2"
+          guests="max 6 guests"
+          bedSize="1800mm wide"
+          images={[two_bedroom_suite_image01, two_bedroom_suite_image02]}
+          desc="Spacious 90 square meter Two Bedroom Apartment with fully equipped kitchen. 1st bedroom with King Size bed, ample closet space, working desk, Bathroom en suite with Shower. 2nd bedroom with twin beds, ample closet space, bathroom en suite with shower.
+          Each of the Tower wing Two Bedroom Apartment features vibrant decor, combining Executive leather furnishings with innovative technology to radiate a contemporary elegance and a separate Dining area."
+        />
+        <RoomType
+          title="Imperial Suite"
+          roomSize="90m2"
+          guests="max 6 guests"
+          bedSize="1800mm wide"
+          images={[imperial_image01, imperial_image02]}
+          desc="Spacious 175 square meter 2 Bedroom Imperial suite. 1st bedroom with King-size bed, ample closet space, working desk, Bathroom en suite with Shower. 2nd bedroom with two twin beds, ample closet space, bathroom en suite with shower. A separate spacious changing room with additional closet space.
+          The luxurious spacious open kitchen has all the modern technology to create an imperial dinner.
+          The indoor swimming pool with an amazing view over the City of Manama makes this Suite a perfect place to live the life as a king."
         />
       </div>
       <Amenities />
