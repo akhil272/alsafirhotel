@@ -19,7 +19,9 @@ const Contact = () => {
         <div className=" py-2">
           <p className="text-sm">email</p>
           <p className="text-primary lowercase">
-            <a href="mailto:hello@alsafirhotel.com">hello@alsafirhotel.com</a>
+            <a href="mailto:reservation@alsafirhotel.com">
+              reservation@alsafirhotel.com
+            </a>
           </p>
         </div>
       </div>

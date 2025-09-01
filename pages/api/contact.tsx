@@ -16,7 +16,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     await transporter.sendMail({
       from: email,
-      to: "hello@alsafirhotel.com",
+      to: "reservation@alsafirhotel.com",
       subject: `Contact form submission from ${name}`,
       html: `<p>You have a contact form submission</p><br>
         <p><strong>Email: </strong> ${email}</p><br>

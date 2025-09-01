@@ -55,7 +55,7 @@ const ContactUs = () => {
         </div>
         <div className="flex items-center">
           <div className="h-10 w-10">{IconsPack.mailIcon}</div>
-          <label className="px-2">hello@alsafirhotel.com</label>
+          <label className="px-2">reservation@alsafirhotel.com</label>
         </div>
         <div className="col-span-2 flex items-center">
           <div className="h-10 md:w-10 w-20">{IconsPack.addressIcon}</div>
