@@ -73,7 +73,7 @@ const Stay = () => {
           roomSize="29m2"
           guests="max 2 guests"
           bedSize="1500mm wide"
-          images={[image3, image4]}
+          images={[image4, image3]}
           desc={t.room1description}
         />
 
