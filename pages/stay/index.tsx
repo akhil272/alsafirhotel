@@ -10,12 +10,12 @@ import useTranslation from "../../hooks/useTranslatiion";
 import Head from "next/head";
 
 const Stay = () => {
-  const coverImage01 = "/images/staypage/twin-room-inside.jpg";
+  const coverImage01 = "/images/staypage/stay-home-image-cover-photo.jpg";
   const coverImage02 = "/images/staypage/stay-cover.jpg";
   const image1 = "/images/gallery/delux-twin.jpg";
   const image2 = "/images/staypage/delux-twin-room-01.jpg";
   const image3 = "/images/staypage/single-room-alsafir-front-view.jpg";
-  const image4 = "/images/staypage/single-room-alsafir-hotel.jpg";
+  const image4 = "/images/staypage/delux-single-cover-photo.jpg";
   const imperial_image01 = "/images/staypage/Imperial-Suite-image-1.jpg";
   const imperial_image02 = "/images/staypage/Imperial-Suite-image-2.jpg";
   const two_bedroom_suite_image01 =
@@ -46,7 +46,7 @@ const Stay = () => {
           content="Sophistic and splendid style Al Safir Hotel offers a classic stay. With 184 stylishly appointed rooms and suites that cleverly combine charm with discreet modern amenities."
         />
       </Head>
-      <ImageSlider autoPlayTime={10000} images={[coverImage02]}>
+      <ImageSlider autoPlayTime={10000} images={[coverImage01, coverImage02]}>
         <div className="flex flex-col h-full mt-24  px-2 md:p-0">
           <div className="md:p-14 p-0 flex flex-col">
             <div className="flex p-6">
@@ -58,7 +58,7 @@ const Stay = () => {
             <div className="uppercase text-3xl font-mark tracking-widest text-primary mt-6 ">
               {t.title}
             </div>
-            <div className="md:text-lg text-sm font-mark tracking-wide mt-2 md:w-2/3 text-white bg-black backdrop-blur-sm bg-opacity-10 rounded-xl p-2 ">
+            <div className="md:text-lg text-sm font-mark tracking-wide mt-2 md:w-2/3 text-white bg-black backdrop-blur-sm bg-opacity-20 rounded-xl p-2 ">
               {t.subtitle}
               <p className=" tracking-wide font-mark ">{t.p1}</p>
               <p className=" tracking-wide font-mark pt-4">{t.p2}</p>
@@ -82,7 +82,7 @@ const Stay = () => {
           roomSize="29m2"
           guests="max 3 guests"
           bedSize="120cm wide"
-          images={[image1, image2]}
+          images={[image1, coverImage01]}
           desc=" Treat yourself to a 5-star standard of living experience at one of
             the city's most distinguished addresses, Al Safir in Manama. Enjoy
             our elegant hotel suites and luxury amenities. Each deluxe single
